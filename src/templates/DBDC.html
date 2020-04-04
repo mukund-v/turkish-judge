@@ -1,0 +1,188 @@
+<!-- HIT template: Survey-v3.0 --><!-- The following snippet enables the 'responsive' behavior on smaller screens -->
+<crowd-form answer-format="flatten-objects">
+<meta content="width=device-width,initial-scale=1" name="viewport" />
+<section class="container" id="Survey"><!-- Instructions -->
+<div class="row">
+<div class="col-xs-12 col-md-12">
+<div class="panel panel-primary"><!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature --><a class="panel-heading" href="javascript:void(0);" id="collapseTrigger"><strong>Instructions</strong> <span class="collapse-text">(Click to Collapse)</span> </a>
+<div class="panel-body" id="instructionBody">
+<h3>Overview</h3>
+
+<p style="margin-bottom: 15px; font-size: 16px; line-height: 1.72222; color: rgb(52, 73, 94); font-family: Lato, Helvetica, Arial, sans-serif;">In this job, you will be presented with conversations between two interalocutors (a conversational system S and a user U). Review the conversation to determine whether the last utterance by S causes a breakdown in the conversation or not.</p>
+
+<p style="margin-bottom: 15px; font-size: 16px; line-height: 1.72222; color: rgb(52, 73, 94); font-family: Lato, Helvetica, Arial, sans-serif;"><span style="color: rgb(209, 72, 65);">This task requires native English skills.<br />
+Please refrain from joining this task if you are a non-native speaker of English.</span></p>
+
+<h3>Step</h3>
+
+<ol style="margin-bottom: 15px; font-size: 15px; color: rgb(52, 73, 94); font-family: Lato, Helvetica, Arial, sans-serif;">
+	<li>Read the conversation.</li>
+	<li>Determine if the last utterance causes a breakdown in the conversation.</li>
+</ol>
+
+<h3>Rules & Tips</h3>
+
+<p style="margin-bottom: 15px; font-size: 16px; line-height: 1.72222; color: rgb(52, 73, 94); font-family: Lato, Helvetica, Arial, sans-serif;">For the last utterance of each conversation, you will choose BREAKDOWN, POSSIBLE BREAKDOWN, or NOT A BREAKDOWN:</p>
+
+<p><span style="color: rgb(52, 73, 94); font-family: Lato, Helvetica, Arial, sans-serif; font-size: 16px;">The key notion is 'difficulty in continuing the conversation smoothly'.</span></p>
+
+<table class="table table-condensed table-striped table-responsive">
+	<tbody>
+	</tbody>
+	<colgroup>
+		<col class="col-xs-2 col-md-2" />
+		<col class="col-xs-10 col-md-10" />
+	</colgroup>
+	<!-- By explaining the sentiment scale, the accuracy of the answers may increase. -->
+	<tbody>
+		<tr>
+			<th>Label</th>
+			<th>Guidance</th>
+		</tr>
+		<tr>
+			<td>NOT A BREAKDOWN</td>
+			<td>means that it is easy to continue the conversation after the utterance in question.</td>
+		</tr>
+		<tr>
+			<td>POSSIBLE BREAKDOWN</td>
+			<td>means that it is difficult to continue the conversation smoothly after the utterance in question.</td>
+		</tr>
+		<tr>
+			<td>BREAKDOWN</td>
+			<td>means that it is difficult to continue the conversation after the utterance in question.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h4>&nbsp;Note:</h4>
+
+<p>Consider not only the preceding utterance but also all the given history utterances if exist for making your judgment. There are no objective and concrete criteria to choose between BREAKDOWN, POSSIBLY, and NOT A BREAKDOWN. It is okay to be subjective in making decisions.</p>
+
+<p>Note that emojis are replaced with alternative texts (e.g.,[SMILE])</p>
+
+
+<h3>Example</h3>
+
+<table class="table table-condensed table-striped table-responsive">
+	<tbody>
+	</tbody>
+	<colgroup>
+		<col class="col-xs-8 col-md-8" />
+		<col class="col-xs-4 col-md-4" />
+	</colgroup>
+	<!-- By explaining the sentiment scale, the accuracy of the answers may increase. -->
+	<tbody>
+		<tr>
+			<td>
+			<p>NOT A BREAKDOWN</p>
+
+			<p>In this example, the last utterance is a suitable response to a greeting. So, this is not a breakdown.</p>
+			</td>
+			<td>​U: How are you?<br />
+			S: Fine. How about you?</td>
+		</tr>
+		<tr>
+			<td>
+			<p>POSSIBLE BREAKDOWN</p>
+
+			<p>​In this example, the last utterance is socially awkward. So this can be labeled a possible breakdown.</p>
+			</td>
+			<td>U: How are you?<br />
+			S: Does it matter?</td>
+		</tr>
+		<tr>
+			<td>
+			<p>BREAKDOWN</p>
+
+			<p>In this example, the last utterance does not make any sense. So, &nbsp;this will be given a breakdown label.</p>
+			</td>
+			<td>
+			<p>U: How are you?<br />
+			S: I am a green fire of fish.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>BREAKDOWN</p>
+
+			<div>In this example, the last utterance is not answering the question at all.</div>
+			</td>
+			<td>U: What is your hobby, then?<br />
+			S: When was your last trip?</td>
+		</tr>
+		<tr>
+			<td>
+			<p>BREAKDOWN</p>
+
+			<div>In this example, the last utterance is inconsistent with the first utterance.</div>
+			</td>
+			<td>S: It's nice to go shopping alone.<br />
+			U: I agree. That's nice.<br />
+			S: Shopping takes time.<br />
+			U: Window shopping is also fun.<br />
+			S: It's fun to go shopping with somebody.</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<!-- End Instructions --><!-- Survey Layout -->
+
+<div class="row" id="workContent" name="${dialogid}">
+<div class="col-sm-8 col-sm-offset-2">
+<p style="margin-bottom: 15px; font-size: 16px; line-height: 1.72222; color: rgb(52, 73, 94); font-family: Lato, Helvetica, Arial, sans-serif;"><span style="color: rgb(209, 72, 65);">The result may not be approved if it is considered as cheating by checking utterances which consist of Obviously BREAKDOWN and NOT A BREAKDOWN utterances. </span></p>
+{% for convo in data %}
+    <div class="panel panel-default">
+    <div class="panel-body"><label><font color = "black">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class="well">{{ convo.content }} </p>
+    Select one of the breakdown labels. (required)
+
+    <div class="radio"><label><input name="{{ convo.annotationid }}" required="true" type="radio" value="NOT BREAKDOWN" /><font color = "green">NOT A BREAKDOWN </label></div>
+
+    <div class="radio"><label><input name="{{ convo.annotationid }}" required="true" type="radio" value="POSSIBLE BREAKDOWN" /><font color = "#ffbf00">POSSIBLE BREAKDOWN </label></div>
+
+    <div class="radio"><label><input name="{{ convo.annotationid }}" required="true" type="radio" value="BREAKDOWN" /><font color = "red">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+{% endfor %}
+
+</div>
+</div>
+<!-- End Survey Layout --></section></crowd-form>
+<!-- Please note that Bootstrap CSS/JS and JQuery are 3rd party libraries that may update their url/code at any time. Amazon Mechanical Turk (MTurk) is including these libraries as a default option for you, but is not responsible for any changes to the external libraries --><!-- External CSS references -->
+<link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet" /><!-- Open internal style sheet -->
+<style type="text/css">#collapseTrigger{
+  color:#fff;
+  display: block;
+  text-decoration: none;
+}
+#submitButton{
+  white-space: normal;
+}
+.image{
+  margin-bottom: 15px; 
+}
+</style>
+<!-- Close internal style sheet --><!-- External JS references --><script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js" integrity="sha384-s1ITto93iSMDxlp/79qhWHi+LsIi9Gx6yL+cOKDuymvihkfol83TYbLbOw+W/wv4" crossorigin="anonymous"></script><!-- Open internal javascript --><script>
+  $(document).ready(function() {
+    // Instructions expand/collapse
+    var content = $('#instructionBody');
+    var trigger = $('#collapseTrigger');
+    // content.hide();
+    $('.collapse-text').text('(Click to Collapse)');
+    trigger.click(function(){
+      content.toggle();
+      var isVisible = content.is(':visible');
+      if(isVisible){
+        $('.collapse-text').text('(Click to Collapse)');
+      }else{
+        $('.collapse-text').text('(Click to Expand)');
+      }
+    });
+    // end expand/collapse
+  });
+</script><!-- CLose internal javascript -->

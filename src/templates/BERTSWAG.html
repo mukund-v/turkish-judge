@@ -1,0 +1,141 @@
+<!-- You must include this JavaScript file -->
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+
+<!-- For the full list of available Crowd HTML Elements and their input/output documentation,
+      please refer to https://docs.aws.amazon.com/sagemaker/latest/dg/sms-ui-template-reference.html -->
+
+<!-- You must include crowd-form so that your task submits answers to MTurk -->
+<crowd-form answer-format="flatten-objects">
+    <crowd-instructions link-text="View full instructions" link-type="button">
+        <short-summary>
+            <ol>
+                <li>
+                    <strong>
+                    You will be given five partially completed English sentences and a 4-5 possible endings to complete each sentence.
+                    </strong>
+                </li>
+                <li>
+                    <strong>
+                    Please read the sentences and use the sliders below to indicate how 
+                    plausible each sentence ending is: (1 = Not possible, 5 = Very plausible)
+                    </strong>
+                </li>
+            </ol>
+        </short-summary>
+        <detailed-instructions>
+            <h3>Task:</h3>
+            <p>
+                For each of the five English sentences below you must rate each of the provided endings on a scale from 1-5 for how plausible that ending is to complete the sentence. Each rating should be completed independently of how the other endings are rated for that sentence. As in, examining that ending in isolation with the sentence, is it plausible or not? 
+            </p>    
+            <h3>Acception/Rejection Policy:</h3>
+            <p>
+                Your assignment will be checked for its quality and rejected if we find that you did not answer this truthfully, or rated the endings randomly.
+            </p>
+        </detailed-instructions>
+        <positive-example>
+            <table style="width:100%">
+                <tr>
+                    <th>Sentence Beginning</th>
+                    <th>Sentence Ending</th>
+                    <th>Plausibility</th>
+                </tr>
+                <tr>
+                <th rowspan="4"> A special effect intro that looks like a chalk board on wood 
+                appears and the words on it say ski school on the upper left, and the middle words 
+                say Ski Tips: foot rotation along with a website at the bottom and a blue circle icon on the 
+                upper right. A man skis into view and he's standing on a snowy mountain with a lot of trees and he </th>
+                    <td bgcolor="#f1f3f4">'s talking and looks like he's giving tips on how to ski as he physically demonstrates and continues to talk the whole time.</td>
+                    <td bgcolor="#f1f3f4"><p><crowd-slider name="sentence1ending1" min="0" max="5" value="5" required pin></crowd-slider></p></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#d6dbe0">is going down the slopes multiple times.</td>
+                    <td bgcolor="#d6dbe0"><p><crowd-slider name="sentence1ending2" min="0" max="5" value="4" required pin></crowd-slider></p></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#f1f3f4">faces that shoulder length of the ocean.</td>
+                    <td bgcolor="#f1f3f4"><p><crowd-slider name="sentence1ending3" min="0" max="5" value="2" required pin></crowd-slider></p></td>
+                </tr>
+                <tr>
+                    <td bgcolor="#d6dbe0">continues to hold it to a small group of structure.</td>
+                    <td bgcolor="#d6dbe0"><p><crowd-slider name="sentence1ending4" min="0" max="5" value="1" required pin></crowd-slider></p></td>
+                </tr>
+            </table>
+        </positive-example>
+    </crowd-instructions>
+    <h2>Instructions:</h2>
+    <ol>
+        <li>
+            <strong>
+                You will be given five partially completed English sentences and 4-5 possible endings to complete each sentence. 
+            </strong>
+        </li>
+        <li>
+            <strong>
+                Please read the sentences and use the sliders below to indicate how 
+                plausible each sentence ending is: (1 = Not possible, 5 = Very plausible). Note that on 1 the slider grays out but this is still a valid answer.. Please do not take tense, singular, or plural into considerations. An example is below with valid plausibilities in parenthesis at the end of each ending.
+            </strong> </li> </br>
+            She climbs the tree in a hoddie and slip. She
+            <ol>
+                <li>stretches out her hands. (Very plausible)</li>
+                <li>gets up and walks towards the camera. (Plausible) </li>
+                <li>is on the grass. (Neutral) </li>
+                <li>speaks to the camera. (Not plausible) </li>
+                <li>page out of the notebook and, rising, begins to rip it into small pieces. (Not possible) </li>
+            </ol> </br> 
+    <li> <strong>Click View full instructions for an example of a well-completed sentence and endings table.</strong> </li>
+    <br></br>
+  <p>
+    <html>
+    <head>
+    <style>
+    table, th, td {
+        border: 1.5px solid black;
+        border-collapse: collapse;
+        width: 50%;
+    }
+    th, td {
+        padding: 5px;
+        text-align: left;
+        width: 50%;    
+    }
+    </style>
+    </head>
+    
+    <body>
+        {% for sentence in data %}
+            <table style="width:100%">
+                <tr>
+                    <th bgcolor="#798398">Sentence Beginning</th>
+                    <th bgcolor="#798398">Sentence Ending</th>
+                    <th bgcolor="#798398">Plausibility (1 = Not possible, 5 = Very plausible)</th>
+                </tr>
+                <tr>
+                <th rowspan="{{ sentence['endings']|length }}" bgcolor="#d6dbe0"> {{ sentence['beginning'] }} </th>
+                    {% for ending in sentence['endings'] %}
+                        {% set endingloop = loop %}
+                        {% if endingloop.index % 2 == 0 %}
+                            <td bgcolor="#f1f3f4">{{ ending['end'] }}</td>
+                            <td bgcolor="#f1f3f4"><p><crowd-slider name="input.{{ sentence['name'] }}{{ ending['name'] }}" min="1" max="5" required pin></crowd-slider></p></td>
+                            </tr>
+                            {% if endingloop.index != sentence[endings]|length-1 %}
+                                <tr>
+                            {% endif %}
+                        {% else %}
+                            <td bgcolor="#d6dbe0">{{ ending['end'] }}</td>
+                            <td bgcolor="#d6dbe0"><p><crowd-slider name="input.{{ sentence['name'] }}{{ ending['name'] }}" min="1" max="5" required pin></crowd-slider></p></td>
+                            </tr>
+                            {% if endingloop.index != sentence[endings]|length-1 %}
+                                <tr>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+            </table>
+            <br>
+            <br>
+        {% endfor %}
+
+    </body>
+    </html>
+    
+  </p>
+</crowd-form>
