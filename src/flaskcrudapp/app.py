@@ -7,9 +7,10 @@ from bson.objectid import ObjectId
 import pandas as pd
 import json
 
-
 with open('./config.json', 'r') as input:
     config = json.load(input)
+
+ALLOWED_EXTENSIONS = {"csv", "tsv"}
 app = Flask(__name__)
 Bootstrap(app)
 app.secret_key="secretkey"
@@ -25,10 +26,17 @@ def index():
 @app.route("/upload", methods=["POST"])
 def upload():
     file = request.files['inputFile']
-    data = pd.read_csv(file)
-    data_json = json.loads(data.to_json(orient='records'))
-    csvs_db.insert(data_json)
-    return file.filename
+    filename = file.filename
+    if '.' in filename and filename.split(".")[-1] in ALLOWED_EXTENSIONS:
+        data = pd.read_csv(file)
+        data_json = json.loads(data.to_json(orient='records'))
+        #csvs_db.insert(data_json)
+        resp = jsonify("File upload accepted!")
+        resp.status_code = 202  # 202 is that the request has been accepted for processing but not yet completed
+        return resp
+    else:
+        return unsupported_media_type()
+        
 
 @app.route('/add', methods=['POST'])
 def add_user():
@@ -80,6 +88,15 @@ def not_found(error=None):
     resp.status_code = 404
     return resp
 
+@app.errorhandler(415)
+def unsupported_media_type(error=None):
+    message = {
+        'status': 415,
+        'message': 'Unsupported Media Type: {}.\n Files can only be a csv or tsv'.format(request.files['inputFile'].filename)
+    }
+    resp = jsonify(message)
+    resp.status_code = 415
+    return resp
 
 if __name__=="__main__":
     app.run(debug=True)
