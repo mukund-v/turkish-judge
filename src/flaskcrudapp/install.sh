@@ -2,4 +2,4 @@
 
 virtualenv venv 
 source venv/bin/activate
-pip install -r --force-reinstall requirements.txt
+pip install --force-reinstall -r requirements.txt

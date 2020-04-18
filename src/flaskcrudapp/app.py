@@ -1,17 +1,34 @@
-from flask import Flask
+from flask import Flask, jsonify, request, render_template
 from flask_pymongo import PyMongo
-from flask import jsonify, request
+from flask_bootstrap import Bootstrap
 from werkzeug.security import generate_password_hash, check_password_hash
 from bson.json_util import dumps
 from bson.objectid import ObjectId
+import pandas as pd
+import json
 
-config = json.load("./config.json")
+
+with open('./config.json', 'r') as input:
+    config = json.load(input)
 app = Flask(__name__)
+Bootstrap(app)
 app.secret_key="secretkey"
 app.config['MONGO_URI']= config["mongo"]
 mongo = PyMongo(app)
 users_db = mongo.db.users
 csvs_db = mongo.db.csvs
+
+@app.route('/')
+def index():
+    return (render_template('index.html'))
+
+@app.route("/upload", methods=["POST"])
+def upload():
+    file = request.files['inputFile']
+    data = pd.read_csv(file)
+    data_json = json.loads(data.to_json(orient='records'))
+    csvs_db.insert(data_json)
+    return file.filename
 
 @app.route('/add', methods=['POST'])
 def add_user():
