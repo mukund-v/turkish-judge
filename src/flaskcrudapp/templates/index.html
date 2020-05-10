@@ -2,6 +2,19 @@
 {% block title %}TurkishJudge{% endblock %}
 {% block content %}
     <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+              <br /> <br />
+              <h1>Welcome to TurkishJudge!</h1>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+        <p> Click <a href="/"> here </a> if you're a Turker submitting an appeal.</p>
+        <p> Click <a href="/"> here </a> to sign in as a Requester. </p>
+        <p>If you want to create a Requester account, you can request for one <a href="/"> here</a>.</p>
+
         <h2>File input</h2>
         <form method="POST" action="/upload" enctype="multipart/form-data">
             <div class="form-group">
