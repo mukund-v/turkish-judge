@@ -79,6 +79,20 @@ def users():
     resp = dumps(users)
     return resp
 
+@app.route('/signup', methods=['GET'])
+def signup():
+    return (render_template('signUp.html'))
+
+@app.route('/createacc', methods=['POST'])
+def createacc():
+    _json = request.json
+    _name = _json['name']
+    _password = _json['pwd']
+    _email = json['email']
+    pass
+
+
+
 @app.errorhandler(404)
 def not_found(error=None):
     message = {

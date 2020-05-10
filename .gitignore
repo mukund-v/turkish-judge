@@ -5,3 +5,5 @@ src/app/.vscode/settings.json
 src/.DS_Store
 src/flaskcrudapp/config.json
 src/flaskcrudapp/venv
+.DS_Store
+node_modules

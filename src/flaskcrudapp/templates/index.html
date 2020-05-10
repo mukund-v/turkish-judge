@@ -1,21 +1,29 @@
-{% extends "bootstrap/base.html" %}
-{% block title %}TurkishJudge{% endblock %}
-{% block content %}
+<!-- Required meta tags -->
+<head>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Turkish Judge</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+      </head>
+      <body>
+      <section class="section">
+
     <div class="container">
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
               <br /> <br />
-              <h1>Welcome to TurkishJudge!</h1>
+              <h1 class="title">Welcome to Turkish Judge!</h1>
             </div>
             <div class="col-md-2"></div>
         </div>
 
         <p> Click <a href="/"> here </a> if you're a Turker submitting an appeal.</p>
         <p> Click <a href="/"> here </a> to sign in as a Requester. </p>
-        <p>If you want to create a Requester account, you can request for one <a href="/"> here</a>.</p>
-
-        <h2>File input</h2>
+        <p>If you want to create a Requester account, you can request for one <a href="/signup"> here</a>.</p>
+        <br/><br/>
+        <h2 class="title">Input a CSV:</h1>
         <form method="POST" action="/upload" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="inputFile">File input</label>
@@ -24,4 +32,5 @@
             <button type="submit" class="btn btn-default">Submit</button>
         </form>
     </div>
-{% endblock %}
+</section>
+</body>
