@@ -4,6 +4,7 @@ from flask_bootstrap import Bootstrap
 from werkzeug.security import generate_password_hash, check_password_hash
 from bson.json_util import dumps
 from bson.objectid import ObjectId
+from utils import *
 import pandas as pd
 import json
 
@@ -28,8 +29,11 @@ def upload():
     file = request.files['inputFile']
     filename = file.filename
     if '.' in filename and filename.split(".")[-1] in ALLOWED_EXTENSIONS:
-        data = pd.read_csv(file)
-        data_json = json.loads(data.to_json(orient='records'))
+        rejected = parse_csv(input=file)
+        reject_json = json.loads(rejected.to_json(orient='records'))
+        csvs_db.insert(reject_json)
+        #data = pd.read_csv(file)
+        #data_json = json.loads(data.to_json(orient='records'))
         #csvs_db.insert(data_json)
         resp = jsonify("File upload accepted!")
         resp.status_code = 202  # 202 is that the request has been accepted for processing but not yet completed
