@@ -56,9 +56,9 @@ def create_task():
       print(output,file=f)
     task = open(file='task.xml',mode='r').read()
     new_hit = mturk.create_hit(
-        Title = 'trst',
-        Description = 'Ftttesst',
-        Keywords = 'chatbots, dialogue agents, evaluation, dialog, conversation',
+        Title = 'turkish judge',
+        Description = 'Decide whether the task included in this HIT was fairly or unfairly rejected',
+        Keywords = 'fairness, jury, adjudication',
         Reward = '0.35',
         MaxAssignments = 3,
         LifetimeInSeconds = 648000,
