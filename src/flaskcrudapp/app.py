@@ -28,13 +28,10 @@ def index():
 def upload():
     file = request.files['inputFile']
     filename = file.filename
+    csvs_db.delete_many({})
     if '.' in filename and filename.split(".")[-1] in ALLOWED_EXTENSIONS:
         rejected = parse_csv(input=file)
-        reject_json = json.loads(rejected.to_json(orient='records'))
-        csvs_db.insert(reject_json)
-        #data = pd.read_csv(file)
-        #data_json = json.loads(data.to_json(orient='records'))
-        #csvs_db.insert(data_json)
+        csvs_db.insert(rejected)
         resp = jsonify("File upload accepted!")
         resp.status_code = 202  # 202 is that the request has been accepted for processing but not yet completed
         return resp
