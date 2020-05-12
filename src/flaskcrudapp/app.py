@@ -94,6 +94,10 @@ def createacc():
     _email = json['email']
     pass
 
+@app.route('/appeal', methods=['POST'])
+def appeal():
+    return (render_template('appeal.html'))
+
 
 
 @app.errorhandler(404)
