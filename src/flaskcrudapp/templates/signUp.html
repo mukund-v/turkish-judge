@@ -10,68 +10,56 @@
   <section class="section">
 
     <div class="columns is-centered">
-        <div class="column is-one-third">
-        <h1 class="title">Create an Account:</h1>
-        <div class="form">
-        <div class="field">
-            <label class="label">Name</label>
-            <div class="control">
-              <input class="input" type="text" placeholder="Text input">
-            </div>
-          </div>
-
-          <div class="field">
-            <label class="label">Requester ID</label>
-            <div class="control">
-              <input class="input" type="text" placeholder="Text input">
-            </div>
-          </div>
-          
-          <div class="field">
-            <label class="label">Username</label>
-            <div class="control has-icons-left has-icons-right">
-              <input class="input is-success" type="text" placeholder="Text input" value="bulma">
-              <span class="icon is-small is-left">
-                <i class="fas fa-user"></i>
-              </span>
-              <span class="icon is-small is-right">
-                <i class="fas fa-check"></i>
-              </span>
-            </div>
-            <p class="help is-success">This username is available</p>
-          </div>
-          
-          <div class="field">
-            <label class="label">Email</label>
-            <div class="control has-icons-left has-icons-right">
-              <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
-              <span class="icon is-small is-left">
-                <i class="fas fa-envelope"></i>
-              </span>
-              <span class="icon is-small is-right">
-                <i class="fas fa-exclamation-triangle"></i>
-              </span>
-            </div>
-            <p class="help is-danger">This email is invalid</p>
-          </div>
-
-          <div class="field">
-            <label class="label">Password</label>
-            <div class="control">
-              <input class="input" type="text" placeholder="Text input">
-            </div>
-          </div>
-          
-          <div class="field is-grouped">
-            <div class="control">
-              <button class="button is-link">Submit</button>
-            </div>
-            <div class="control">
-              <button class="button is-link is-light">Cancel</button>
-            </div>
-          </div>
-        </div>
-    </div>
+      <div class="column is-one-third">
+          <form method="POST" action="/signin" class="box">
+              <p class="is-size-4">Create a Requester Account</p>
+              <br/>
+              <div class="field">
+                <label class="label">Name</label>
+                <div class="control has-icons-left">
+                  <input type="email" placeholder="e.g. bobsmith@gmail.com" class="input" name="email" required>
+                  <span class="icon is-small is-left">
+                    <i class="fa fa-envelope"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">RequesterID</label>
+                <div class="control has-icons-left">
+                  <input type="email" placeholder="e.g. bobsmith@gmail.com" class="input" name="email" required>
+                  <span class="icon is-small is-left">
+                    <i class="fa fa-envelope"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Email</label>
+                <div class="control has-icons-left">
+                  <input type="email" placeholder="e.g. bobsmith@gmail.com" class="input" name="email" required>
+                  <span class="icon is-small is-left">
+                    <i class="fa fa-envelope"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Password</label>
+                <div class="control has-icons-left">
+                  <input type="password" placeholder="*******" class="input" name="password"required>
+                  <span class="icon is-small is-left">
+                    <i class="fa fa-lock"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="field">
+                <button class="button is-dark">
+                  Submit
+                </button>
+              </div>
+              <br/>
+              <p>Already have an account? Sign in <a href="/">here</a>!</p>
+              <p>Click <a href="/">here</a> if you're a Turker trying to submit an appeal!</p>
+          </form>
+      </div>
     </div>
   </section>
   </body>
