@@ -43,18 +43,24 @@ def upload():
 
 @app.route('/add', methods=['POST'])
 def add_user():
-    _json = request.json
-    _name = _json['name']
-    _email = _json['email']
-    _password = _json['pwd']
+    _form = request.form
+    _name = _form['name']
+    _email = _form['email']
+    _password = _form['pwd']
+    _reqid = _form['reqID']
 
+    if users_db.find_one({"email" : _email}):# or users_db.find_one({"reqID" : r})
+        return not_found('user already exists!')
+    
     if _name and _email and _password and request.method == 'POST':
         _hashed_password = generate_password_hash(_password)
         id = users_db.insert({"name":_name,"email":_email,"pwd":_hashed_password})
 
+        session['username'] = _name
+
         resp = jsonify('User added successfully')
         resp.status_code = 200
-        return resp
+        return render_template('index.html')
     
     else:
         return not_found()
@@ -63,7 +69,7 @@ def add_user():
 def signin():
     _form = request.form
     _email = _form['email']
-    _password = _form['password']
+    _password = _form['pwd']
 
     if _email and _password:
         user = users_db.find_one({"email": _email})
@@ -86,25 +92,17 @@ def users():
 def signup():
     return (render_template('signUp.html'))
 
-@app.route('/createacc', methods=['POST'])
-def createacc():
-    _json = request.json
-    _name = _json['name']
-    _password = _json['pwd']
-    _email = json['email']
-    pass
-
 @app.route('/appeal', methods=['POST'])
 def appeal():
     return (render_template('appeal.html'))
-
 
 
 @app.errorhandler(404)
 def not_found(error=None):
     message = {
         'status': 404,
-        'message': 'Not found' + request.url
+        'message': 'Not found' + request.url,
+        'error message' : error
     }
     resp = jsonify(message)
     resp.status_code = 404
