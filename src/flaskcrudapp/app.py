@@ -59,15 +59,16 @@ def add_user():
     else:
         return not_found()
 
-@app.route('/signin', methods=['GET'])
+@app.route('/signin', methods=['POST'])
 def signin():
-    _json = request.json
-    _name = _json['name']
-    _password = _json['pwd']
+    _form = request.form
+    _email = _form['email']
+    _password = _form['password']
 
-    if _name and _password:
-        user = users_db.find_one({"name": _name})
+    if _email and _password:
+        user = users_db.find_one({"email": _email})
         if user and check_password_hash(user["pwd"], _password):
+            session['username'] = user['name']
             resp = dumps(user)
             return resp
         else: 
