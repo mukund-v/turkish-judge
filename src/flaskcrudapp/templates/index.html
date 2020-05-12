@@ -11,24 +11,90 @@
 
     <div class="columns is-centered">
         <div class="column is-one-third">
-        <div class="row">
-              <br /> <br />
-              <h1 class="title">Welcome to Turkish Judge!</h1>
-        </div>
-        <br/>
-        <p> Click <a href="/"> here </a> if you're a Turker submitting an appeal.</p>
-        <p> Click <a href="/"> here </a> to sign in as a Requester. </p>
-        <p>If you want to create a Requester account, you can request for one <a href="/signup"> here</a>.</p>
-        <br/><br/>
-        <h2 class="title">Input a CSV:</h1>
-        <form method="POST" action="/upload" enctype="multipart/form-data">
-            <div class="form-group">
-                <label for="inputFile">File input</label>
-                <input type="file" name="inputFile">
+            <div class="row" align="center">
+                <br /> <br />
+                <h2 class="title">Welcome to Turkish Judge!</h1>
             </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-        </form>
+        </div>
     </div>
+
+    <div class="columns is-centered">
+        <div class="column is-one-third">
+            <form action="" class="box">
+                <p class="is-size-4">Requester Sign-in</p>
+                <br/>
+                <div class="field">
+                  <label for="" class="label">Email</label>
+                  <div class="control has-icons-left">
+                    <input type="email" placeholder="e.g. bobsmith@gmail.com" class="input" required>
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-envelope"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="" class="label">Password</label>
+                  <div class="control has-icons-left">
+                    <input type="password" placeholder="*******" class="input" required>
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-lock"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="" class="checkbox">
+                    <input type="checkbox">
+                   Remember me
+                  </label>
+                </div>
+                <div class="field">
+                  <button class="button is-dark">
+                    Login
+                  </button>
+                </div>
+            </form>
+        </div>
+        <div class="column is-one-third">
+            <form action="" class="box">
+                <p class="is-size-4">Submit an Appeal</p>
+                <br/>
+                <div class="field">
+                  <label for="" class="label">Turker ID</label>
+                  <div class="control">
+                    <input type="text" placeholder="123456789" class="input" required>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="" class="label">HIT number</label>
+                  <div class="control">
+                    <input type="text" placeholder="123456789" class="input" required>
+                  </div>
+                </div>
+                <div class="field">
+                  <button class="button is-dark">
+                    Go
+                  </button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+
+    <div class="columns is-centered">
+        <div class="column is-one-third">
+            <div class="box">
+                <h2 class="title">Input a CSV:</h1>
+                <form method="POST" action="/upload" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="inputFile">File input</label>
+                        <br/><br/>
+                        <input type="file" name="inputFile">
+                    </div>
+                    <br/>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </div>
+        </div>
     </div>
 </section>
 </body>

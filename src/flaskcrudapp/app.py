@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, render_template
+from flask import Flask, jsonify, request, render_template, session
 from flask_pymongo import PyMongo
 from flask_bootstrap import Bootstrap
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -13,7 +13,7 @@ with open('./config.json', 'r') as input:
 
 ALLOWED_EXTENSIONS = {"csv", "tsv"}
 app = Flask(__name__)
-Bootstrap(app)
+# Bootstrap(app)
 app.secret_key="secretkey"
 app.config['MONGO_URI']= config["mongo"]
 mongo = PyMongo(app)
@@ -22,6 +22,8 @@ csvs_db = mongo.db.csvs
 
 @app.route('/')
 def index():
+    if 'username' in session:
+        print('you are logged in as: {}'.format(session['username']))
     return (render_template('index.html'))
 
 @app.route("/upload", methods=["POST"])
