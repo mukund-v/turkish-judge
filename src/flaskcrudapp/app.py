@@ -20,26 +20,36 @@ mongo = PyMongo(app)
 users_db = mongo.db.users
 csvs_db = mongo.db.csvs
 
+
 @app.route('/')
 def index():
     if 'username' in session:
         print('you are logged in as: {}'.format(session['username']))
     return (render_template('index.html'))
 
-@app.route("/upload", methods=["POST"])
-def upload():
-    file = request.files['inputFile']
-    filename = file.filename
-    csvs_db.delete_many({})
-    if '.' in filename and filename.split(".")[-1] in ALLOWED_EXTENSIONS:
-        rejected = parse_csv(input=file)
-        csvs_db.insert(rejected)
-        resp = jsonify("File upload accepted!")
-        resp.status_code = 202  # 202 is that the request has been accepted for processing but not yet completed
-        return resp
+
+@app.route('/signin', methods=['POST'])
+def signin():
+    _form = request.form
+    _email = _form['email']
+    _password = _form['pwd']
+
+    if _email and _password:
+        user = users_db.find_one({"email": _email})
+        if user and check_password_hash(user["pwd"], _password):
+            session['username'] = user['name']
+            resp = dumps(user)
+            return (render_template('requester.html'))
+        else: 
+            return not_found()
     else:
-        return unsupported_media_type()
-        
+        return not_found()
+
+
+@app.route('/signup', methods=['GET'])
+def signup():
+    return (render_template('signUp.html'))
+
 
 @app.route('/add', methods=['POST'])
 def add_user():
@@ -50,7 +60,7 @@ def add_user():
     _reqid = _form['reqID']
 
     if users_db.find_one({"email" : _email}):# or users_db.find_one({"reqID" : r})
-        return not_found('user already exists!')
+        return not_found('user with that email already exists!')
     
     if _name and _email and _password and request.method == 'POST':
         _hashed_password = generate_password_hash(_password)
@@ -65,36 +75,37 @@ def add_user():
     else:
         return not_found()
 
-@app.route('/signin', methods=['POST'])
-def signin():
-    _form = request.form
-    _email = _form['email']
-    _password = _form['pwd']
 
-    if _email and _password:
-        user = users_db.find_one({"email": _email})
-        if user and check_password_hash(user["pwd"], _password):
-            session['username'] = user['name']
-            resp = dumps(user)
-            return resp
-        else: 
-            return not_found()
+@app.route('/appeal', methods=['POST'])
+def appeal():
+    return (render_template('appeal.html'))
+
+
+@app.route('/requester', methods=['POST'])
+def requester():
+    return (render_template('requester.html'))
+
+
+@app.route("/upload", methods=["POST"])
+def upload():
+    file = request.files['inputFile']
+    filename = file.filename
+    csvs_db.delete_many({})
+    if '.' in filename and filename.split(".")[-1] in ALLOWED_EXTENSIONS:
+        rejected = parse_csv(input=file)
+        csvs_db.insert(rejected)
+        resp = jsonify("File upload accepted!")
+        resp.status_code = 202  # 202 is that the request has been accepted for processing but not yet completed
+        return resp
     else:
-        return not_found()
+        return unsupported_media_type()
+
 
 @app.route('/users', methods=['GET'])
 def users():
     users = users_db.find()
     resp = dumps(users)
     return resp
-
-@app.route('/signup', methods=['GET'])
-def signup():
-    return (render_template('signUp.html'))
-
-@app.route('/appeal', methods=['POST'])
-def appeal():
-    return (render_template('appeal.html'))
 
 
 @app.errorhandler(404)
