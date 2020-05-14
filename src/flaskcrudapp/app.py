@@ -1,10 +1,11 @@
-from flask import Flask, jsonify, request, render_template, session
+from flask import Flask, jsonify, request, render_template, send_from_directory, session
 from flask_pymongo import PyMongo
 from flask_bootstrap import Bootstrap
 from werkzeug.security import generate_password_hash, check_password_hash
 from bson.json_util import dumps
 from bson.objectid import ObjectId
 from utils import *
+import os
 import pandas as pd
 import json
 
@@ -23,9 +24,12 @@ csvs_db = mongo.db.csvs
 
 @app.route('/')
 def index():
-    if 'username' in session:
-        print('you are logged in as: {}'.format(session['username']))
     return (render_template('index.html'))
+
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico')
 
 
 @app.route('/signin', methods=['POST'])
