@@ -82,6 +82,12 @@ def add_user():
 
 @app.route('/appeal', methods=['POST'])
 def appeal():
+    _form = request.form 
+    _worker_id = _form["turkerId"]
+    _HIT_id = _form["HITId"]
+    result = csvs_db.find_one({"WorkerId":_worker_id, "HITId":_HIT_id})
+    if not result:
+        return render_template('index.html', error="Worker Id and HIT Id combination does not exist.")
     return (render_template('appeal.html'))
 
 

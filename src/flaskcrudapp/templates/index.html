@@ -17,7 +17,9 @@
             </div>
         </div>
     </div>
-
+    {% if error %}
+      <p class=error><strong>Error:</strong> {{ error }}
+    {% endif %}
     <div class="columns is-centered">
         <div class="column is-one-third">
             <form method="POST" action="/signin" class="box">
@@ -56,13 +58,13 @@
                 <div class="field">
                   <label class="label">Turker ID</label>
                   <div class="control">
-                    <input type="text" placeholder="123456789" class="input" required>
+                    <input type="text" placeholder="123456789" class="input" name="turkerId" required>
                   </div>
                 </div>
                 <div class="field">
                   <label class="label">HIT number</label>
                   <div class="control">
-                    <input type="text" placeholder="123456789" class="input" required>
+                    <input type="text" placeholder="123456789" class="input" name="HITId" required>
                   </div>
                 </div>
                 <div class="field">
