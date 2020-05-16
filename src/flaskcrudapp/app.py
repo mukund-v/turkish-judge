@@ -22,16 +22,15 @@ users_db = mongo.db.users
 csvs_db = mongo.db.csvs
 
 
+
 @app.route('/')
 def index():
     return (render_template('index.html'))
 
 
-@app.route('/favicon.ico')
-def favicon():
-    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico')
-
-
+'''
+Signin route.
+'''
 @app.route('/signin', methods=['POST'])
 def signin():
     _form = request.form
@@ -55,6 +54,10 @@ def signup():
     return (render_template('signUp.html'))
 
 
+
+'''
+Add a requester as a user in database and redirects to requester page.
+'''
 @app.route('/add', methods=['POST'])
 def add_user():
     _form = request.form
@@ -63,12 +66,12 @@ def add_user():
     _password = _form['pwd']
     _reqid = _form['reqID']
 
-    if users_db.find_one({"email" : _email}):# or users_db.find_one({"reqID" : r})
-        return not_found('user with that email already exists!')
+    if users_db.find_one({"email" : _email}) or users_db.find_one({"reqID" : _reqid}):
+        return not_found('user with that email / requester id already exists!')
     
     if _name and _email and _password and request.method == 'POST':
         _hashed_password = generate_password_hash(_password)
-        id = users_db.insert({"name":_name,"email":_email,"pwd":_hashed_password})
+        id = users_db.insert({"name":_name, "req_id":_reqid, "email":_email,"pwd":_hashed_password})
 
         session['username'] = _name
 
@@ -80,22 +83,39 @@ def add_user():
         return not_found()
 
 
+'''
+Looks up appeal info in databse and redirects Turker to appeal page.
+'''
 @app.route('/appeal', methods=['POST'])
 def appeal():
     _form = request.form 
     _worker_id = _form["turkerId"]
     _HIT_id = _form["HITId"]
     result = csvs_db.find_one({"WorkerId":_worker_id, "HITId":_HIT_id})
+
     if not result:
         return render_template('index.html', error="Worker Id and HIT Id combination does not exist.")
-    return (render_template('appeal.html'))
+
+    hit_data = {
+        'HITId' : _HIT_id,
+        'WorkerId' : _worker_id
+    }
+
+    return (render_template('appeal.html', hit_data=hit_data))
 
 
+'''
+Requester page.
+'''
 @app.route('/requester', methods=['POST'])
 def requester():
     return (render_template('requester.html'))
 
 
+
+'''
+Upload csv data to database.
+'''
 @app.route("/upload", methods=["POST"])
 def upload():
     file = request.files['inputFile']
@@ -111,11 +131,22 @@ def upload():
         return unsupported_media_type()
 
 
+'''
+Get users of database for testing.
+'''
 @app.route('/users', methods=['GET'])
 def users():
     users = users_db.find()
     resp = dumps(users)
     return resp
+
+
+'''
+Route to get tab icon.
+'''
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico')
 
 
 @app.errorhandler(404)
@@ -129,6 +160,7 @@ def not_found(error=None):
     resp.status_code = 404
     return resp
 
+
 @app.errorhandler(415)
 def unsupported_media_type(error=None):
     message = {
@@ -138,6 +170,7 @@ def unsupported_media_type(error=None):
     resp = jsonify(message)
     resp.status_code = 415
     return resp
+
 
 if __name__=="__main__":
     app.run(debug=True)

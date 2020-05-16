@@ -8,13 +8,13 @@
       </head>
       <body>
       <section class="section">
-    
         <div class="columns is-centered">
           <div class="column is-one-third">
+              <p class="is-size-4">Please fill out the form below:</p>
+              <br />
               <form method="POST" action="" class="box">
-                  <p>HIT:</p>
-                  <p>WorkerID:</p>
-                  <p class="is-size-4">Please fill out the form below:</p>
+                  <p>HIT: {{hit_data['HITId']}}</p>
+                  <p>WorkerID: {{hit_data['WorkerId']}}</p>
                   <br/>
                   <div class="field">
                     <label class="label">Explanation</label>
