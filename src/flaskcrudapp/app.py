@@ -44,7 +44,7 @@ def signin():
             resp = dumps(user)
             return (render_template('requester.html'))
         else: 
-            return not_found()
+            return (render_template('index.html', signinerror=True))
     else:
         return not_found()
 
@@ -94,7 +94,7 @@ def appeal():
     result = csvs_db.find_one({"WorkerId":_worker_id, "HITId":_HIT_id})
 
     if not result:
-        return render_template('index.html', error="Worker Id and HIT Id combination does not exist.")
+        return render_template('index.html', appealerror=True)
 
     hit_data = {
         'HITId' : _HIT_id,

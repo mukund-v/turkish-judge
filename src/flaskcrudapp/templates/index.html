@@ -13,9 +13,6 @@
     <h2 class="title" align="center">Welcome to Turkish Judge!</h2>
     <br />
 
-    {% if error %}
-      <p class=error><strong>Error:</strong> {{ error }}
-    {% endif %}
     <div class="columns is-centered">
         <div class="column is-one-third">
             <form method="POST" action="/signin" class="box">
@@ -39,6 +36,10 @@
                     </span>
                   </div>
                 </div>
+                {% if signinerror %}
+                <p class=error style="color:red"><strong>Error: </strong> Email or password provided is incorrect.</p>
+                <br />
+                {% endif %}
                 <p>Don't have an account? You can request for one <a href="/signup">here</a>!</p><br/>
                 <div class="field">
                   <button class="button is-dark">
@@ -63,6 +64,10 @@
                     <input type="text" placeholder="123456789" class="input" name="HITId" required>
                   </div>
                 </div>
+                {% if appealerror %}
+                <p class=error style="color:red"><strong>Error: </strong> Sorry! We couldn't find that appeal.</p>
+                <br />
+                {% endif %}
                 <div class="field">
                   <button class="button is-dark">
                     Go
