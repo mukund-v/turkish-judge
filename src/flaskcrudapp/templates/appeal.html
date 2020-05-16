@@ -1,35 +1,38 @@
 <!-- Required meta tags -->
 <head>
     <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Submit an Appeal</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
-        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-      </head>
-      <body>
-      <section class="section">
-        <div class="columns is-centered">
-          <div class="column is-one-third">
-              <p class="is-size-4">Please fill out the form below:</p>
-              <br />
-              <form method="POST" action="" class="box">
-                  <p>HIT: {{hit_data['HITId']}}</p>
-                  <p>WorkerID: {{hit_data['WorkerId']}}</p>
-                  <br/>
-                  <div class="field">
-                    <label class="label">Explanation</label>
-                    <div class="control">
-                      <input type="text" placeholder="Requester sucks" class="input" name="name" required>
-                    </div>
-                  </div>
-                  <br/>
-                  <div class="field">
-                    <button class="button is-dark">
-                      Submit
-                    </button>
-                  </div>
-              </form>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Submit an Appeal</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+<body>
+  <section class="section">
+
+    <br /> <br />
+    <h2 class="title" align="center">Submit an Appeal:</h2>
+    <br />
+
+    <div class="columns is-centered">
+      <div class="column is-one-third">
+        <form method="POST" action="" class="box">
+          <p>HIT: {{hit_data['HITId']}}</p>
+          <p>WorkerID: {{hit_data['WorkerId']}}</p>
+          <br/>
+          <div class="field">
+            <label class="label">Explanation</label>
+            <div class="control">
+              <input type="text" placeholder="Requester sucks" class="input" name="name" required>
+            </div>
           </div>
-        </div>
-      </section>
-      </body>
+          <br/>
+          <div class="field">
+            <button class="button is-dark">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</body>
