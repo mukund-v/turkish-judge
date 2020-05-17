@@ -8,3 +8,4 @@ src/flaskcrudapp/venv
 src/flaskcrudapp/__pycache__
 .DS_Store
 node_modules
+src/templates/.DS_Store
