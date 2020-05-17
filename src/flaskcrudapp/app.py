@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, render_template, send_from_directory, session
+from flask import Flask, jsonify, redirect, request, render_template, send_from_directory, session, url_for
 from flask_pymongo import PyMongo
 from flask_bootstrap import Bootstrap
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -25,6 +25,8 @@ csvs_db = mongo.db.csvs
 
 @app.route('/')
 def index():
+    if session.get('logged_in'):
+        return redirect(url_for('requester'))
     return (render_template('index.html'))
 
 
@@ -41,18 +43,30 @@ def signin():
         user = users_db.find_one({"email": _email})
         if user and check_password_hash(user["pwd"], _password):
             session['username'] = user['name']
+            session['logged_in'] = True
             resp = dumps(user)
-            return (render_template('requester.html'))
-        else: 
+            return redirect(url_for('requester'))
+        else:
             return (render_template('index.html', signinerror=True))
     else:
         return not_found()
 
 
+'''
+Signout route.
+'''
+@app.route('/signout', methods=['GET'])
+def signout():
+    session.clear()
+    return redirect(url_for('index'))
+
+
+'''
+Account signup page.
+'''
 @app.route('/signup', methods=['GET'])
 def signup():
     return (render_template('signUp.html'))
-
 
 
 '''
@@ -61,6 +75,7 @@ Add a requester as a user in database and redirects to requester page.
 @app.route('/add', methods=['POST'])
 def add_user():
     _form = request.form
+
     _name = _form['name']
     _email = _form['email']
     _password = _form['pwd']
@@ -75,6 +90,7 @@ def add_user():
 
         session['username'] = _name
 
+        session['logged_in'] = True
         resp = jsonify('User added successfully')
         resp.status_code = 200
         return render_template('index.html')
@@ -117,11 +133,11 @@ def make_appeal():
 '''
 Requester page.
 '''
-@app.route('/requester', methods=['POST'])
+@app.route('/requester')
 def requester():
-    return (render_template('requester.html'))
-
-
+    if session.get('logged_in'):
+        return (render_template('requester.html', username=session.get('username')))
+    return redirect(url_for('index'))
 
 '''
 Upload csv data to database.
