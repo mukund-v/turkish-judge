@@ -44,6 +44,33 @@ def align_xmls(question_xml, answer_xml):
     with open("templates1/task.html", 'w') as output:
         print (question.find("crowd-form"),file=output)
 
+def create_appeal(sandbox_link, explanation):
+    mturk = connect_to_MTurk()
+    new_hit = mturk.create_hit(
+        Title = 'HIT rejection reviewing',
+        Description = 'Judge whether the rejectection was fair or unfair',
+        Keywords = 'fairness, jury, adjudication',
+        Reward = '0.01',
+        MaxAssignments = 5,
+        LifetimeInSeconds = 1209600,
+        AssignmentDurationInSeconds = 5400,
+        AutoApprovalDelayInSeconds = 1,
+        QualificationRequirements = [],
+        HITLayoutId = "3S61CKY9NO0FW7HAPT77VH7YQLZOB2", # this Id is for sandbox, there is a different one for marketplace
+        HITLayoutParameters = [
+          {
+            "Name": "explanation",
+            "Value": explanation
+          },
+          {
+            "Name": "sandboxLink",
+            "Value": sandbox_link
+          }
+        ]
+    )
+    return new_hit['HIT']['HITId']
+    print ("https://workersandbox.mturk.com/mturk/preview?groupId=" + new_hit['HIT']['HITGroupId'])
+
 
 def create_task(question_xml, answer_xml, HITId):
     mturk = connect_to_MTurk()

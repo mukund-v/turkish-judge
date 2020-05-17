@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, redirect, request, render_template, send_from_directory, session, url_for
+from flask import Flask, jsonify, redirect, request, render_template, send_from_directory, session, url_for, redirect
 from flask_pymongo import PyMongo
 from flask_bootstrap import Bootstrap
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -86,7 +86,7 @@ def add_user():
     
     if _name and _email and _password and request.method == 'POST':
         _hashed_password = generate_password_hash(_password)
-        id = users_db.insert({"name":_name, "req_id":_reqid, "email":_email,"pwd":_hashed_password})
+        id = users_db.insert({"name":_name, "req_id":_reqid, "email":_email, "pwd":_hashed_password, "hits": []})
 
         session['username'] = _name
 
@@ -112,12 +112,13 @@ def appeal():
     if not result:
         return render_template('index.html', appealerror=True)
 
+    sandbox_link = result["sandboxLink"]
     hit_data = {
         'HITId' : _HIT_id,
         'WorkerId' : _worker_id,
-        'sandboxLink' : result["sandboxLink"]
+        'sandboxLink' : sandbox_link
     }
-
+    session["sandboxLink"] = sandbox_link
     return (render_template('appeal.html', hit_data=hit_data))
 
 
@@ -128,7 +129,9 @@ Submitting appeal
 def make_appeal():
     _form = request.form 
     _explanation = _form["explanation"]
-
+    hit_id = create_appeal(sandbox_link=session["sandboxLink"], explanation=_explanation)
+    csvs_db.update_one({"sandboxLink": session["sandboxLink"]}, {"$set": {"Status":"Appealed", "AppealId":hit_id}})
+    return redirect("/")
 
 '''
 Requester page.
@@ -146,10 +149,15 @@ Upload csv data to database.
 def upload():
     file = request.files['inputFile']
     filename = file.filename
-    csvs_db.delete_many({})
     if '.' in filename and filename.split(".")[-1] in ALLOWED_EXTENSIONS:
         rejected = parse_csv(input=file)
         csvs_db.insert(rejected)
+        batch_ids = set()
+        for reject in rejected:
+            batch_ids.add(reject["HITId"])
+        current_hits = users_db.find_one({"name":session["username"]})["hits"]
+        current_hits.extend(batch_ids)
+        users_db.update_one({"name":session["username"]}, {"$set":{"hits":current_hits}}) 
         resp = jsonify("File upload accepted!")
         resp.status_code = 202  # 202 is that the request has been accepted for processing but not yet completed
         return resp
