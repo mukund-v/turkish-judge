@@ -1,32 +1,32 @@
 <head>
-    <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Requesters</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
-        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-      </head>
-      <body>
-      <section class="section">
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Requesters</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+<body>
+  <section class="section">
 
     <br /> <br />
-    <h2 class="title" align="center">This is the Requesters page.</h2>
+    <h2 class="title" align="center">Requesters</h2>
     <br />
     
     <div class="columns is-centered">
-        <div class="column is-one-third">
-            <div class="box">
-                <h2 class="title">Input a CSV:</h1>
-                <form method="POST" action="/upload" enctype="multipart/form-data">
-                    <div class="form-group">
-                        <label for="inputFile">File input</label>
-                        <br/><br/>
-                        <input type="file" name="inputFile">
-                    </div>
-                    <br/>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>
+      <div class="column is-one-third">
+        <div class="box">
+          <h2 class="title">Input a CSV:</h1>
+          <form method="POST" action="/upload" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="inputFile">File input</label>
+              <br/><br/>
+              <input type="file" name="inputFile">
             </div>
+            <br/>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
         </div>
+          You are currently logged in as {{username}}. Click <a href="/signout">here</a> to log out.
     </div>
-</section>
+  </section>
 </body>

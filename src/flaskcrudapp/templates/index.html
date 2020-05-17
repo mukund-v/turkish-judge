@@ -1,98 +1,91 @@
 <!-- Required meta tags -->
 <head>
-    <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Turkish Judge</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
-        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-      </head>
-      <body>
-      <section class="section">
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Turkish Judge</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+<body>
+  <section class="section">
 
     <br /> <br />
     <h2 class="title" align="center">Welcome to Turkish Judge!</h2>
     <br />
 
     <div class="columns is-centered">
-        <div class="column is-one-third">
-            <form method="POST" action="/signin" class="box">
-                <p class="is-size-4">Requester Sign-in</p>
-                <br/>
-                <div class="field">
-                  <label class="label">Email</label>
-                  <div class="control has-icons-left">
-                    <input type="email" placeholder="e.g. bobsmith@gmail.com" class="input" name="email" required>
-                    <span class="icon is-small is-left">
-                      <i class="fa fa-envelope"></i>
-                    </span>
-                  </div>
-                </div>
-                <div class="field">
-                  <label class="label">Password</label>
-                  <div class="control has-icons-left">
-                    <input type="password" placeholder="*******" class="input" name="pwd"required>
-                    <span class="icon is-small is-left">
-                      <i class="fa fa-lock"></i>
-                    </span>
-                  </div>
-                </div>
-                {% if signinerror %}
-                <p class=error style="color:red"><strong>Error: </strong> Email or password provided is incorrect.</p>
-                <br />
-                {% endif %}
-                <p>Don't have an account? You can request for one <a href="/signup">here</a>!</p><br/>
-                <div class="field">
-                  <button class="button is-dark">
-                    Login
-                  </button>
-                </div>
-            </form>
-        </div>
-        <div class="column is-one-third">
-            <form method="POST" action="/appeal" class="box">
-                <p class="is-size-4">Submit an Appeal</p>
-                <br/>
-                <div class="field">
-                  <label class="label">Turker ID</label>
-                  <div class="control">
-                    <input type="text" placeholder="123456789" class="input" name="turkerId" required>
-                  </div>
-                </div>
-                <div class="field">
-                  <label class="label">HIT number</label>
-                  <div class="control">
-                    <input type="text" placeholder="123456789" class="input" name="HITId" required>
-                  </div>
-                </div>
-                {% if appealerror %}
-                <p class=error style="color:red"><strong>Error: </strong> Sorry! We couldn't find that appeal.</p>
-                <br />
-                {% endif %}
-                <div class="field">
-                  <button class="button is-dark">
-                    Go
-                  </button>
-                </div>
-            </form>
-            
-        </div>
-    </div>
-
-    <div class="columns is-centered">
-        <div class="column is-one-third">
-            <div class="box">
-                <h2 class="title">Input a CSV:</h1>
-                <form method="POST" action="/upload" enctype="multipart/form-data">
-                    <div class="form-group">
-                        <label for="inputFile">File input</label>
-                        <br/><br/>
-                        <input type="file" name="inputFile">
-                    </div>
-                    <br/>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>
+      <div class="column is-one-third">
+        <form method="POST" action="/signin" class="box">
+          <p class="is-size-4">Requester Sign-in</p>
+          <br/>
+          
+          <div class="field">
+            <label class="label">Email</label>
+            <div class="control has-icons-left">
+              <input type="email" placeholder="e.g. bobsmith@gmail.com" class="input" name="email" required>
+              <span class="icon is-small is-left">
+                <i class="fa fa-envelope"></i>
+              </span>
             </div>
-        </div>
+          </div>
+          
+          <div class="field">
+            <label class="label">Password</label>
+            <div class="control has-icons-left">
+              <input type="password" placeholder="*******" class="input" name="pwd"required>
+              <span class="icon is-small is-left">
+                <i class="fa fa-lock"></i>
+              </span>
+            </div>
+          </div>
+          
+          {% if signinerror %}
+          <p class=error style="color:red"><strong>Error: </strong> Email or password provided is incorrect.</p>
+          <br />
+          {% endif %}
+          
+          <p>Don't have an account? You can request for one <a href="/signup">here</a>!</p><br/>
+
+          <div class="field">
+            <button class="button is-dark">
+              Login
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="column is-one-third">
+        <form method="POST" action="/appeal" class="box">
+            
+          <p class="is-size-4">Submit an Appeal</p>
+          <br/>
+            
+          <div class="field">
+            <label class="label">Turker ID</label>
+            <div class="control">
+              <input type="text" placeholder="123456789" class="input" name="turkerId" required>
+            </div>
+          </div>
+            
+          <div class="field">
+            <label class="label">HIT number</label>
+            <div class="control">
+              <input type="text" placeholder="123456789" class="input" name="HITId" required>
+            </div>
+          </div>
+            
+          {% if appealerror %}
+          <p class=error style="color:red"><strong>Error: </strong> Sorry! We couldn't find that appeal.</p>
+          <br />
+          {% endif %}
+            
+          <div class="field">
+            <button class="button is-dark">
+              Go
+            </button>
+          </div>
+
+        </form>
+      </div>
     </div>
-</section>
+  </section>
 </body>
