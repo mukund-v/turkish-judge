@@ -27,8 +27,9 @@ csvs_db = mongo.db.csvs
 def index():
     if session.get('logged_in'):
         return redirect(url_for('requester'))
-    return (render_template('index.html'))
-
+    return (render_template('index.html', signupsuccess=request.args.get('signupsuccess'),
+            appealsuccess=request.args.get('appealsuccess'), appealId=request.args.get('appealId'),
+            signinerror=request.args.get('signinerror'), appealerror=request.args.get('appealerror')))
 
 '''
 Signin route.
@@ -47,7 +48,7 @@ def signin():
             resp = dumps(user)
             return redirect(url_for('requester'))
         else:
-            return (render_template('index.html', signinerror=True))
+            return (redirect(url_for('index', signinerror=True)))
     else:
         return not_found()
 
@@ -66,7 +67,7 @@ Account signup page.
 '''
 @app.route('/signup', methods=['GET'])
 def signup():
-    return (render_template('signUp.html'))
+    return (render_template('signUp.html', signuperror=request.args.get('signuperror')))
 
 
 '''
@@ -82,6 +83,7 @@ def add_user():
     _reqid = _form['reqID']
 
     if users_db.find_one({"email" : _email}) or users_db.find_one({"reqID" : _reqid}):
+        return redirect(url_for('signup', signuperror=True))
         return not_found('user with that email / requester id already exists!')
     
     if _name and _email and _password and request.method == 'POST':
@@ -90,10 +92,9 @@ def add_user():
 
         session['username'] = _name
 
-        session['logged_in'] = True
         resp = jsonify('User added successfully')
         resp.status_code = 200
-        return render_template('index.html')
+        return (redirect(url_for('index', signupsuccess=True)))
     
     else:
         return not_found()
@@ -110,7 +111,7 @@ def appeal():
     result = csvs_db.find_one({"WorkerId":_worker_id, "HITId":_HIT_id})
 
     if not result:
-        return render_template('index.html', appealerror=True)
+        return (redirect(url_for('index', appealerror=True)))
 
     sandbox_link = result["sandboxLink"]
     hit_data = {
@@ -131,7 +132,7 @@ def make_appeal():
     _explanation = _form["explanation"]
     hit_id = create_appeal(sandbox_link=session["sandboxLink"], explanation=_explanation)
     csvs_db.update_one({"sandboxLink": session["sandboxLink"]}, {"$set": {"Status":"Appealed", "AppealId":hit_id}})
-    return redirect("/")
+    return redirect(url_for('index', appealsuccess=True, appealId=hit_id))
 
 '''
 Requester page.

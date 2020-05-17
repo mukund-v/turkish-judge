@@ -43,6 +43,11 @@
           <p class=error style="color:red"><strong>Error: </strong> Email or password provided is incorrect.</p>
           <br />
           {% endif %}
+          {% if signupsuccess %}
+          <p class=error style="color:coral"><strong>Success: </strong> Your account has been made, you can now sign in.</p>
+          <br />
+          {% endif %}
+
           
           <p>Don't have an account? You can request for one <a href="/signup">here</a>!</p><br/>
 
@@ -77,7 +82,10 @@
           <p class=error style="color:red"><strong>Error: </strong> Sorry! We couldn't find that appeal.</p>
           <br />
           {% endif %}
-            
+          {% if appealsuccess %}
+          <p class=error style="color:coral"><strong>Success: </strong>Your appeal has been posted. To check the status come back and enter your WorkerId and this HITId: {{appealId}}.</p>
+          <br />
+          {% endif %}
           <div class="field">
             <button class="button is-dark">
               Go

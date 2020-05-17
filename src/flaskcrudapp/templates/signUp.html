@@ -48,6 +48,10 @@
                   </span>
                 </div>
               </div>
+              {% if signuperror %}
+              <p class=error style="color:red"><strong>Error: </strong> User with that email or requester ID already exists.</p>
+              <br />
+              {% endif %}
               <div class="field">
                 <button class="button is-dark">
                   Submit
