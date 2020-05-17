@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, render_template, send_from_directory, session
+from flask import Flask, jsonify, request, render_template, send_from_directory, session, redirect
 from flask_pymongo import PyMongo
 from flask_bootstrap import Bootstrap
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -96,12 +96,13 @@ def appeal():
     if not result:
         return render_template('index.html', appealerror=True)
 
+    sandbox_link = result["sandboxLink"]
     hit_data = {
         'HITId' : _HIT_id,
         'WorkerId' : _worker_id,
-        'sandboxLink' : result["sandboxLink"]
+        'sandboxLink' : sandbox_link
     }
-
+    session["sandboxLink"] = sandbox_link
     return (render_template('appeal.html', hit_data=hit_data))
 
 
@@ -112,7 +113,9 @@ Submitting appeal
 def make_appeal():
     _form = request.form 
     _explanation = _form["explanation"]
-
+    hit_id = create_appeal(sandbox_link=session["sandboxLink"], explanation=_explanation)
+    csvs_db.update_one({"sandboxLink": session["sandboxLink"]}, {"$set": {"Status":"Appealed", "AppealId":hit_id}})
+    return redirect("/")
 
 '''
 Requester page.

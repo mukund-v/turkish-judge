@@ -44,26 +44,10 @@ def align_xmls(question_xml, answer_xml):
     with open("templates1/task.html", 'w') as output:
         print (question.find("crowd-form"),file=output)
 
-def create_appeal():
+def create_appeal(sandbox_link, explanation):
     mturk = connect_to_MTurk()
-    fileloader = FileSystemLoader('templates1')      # Accesses the directory 'templates' in the same classpath as this code file. 'templates' contains files for HTML/XML templates
-    env = Environment(loader=fileloader)            # Establishes the environment to load a specific file from the templates diretory
-    appeal_hit = env.get_template("appeal.html")
-    data = {}
-    data["sandboxLink"] = "www.test.com"
-    data["explanation"] = "testing"
-    appeal = appeal_hit.render(data=data)
-    with open("templates1/appeal.html", 'w') as f:
-      print (appeal, file=f)
-
-    appeal_template = env.get_template('appeal.xml')
-    output = appeal_template.render()
-
-    with open('appeal.xml', 'w') as f:
-      print(output,file=f) 
-    appeal = open(file='appeal.xml', mode='r').read()
     new_hit = mturk.create_hit(
-        Title = 'test32',
+        Title = 'HIT rejection reviewing',
         Description = 'Judge whether the rejectection was fair or unfair',
         Keywords = 'fairness, jury, adjudication',
         Reward = '0.01',
@@ -72,8 +56,19 @@ def create_appeal():
         AssignmentDurationInSeconds = 5400,
         AutoApprovalDelayInSeconds = 1,
         QualificationRequirements = [],
-        Question = appeal
+        HITLayoutId = "3S61CKY9NO0FW7HAPT77VH7YQLZOB2", # this Id is for sandbox, there is a different one for marketplace
+        HITLayoutParameters = [
+          {
+            "Name": "explanation",
+            "Value": explanation
+          },
+          {
+            "Name": "sandboxLink",
+            "Value": sandbox_link
+          }
+        ]
     )
+    return new_hit['HIT']['HITId']
     print ("https://workersandbox.mturk.com/mturk/preview?groupId=" + new_hit['HIT']['HITGroupId'])
 
 
@@ -155,5 +150,3 @@ def writeIDS(inputfile,outputfile):
         rows.append(line.split(" ")[2])
 
   writetxtfile(outputfile,rows)
-
-create_appeal()
