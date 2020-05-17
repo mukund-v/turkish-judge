@@ -6,21 +6,25 @@ from bs4 import BeautifulSoup
 from jinja2 import Environment, FileSystemLoader, Template
 from example import example_question, example_answer
 
+
+with open("config.json", 'r') as input:
+    config = json.loads(input.read())
+
 def parse_csv(input):
     df = pd.read_csv(input)
     rejected = df[
-        df["AssignmentStatus"]=="Submitted"  # the csv we're using rn has 'Submitted' not 'Approved'
+        df["AssignmentStatus"]=="Approved"  # testing csv has all 'Approved'
     ]
-    only_relevant_columns = rejected[["WorkerId", "AssignmentId", "HITId", "Answer"]]
+    only_relevant_columns = rejected[["WorkerId", "AssignmentId", "HITId", "Question", "Answer"]]
     rejected_w_id = only_relevant_columns.rename(columns={"AssignmentId":"_id"})
     reject_json = json.loads(rejected_w_id.to_json(orient='records'))
+    print (reject_json)
     for hit in reject_json:
         hit["Status"] = "NA"
+        hit["sandboxLink"] = create_task(question_xml=hit["Question"], answer_xml=hit["Answer"], HITId=hit["HITId"])
     return reject_json
 
-
 def align_xmls(question_xml, answer_xml):
-
     question = BeautifulSoup(question_xml, 'lxml')
     answer = BeautifulSoup(answer_xml, 'xml')
     questions = question.find_all("input")
@@ -36,46 +40,35 @@ def align_xmls(question_xml, answer_xml):
                     parent = q.parent.parent.parent
                     question_tag = question.new_tag("p")
                     question_tag.string = "Worker answered: {}".format(q_value)
-                    parent.append(question_tag)
-                    #question_xml.replace(parent, parent+"<p>Worker answered: {}</p>".format(q_value))
-        
-    #for question in questions:
-    #    print (question.parent.parent.parent)
-    #    print ("<<<<------------>>>>")
-    again = question.find_all("input")
-    with open("task.html", 'w') as output:
+                    parent.append(question_tag) 
+    with open("templates1/task.html", 'w') as output:
         print (question.find("crowd-form"),file=output)
 
-def create_task():
+
+def create_task(question_xml, answer_xml, HITId):
     mturk = connect_to_MTurk()
+    align_xmls(question_xml=question_xml, answer_xml=answer_xml)
     fileloader = FileSystemLoader('templates1')      # Accesses the directory 'templates' in the same classpath as this code file. 'templates' contains files for HTML/XML templates
     env = Environment(loader=fileloader)            # Establishes the environment to load a specific file from the templates diretory
-
     task_template = env.get_template('task.xml')
-
     output = task_template.render()
 
     with open('task.xml', 'w') as f:
       print(output,file=f)
     task = open(file='task.xml',mode='r').read()
     new_hit = mturk.create_hit(
-        Title = 'turkish judge',
-        Description = 'Decide whether the task included in this HIT was fairly or unfairly rejected',
+        Title = 'Appeal of {}'.format(HITId),
+        Description = 'Review this filled out HIT to determine whether the worker completed it correctly',
         Keywords = 'fairness, jury, adjudication',
-        Reward = '0.35',
-        MaxAssignments = 3,
-        LifetimeInSeconds = 648000,
+        Reward = '0.01',
+        MaxAssignments = 5,
+        LifetimeInSeconds = 1209600,
         AssignmentDurationInSeconds = 5400,
-        AutoApprovalDelayInSeconds = 259200,
+        AutoApprovalDelayInSeconds = 1,
         QualificationRequirements = [],
         Question = task
     )
-
-    print("A new HIT has been created. You can preview it here:")
-    print("https://workersandbox.mturk.com/mturk/preview?groupId=" + new_hit['HIT']['HITGroupId'])
-    print("HITID = " + new_hit['HIT']['HITId'] + " (Use to Get Results)")
-
-
+    return "https://workersandbox.mturk.com/mturk/preview?groupId=" + new_hit['HIT']['HITGroupId']
 
 def connect_to_MTurk(sandbox=True):
   '''
@@ -130,12 +123,3 @@ def writeIDS(inputfile,outputfile):
         rows.append(line.split(" ")[2])
 
   writetxtfile(outputfile,rows)
-
-
-if __name__=="__main__":
-    with open("config.json", 'r') as input:
-        config = json.loads(input.read())
-    align_xmls(
-        question_xml=example_question(), 
-        answer_xml=example_answer())
-    create_task()

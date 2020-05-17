@@ -98,10 +98,20 @@ def appeal():
 
     hit_data = {
         'HITId' : _HIT_id,
-        'WorkerId' : _worker_id
+        'WorkerId' : _worker_id,
+        'sandboxLink' : result["sandboxLink"]
     }
 
     return (render_template('appeal.html', hit_data=hit_data))
+
+
+'''
+Submitting appeal
+'''
+@app.route('/makeappeal', methods=['POST'])
+def make_appeal():
+    _form = request.form 
+    _explanation = _form["explanation"]
 
 
 '''

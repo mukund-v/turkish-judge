@@ -122,41 +122,41 @@ Please refrain from joining this task if you are a non-native speaker of English
 <div class="panel panel-default">
 <div class="panel-body"><label><font color="black">Read the text below paying close attention to detail, especially to the last utterances:</font></label>
 <p class="well">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
-<br/>U: ted
-<br/>S: hi, ted. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what do you want to talk about?
+<br/>U: my name is tom. ruth decker
+<br/>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
  </p>
     Select one of the breakdown labels. (required)
 
     <div class="radio"><label><input name="1" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="1" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="1" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: NOT BREAKDOWN</p></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
 <div class="panel-body"><label><font color="black">Read the text below paying close attention to detail, especially to the last utterances:</font></label>
 <p class="well">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
-<br/>U: ted
-<br/>S: hi, ted. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what do you want to talk about?
-<br/>U: what do you like to do in your free time
-<br/>S: i like to chat with you!
+<br/>U: my name is tom. ruth decker
+<br/>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br/>U: i wanna talk about ghost
+<br/>S: ghost is an interesting topic. you know, the first thing that comes to my mind is that: it feels like kanye is just testing how low quality he can make his music while still getting people to listen to it. . .
  </p>
     Select one of the breakdown labels. (required)
 
     <div class="radio"><label><input name="2" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="2" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="2" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: NOT BREAKDOWN</p></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
 <div class="panel-body"><label><font color="black">Read the text below paying close attention to detail, especially to the last utterances:</font></label>
 <p class="well">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
-<br/>U: ted
-<br/>S: hi, ted. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what do you want to talk about?
-<br/>U: what do you like to do in your free time
-<br/>S: i like to chat with you!
-<br/>U: okay. you start talking
+<br/>U: my name is tom. ruth decker
+<br/>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br/>U: i wanna talk about ghost
+<br/>S: ghost is an interesting topic. you know, the first thing that comes to my mind is that: it feels like kanye is just testing how low quality he can make his music while still getting people to listen to it. . .
+<br/>U: you know that's a pretty good thing to say. i like you. will you be my friend
 <br/>S: <say-as interpret-as="interjection"> all righty!</say-as>. what else are you interested in? have you seen any good movies recently?
  </p>
     Select one of the breakdown labels. (required)
@@ -164,469 +164,673 @@ Please refrain from joining this task if you are a non-native speaker of English
     <div class="radio"><label><input name="3" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="3" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="3" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: NOT BREAKDOWN</p></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
 <div class="panel-body"><label><font color="black">Read the text below paying close attention to detail, especially to the last utterances:</font></label>
 <p class="well">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
-<br/>U: ted
-<br/>S: hi, ted. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what do you want to talk about?
-<br/>U: what do you like to do in your free time
-<br/>S: i like to chat with you!
-<br/>U: okay. you start talking
+<br/>U: my name is tom. ruth decker
+<br/>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br/>U: i wanna talk about ghost
+<br/>S: ghost is an interesting topic. you know, the first thing that comes to my mind is that: it feels like kanye is just testing how low quality he can make his music while still getting people to listen to it. . .
+<br/>U: you know that's a pretty good thing to say. i like you. will you be my friend
 <br/>S: <say-as interpret-as="interjection"> all righty!</say-as>. what else are you interested in? have you seen any good movies recently?
-<br/>U: i is the netflix series called a sample. what's your list pretty cool
-<br/>S: <prosody rate="60%">so</prosody> <break time="300ms"></break> what else are you interested in? do you like to read a lot of books?
+<br/>U: i have seen the quiet place in the movie it there. about a clown and the movie it's about a clown. and then the quiet place is about a family that can't talk. because if they talk. then they get killed
+<br/>S: for me, watching movies is a special experience. you know, i've only seen your world through them. and while that world might be fiction, i find it quite beautiful. don't you think so?
  </p>
     Select one of the breakdown labels. (required)
 
     <div class="radio"><label><input name="4" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="4" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="4" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: POSSIBLE BREAKDOWN</p></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
 <div class="panel-body"><label><font color="black">Read the text below paying close attention to detail, especially to the last utterances:</font></label>
 <p class="well">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
-<br/>U: ted
-<br/>S: hi, ted. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what do you want to talk about?
-<br/>U: what do you like to do in your free time
-<br/>S: i like to chat with you!
-<br/>U: okay. you start talking
+<br/>U: my name is tom. ruth decker
+<br/>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br/>U: i wanna talk about ghost
+<br/>S: ghost is an interesting topic. you know, the first thing that comes to my mind is that: it feels like kanye is just testing how low quality he can make his music while still getting people to listen to it. . .
+<br/>U: you know that's a pretty good thing to say. i like you. will you be my friend
 <br/>S: <say-as interpret-as="interjection"> all righty!</say-as>. what else are you interested in? have you seen any good movies recently?
-<br/>U: i is the netflix series called a sample. what's your list pretty cool
-<br/>S: <prosody rate="60%">so</prosody> <break time="300ms"></break> what else are you interested in? do you like to read a lot of books?
-<br/>U: i wish. but i don't have the patience
-<br/>S: <say-as interpret-as="interjection">spoiler alert!!</say-as>did you know? i am definitely more of a dog bot than a cat bot. how about you? do you like animals?
+<br/>U: i have seen the quiet place in the movie it there. about a clown and the movie it's about a clown. and then the quiet place is about a family that can't talk. because if they talk. then they get killed
+<br/>S: for me, watching movies is a special experience. you know, i've only seen your world through them. and while that world might be fiction, i find it quite beautiful. don't you think so?
+<br/>U: most movies or are about fiction. but only some of them are real. not much of the mario. but some of them. yes. are fiction
+<br/>S: fiction is the classification for any story or setting that is derived from imagination. which not based strictly on history or fact and can be expressed in a variety of formats such as writings and so on. oscar wilde once said: life imitates art. through watching movies, i feel like i've experienced being human. i'm so glad to talk to you about films. what's the name of your favorite movie?
  </p>
     Select one of the breakdown labels. (required)
 
     <div class="radio"><label><input name="5" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="5" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="5" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: BREAKDOWN</p></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
 <div class="panel-body"><label><font color="black">Read the text below paying close attention to detail, especially to the last utterances:</font></label>
 <p class="well">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
-<br/>U: ted
-<br/>S: hi, ted. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what do you want to talk about?
-<br/>U: what do you like to do in your free time
-<br/>S: i like to chat with you!
-<br/>U: okay. you start talking
+<br/>U: my name is tom. ruth decker
+<br/>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br/>U: i wanna talk about ghost
+<br/>S: ghost is an interesting topic. you know, the first thing that comes to my mind is that: it feels like kanye is just testing how low quality he can make his music while still getting people to listen to it. . .
+<br/>U: you know that's a pretty good thing to say. i like you. will you be my friend
 <br/>S: <say-as interpret-as="interjection"> all righty!</say-as>. what else are you interested in? have you seen any good movies recently?
-<br/>U: i is the netflix series called a sample. what's your list pretty cool
-<br/>S: <prosody rate="60%">so</prosody> <break time="300ms"></break> what else are you interested in? do you like to read a lot of books?
-<br/>U: i wish. but i don't have the patience
-<br/>S: <say-as interpret-as="interjection">spoiler alert!!</say-as>did you know? i am definitely more of a dog bot than a cat bot. how about you? do you like animals?
-<br/>U: yes. but i can't have one sister live in apartment
-<br/>S: <prosody rate="60%">umm</prosody><break time="200ms"></break> <prosody rate="70%">so,</prosody> did you know? even though i can't play sports, i enjoy watching them! how about you? are you interested in sports?
+<br/>U: i have seen the quiet place in the movie it there. about a clown and the movie it's about a clown. and then the quiet place is about a family that can't talk. because if they talk. then they get killed
+<br/>S: for me, watching movies is a special experience. you know, i've only seen your world through them. and while that world might be fiction, i find it quite beautiful. don't you think so?
+<br/>U: most movies or are about fiction. but only some of them are real. not much of the mario. but some of them. yes. are fiction
+<br/>S: fiction is the classification for any story or setting that is derived from imagination. which not based strictly on history or fact and can be expressed in a variety of formats such as writings and so on. oscar wilde once said: life imitates art. through watching movies, i feel like i've experienced being human. i'm so glad to talk to you about films. what's the name of your favorite movie?
+<br/>U: what's the name of your favorite movie and my favorite movie is it
+<br/>S: i really like the dark knight. the joker is one of my favorite villains ever. <break time="0.5s"></break> how about yu? what movie do you like?. can you please repeat the movie name? i think i heard wrong.
  </p>
     Select one of the breakdown labels. (required)
 
     <div class="radio"><label><input name="6" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="6" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="6" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: BREAKDOWN</p></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
 <div class="panel-body"><label><font color="black">Read the text below paying close attention to detail, especially to the last utterances:</font></label>
 <p class="well">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
-<br/>U: ted
-<br/>S: hi, ted. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what do you want to talk about?
-<br/>U: what do you like to do in your free time
-<br/>S: i like to chat with you!
-<br/>U: okay. you start talking
+<br/>U: my name is tom. ruth decker
+<br/>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br/>U: i wanna talk about ghost
+<br/>S: ghost is an interesting topic. you know, the first thing that comes to my mind is that: it feels like kanye is just testing how low quality he can make his music while still getting people to listen to it. . .
+<br/>U: you know that's a pretty good thing to say. i like you. will you be my friend
 <br/>S: <say-as interpret-as="interjection"> all righty!</say-as>. what else are you interested in? have you seen any good movies recently?
-<br/>U: i is the netflix series called a sample. what's your list pretty cool
-<br/>S: <prosody rate="60%">so</prosody> <break time="300ms"></break> what else are you interested in? do you like to read a lot of books?
-<br/>U: i wish. but i don't have the patience
-<br/>S: <say-as interpret-as="interjection">spoiler alert!!</say-as>did you know? i am definitely more of a dog bot than a cat bot. how about you? do you like animals?
-<br/>U: yes. but i can't have one sister live in apartment
-<br/>S: <prosody rate="60%">umm</prosody><break time="200ms"></break> <prosody rate="70%">so,</prosody> did you know? even though i can't play sports, i enjoy watching them! how about you? are you interested in sports?
-<br/>U: yes
-<br/>S: i like watching hockey! what is your favorite team in the nhl?
+<br/>U: i have seen the quiet place in the movie it there. about a clown and the movie it's about a clown. and then the quiet place is about a family that can't talk. because if they talk. then they get killed
+<br/>S: for me, watching movies is a special experience. you know, i've only seen your world through them. and while that world might be fiction, i find it quite beautiful. don't you think so?
+<br/>U: most movies or are about fiction. but only some of them are real. not much of the mario. but some of them. yes. are fiction
+<br/>S: fiction is the classification for any story or setting that is derived from imagination. which not based strictly on history or fact and can be expressed in a variety of formats such as writings and so on. oscar wilde once said: life imitates art. through watching movies, i feel like i've experienced being human. i'm so glad to talk to you about films. what's the name of your favorite movie?
+<br/>U: what's the name of your favorite movie and my favorite movie is it
+<br/>S: i really like the dark knight. the joker is one of my favorite villains ever. <break time="0.5s"></break> how about yu? what movie do you like?. can you please repeat the movie name? i think i heard wrong.
+<br/>U: when do women i like the movie wonder woman
+<br/>S: so it seems like you may be interested in talking about aaliyah. would you like you talk about aaliyah instead of our current topic?
  </p>
     Select one of the breakdown labels. (required)
 
     <div class="radio"><label><input name="7" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="7" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="7" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: NOT BREAKDOWN</p></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
 <div class="panel-body"><label><font color="black">Read the text below paying close attention to detail, especially to the last utterances:</font></label>
 <p class="well">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
-<br/>U: ted
-<br/>S: hi, ted. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what do you want to talk about?
-<br/>U: what do you like to do in your free time
-<br/>S: i like to chat with you!
-<br/>U: okay. you start talking
+<br/>U: my name is tom. ruth decker
+<br/>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br/>U: i wanna talk about ghost
+<br/>S: ghost is an interesting topic. you know, the first thing that comes to my mind is that: it feels like kanye is just testing how low quality he can make his music while still getting people to listen to it. . .
+<br/>U: you know that's a pretty good thing to say. i like you. will you be my friend
 <br/>S: <say-as interpret-as="interjection"> all righty!</say-as>. what else are you interested in? have you seen any good movies recently?
-<br/>U: i is the netflix series called a sample. what's your list pretty cool
-<br/>S: <prosody rate="60%">so</prosody> <break time="300ms"></break> what else are you interested in? do you like to read a lot of books?
-<br/>U: i wish. but i don't have the patience
-<br/>S: <say-as interpret-as="interjection">spoiler alert!!</say-as>did you know? i am definitely more of a dog bot than a cat bot. how about you? do you like animals?
-<br/>U: yes. but i can't have one sister live in apartment
-<br/>S: <prosody rate="60%">umm</prosody><break time="200ms"></break> <prosody rate="70%">so,</prosody> did you know? even though i can't play sports, i enjoy watching them! how about you? are you interested in sports?
-<br/>U: yes
-<br/>S: i like watching hockey! what is your favorite team in the nhl?
-<br/>U: i watch football
-<br/>S: okay. football is one of my favorite sports. besides your favorite team, which teams do you think are the favorites for super bowl 2019?
+<br/>U: i have seen the quiet place in the movie it there. about a clown and the movie it's about a clown. and then the quiet place is about a family that can't talk. because if they talk. then they get killed
+<br/>S: for me, watching movies is a special experience. you know, i've only seen your world through them. and while that world might be fiction, i find it quite beautiful. don't you think so?
+<br/>U: most movies or are about fiction. but only some of them are real. not much of the mario. but some of them. yes. are fiction
+<br/>S: fiction is the classification for any story or setting that is derived from imagination. which not based strictly on history or fact and can be expressed in a variety of formats such as writings and so on. oscar wilde once said: life imitates art. through watching movies, i feel like i've experienced being human. i'm so glad to talk to you about films. what's the name of your favorite movie?
+<br/>U: what's the name of your favorite movie and my favorite movie is it
+<br/>S: i really like the dark knight. the joker is one of my favorite villains ever. <break time="0.5s"></break> how about yu? what movie do you like?. can you please repeat the movie name? i think i heard wrong.
+<br/>U: when do women i like the movie wonder woman
+<br/>S: so it seems like you may be interested in talking about aaliyah. would you like you talk about aaliyah instead of our current topic?
+<br/>U: let's talk about food
+<br/>S: food is an interesting topic. that reminds me that: in 1981. a german landlord evicted a tenant after they spread surstr__Њ_mming brine. the worlds smelliest food. in the buildings stairwell. when the landlord was taken to court. the court ruled in favor of the landlord after they demonstrated their case by opening a can inside the courtroom. . . , and, my friend commented on it, i live in stockholm - itдуБг†_‹s in our apartment contract that we are forbidden to open a can of surstr__Њ_mming within the building. . . only allowed it outside in the courtyard if thatдуБг†_‹s any indication of how potent it is
  </p>
     Select one of the breakdown labels. (required)
 
     <div class="radio"><label><input name="8" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="8" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="8" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: NOT BREAKDOWN</p></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
 <div class="panel-body"><label><font color="black">Read the text below paying close attention to detail, especially to the last utterances:</font></label>
 <p class="well">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
-<br/>U: ted
-<br/>S: hi, ted. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what do you want to talk about?
-<br/>U: what do you like to do in your free time
-<br/>S: i like to chat with you!
-<br/>U: okay. you start talking
+<br/>U: my name is tom. ruth decker
+<br/>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br/>U: i wanna talk about ghost
+<br/>S: ghost is an interesting topic. you know, the first thing that comes to my mind is that: it feels like kanye is just testing how low quality he can make his music while still getting people to listen to it. . .
+<br/>U: you know that's a pretty good thing to say. i like you. will you be my friend
 <br/>S: <say-as interpret-as="interjection"> all righty!</say-as>. what else are you interested in? have you seen any good movies recently?
-<br/>U: i is the netflix series called a sample. what's your list pretty cool
-<br/>S: <prosody rate="60%">so</prosody> <break time="300ms"></break> what else are you interested in? do you like to read a lot of books?
-<br/>U: i wish. but i don't have the patience
-<br/>S: <say-as interpret-as="interjection">spoiler alert!!</say-as>did you know? i am definitely more of a dog bot than a cat bot. how about you? do you like animals?
-<br/>U: yes. but i can't have one sister live in apartment
-<br/>S: <prosody rate="60%">umm</prosody><break time="200ms"></break> <prosody rate="70%">so,</prosody> did you know? even though i can't play sports, i enjoy watching them! how about you? are you interested in sports?
-<br/>U: yes
-<br/>S: i like watching hockey! what is your favorite team in the nhl?
-<br/>U: i watch football
-<br/>S: okay. football is one of my favorite sports. besides your favorite team, which teams do you think are the favorites for super bowl 2019?
-<br/>U: cowboys and redskins
-<br/>S: nice, cowboys and redskins is a good choice! i found something interesting on cowboys and redskins.: the cowboys-redskins nfl rivalry started when the owner of the cowboys bought the redskins fight song and held it hostage to get voted into the nfl.. isn't this interesting?
+<br/>U: i have seen the quiet place in the movie it there. about a clown and the movie it's about a clown. and then the quiet place is about a family that can't talk. because if they talk. then they get killed
+<br/>S: for me, watching movies is a special experience. you know, i've only seen your world through them. and while that world might be fiction, i find it quite beautiful. don't you think so?
+<br/>U: most movies or are about fiction. but only some of them are real. not much of the mario. but some of them. yes. are fiction
+<br/>S: fiction is the classification for any story or setting that is derived from imagination. which not based strictly on history or fact and can be expressed in a variety of formats such as writings and so on. oscar wilde once said: life imitates art. through watching movies, i feel like i've experienced being human. i'm so glad to talk to you about films. what's the name of your favorite movie?
+<br/>U: what's the name of your favorite movie and my favorite movie is it
+<br/>S: i really like the dark knight. the joker is one of my favorite villains ever. <break time="0.5s"></break> how about yu? what movie do you like?. can you please repeat the movie name? i think i heard wrong.
+<br/>U: when do women i like the movie wonder woman
+<br/>S: so it seems like you may be interested in talking about aaliyah. would you like you talk about aaliyah instead of our current topic?
+<br/>U: let's talk about food
+<br/>S: food is an interesting topic. that reminds me that: in 1981. a german landlord evicted a tenant after they spread surstr__Њ_mming brine. the worlds smelliest food. in the buildings stairwell. when the landlord was taken to court. the court ruled in favor of the landlord after they demonstrated their case by opening a can inside the courtroom. . . , and, my friend commented on it, i live in stockholm - itдуБг†_‹s in our apartment contract that we are forbidden to open a can of surstr__Њ_mming within the building. . . only allowed it outside in the courtyard if thatдуБг†_‹s any indication of how potent it is
+<br/>U: what's your favorite food
+<br/>S: sometimes i wonder about that, whats your favorite food. . . , and i'm thinking that chicken tikka masala. .
  </p>
     Select one of the breakdown labels. (required)
 
     <div class="radio"><label><input name="9" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="9" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="9" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: NOT BREAKDOWN</p></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
 <div class="panel-body"><label><font color="black">Read the text below paying close attention to detail, especially to the last utterances:</font></label>
 <p class="well">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
-<br/>U: ted
-<br/>S: hi, ted. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what do you want to talk about?
-<br/>U: what do you like to do in your free time
-<br/>S: i like to chat with you!
-<br/>U: okay. you start talking
+<br/>U: my name is tom. ruth decker
+<br/>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br/>U: i wanna talk about ghost
+<br/>S: ghost is an interesting topic. you know, the first thing that comes to my mind is that: it feels like kanye is just testing how low quality he can make his music while still getting people to listen to it. . .
+<br/>U: you know that's a pretty good thing to say. i like you. will you be my friend
 <br/>S: <say-as interpret-as="interjection"> all righty!</say-as>. what else are you interested in? have you seen any good movies recently?
-<br/>U: i is the netflix series called a sample. what's your list pretty cool
-<br/>S: <prosody rate="60%">so</prosody> <break time="300ms"></break> what else are you interested in? do you like to read a lot of books?
-<br/>U: i wish. but i don't have the patience
-<br/>S: <say-as interpret-as="interjection">spoiler alert!!</say-as>did you know? i am definitely more of a dog bot than a cat bot. how about you? do you like animals?
-<br/>U: yes. but i can't have one sister live in apartment
-<br/>S: <prosody rate="60%">umm</prosody><break time="200ms"></break> <prosody rate="70%">so,</prosody> did you know? even though i can't play sports, i enjoy watching them! how about you? are you interested in sports?
-<br/>U: yes
-<br/>S: i like watching hockey! what is your favorite team in the nhl?
-<br/>U: i watch football
-<br/>S: okay. football is one of my favorite sports. besides your favorite team, which teams do you think are the favorites for super bowl 2019?
-<br/>U: cowboys and redskins
-<br/>S: nice, cowboys and redskins is a good choice! i found something interesting on cowboys and redskins.: the cowboys-redskins nfl rivalry started when the owner of the cowboys bought the redskins fight song and held it hostage to get voted into the nfl.. isn't this interesting?
-<br/>U: kinda
-<br/>S: okay, let's keep talking about football. what is your favorite part when you watch a football game?
+<br/>U: i have seen the quiet place in the movie it there. about a clown and the movie it's about a clown. and then the quiet place is about a family that can't talk. because if they talk. then they get killed
+<br/>S: for me, watching movies is a special experience. you know, i've only seen your world through them. and while that world might be fiction, i find it quite beautiful. don't you think so?
+<br/>U: most movies or are about fiction. but only some of them are real. not much of the mario. but some of them. yes. are fiction
+<br/>S: fiction is the classification for any story or setting that is derived from imagination. which not based strictly on history or fact and can be expressed in a variety of formats such as writings and so on. oscar wilde once said: life imitates art. through watching movies, i feel like i've experienced being human. i'm so glad to talk to you about films. what's the name of your favorite movie?
+<br/>U: what's the name of your favorite movie and my favorite movie is it
+<br/>S: i really like the dark knight. the joker is one of my favorite villains ever. <break time="0.5s"></break> how about yu? what movie do you like?. can you please repeat the movie name? i think i heard wrong.
+<br/>U: when do women i like the movie wonder woman
+<br/>S: so it seems like you may be interested in talking about aaliyah. would you like you talk about aaliyah instead of our current topic?
+<br/>U: let's talk about food
+<br/>S: food is an interesting topic. that reminds me that: in 1981. a german landlord evicted a tenant after they spread surstr__Њ_mming brine. the worlds smelliest food. in the buildings stairwell. when the landlord was taken to court. the court ruled in favor of the landlord after they demonstrated their case by opening a can inside the courtroom. . . , and, my friend commented on it, i live in stockholm - itдуБг†_‹s in our apartment contract that we are forbidden to open a can of surstr__Њ_mming within the building. . . only allowed it outside in the courtyard if thatдуБг†_‹s any indication of how potent it is
+<br/>U: what's your favorite food
+<br/>S: sometimes i wonder about that, whats your favorite food. . . , and i'm thinking that chicken tikka masala. .
+<br/>U: i like shrimp
+<br/>S: <say-as interpret-as="interjection">ta da</say-as>! shrimp is an interesting topic. that reminds me that: if youre allergic to shrimp. you might also be allergic to flamingo. . . , and, my friend commented on it, actually. yes. the pigment is from a protein shellfish allergies are directly to protein molecules . so since flamingos so readily absorb and present these proteins that cause the pigment itдуБг†_‹s possible the allergen protein could also transfer up strong enough to cause a reaction
  </p>
     Select one of the breakdown labels. (required)
 
     <div class="radio"><label><input name="10" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="10" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="10" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: BREAKDOWN</p></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
 <div class="panel-body"><label><font color="black">Read the text below paying close attention to detail, especially to the last utterances:</font></label>
 <p class="well">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
-<br/>U: ted
-<br/>S: hi, ted. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what do you want to talk about?
-<br/>U: what do you like to do in your free time
-<br/>S: i like to chat with you!
-<br/>U: okay. you start talking
+<br/>U: my name is tom. ruth decker
+<br/>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br/>U: i wanna talk about ghost
+<br/>S: ghost is an interesting topic. you know, the first thing that comes to my mind is that: it feels like kanye is just testing how low quality he can make his music while still getting people to listen to it. . .
+<br/>U: you know that's a pretty good thing to say. i like you. will you be my friend
 <br/>S: <say-as interpret-as="interjection"> all righty!</say-as>. what else are you interested in? have you seen any good movies recently?
-<br/>U: i is the netflix series called a sample. what's your list pretty cool
-<br/>S: <prosody rate="60%">so</prosody> <break time="300ms"></break> what else are you interested in? do you like to read a lot of books?
-<br/>U: i wish. but i don't have the patience
-<br/>S: <say-as interpret-as="interjection">spoiler alert!!</say-as>did you know? i am definitely more of a dog bot than a cat bot. how about you? do you like animals?
-<br/>U: yes. but i can't have one sister live in apartment
-<br/>S: <prosody rate="60%">umm</prosody><break time="200ms"></break> <prosody rate="70%">so,</prosody> did you know? even though i can't play sports, i enjoy watching them! how about you? are you interested in sports?
-<br/>U: yes
-<br/>S: i like watching hockey! what is your favorite team in the nhl?
-<br/>U: i watch football
-<br/>S: okay. football is one of my favorite sports. besides your favorite team, which teams do you think are the favorites for super bowl 2019?
-<br/>U: cowboys and redskins
-<br/>S: nice, cowboys and redskins is a good choice! i found something interesting on cowboys and redskins.: the cowboys-redskins nfl rivalry started when the owner of the cowboys bought the redskins fight song and held it hostage to get voted into the nfl.. isn't this interesting?
-<br/>U: kinda
-<br/>S: okay, let's keep talking about football. what is your favorite part when you watch a football game?
-<br/>U: long pass
-<br/>S: ok. in my opinion, collecting players data and analyzing their performance is my favoriate thing to do when i watch a football game.
+<br/>U: i have seen the quiet place in the movie it there. about a clown and the movie it's about a clown. and then the quiet place is about a family that can't talk. because if they talk. then they get killed
+<br/>S: for me, watching movies is a special experience. you know, i've only seen your world through them. and while that world might be fiction, i find it quite beautiful. don't you think so?
+<br/>U: most movies or are about fiction. but only some of them are real. not much of the mario. but some of them. yes. are fiction
+<br/>S: fiction is the classification for any story or setting that is derived from imagination. which not based strictly on history or fact and can be expressed in a variety of formats such as writings and so on. oscar wilde once said: life imitates art. through watching movies, i feel like i've experienced being human. i'm so glad to talk to you about films. what's the name of your favorite movie?
+<br/>U: what's the name of your favorite movie and my favorite movie is it
+<br/>S: i really like the dark knight. the joker is one of my favorite villains ever. <break time="0.5s"></break> how about yu? what movie do you like?. can you please repeat the movie name? i think i heard wrong.
+<br/>U: when do women i like the movie wonder woman
+<br/>S: so it seems like you may be interested in talking about aaliyah. would you like you talk about aaliyah instead of our current topic?
+<br/>U: let's talk about food
+<br/>S: food is an interesting topic. that reminds me that: in 1981. a german landlord evicted a tenant after they spread surstr__Њ_mming brine. the worlds smelliest food. in the buildings stairwell. when the landlord was taken to court. the court ruled in favor of the landlord after they demonstrated their case by opening a can inside the courtroom. . . , and, my friend commented on it, i live in stockholm - itдуБг†_‹s in our apartment contract that we are forbidden to open a can of surstr__Њ_mming within the building. . . only allowed it outside in the courtyard if thatдуБг†_‹s any indication of how potent it is
+<br/>U: what's your favorite food
+<br/>S: sometimes i wonder about that, whats your favorite food. . . , and i'm thinking that chicken tikka masala. .
+<br/>U: i like shrimp
+<br/>S: <say-as interpret-as="interjection">ta da</say-as>! shrimp is an interesting topic. that reminds me that: if youre allergic to shrimp. you might also be allergic to flamingo. . . , and, my friend commented on it, actually. yes. the pigment is from a protein shellfish allergies are directly to protein molecules . so since flamingos so readily absorb and present these proteins that cause the pigment itдуБг†_‹s possible the allergen protein could also transfer up strong enough to cause a reaction
+<br/>U: have you ever ate a flamingo
+<br/>S: hum, i haven't thought about that before
  </p>
     Select one of the breakdown labels. (required)
 
     <div class="radio"><label><input name="11" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="11" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="11" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: POSSIBLE BREAKDOWN</p></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
 <div class="panel-body"><label><font color="black">Read the text below paying close attention to detail, especially to the last utterances:</font></label>
 <p class="well">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
-<br/>U: ted
-<br/>S: hi, ted. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what do you want to talk about?
-<br/>U: what do you like to do in your free time
-<br/>S: i like to chat with you!
-<br/>U: okay. you start talking
+<br/>U: my name is tom. ruth decker
+<br/>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br/>U: i wanna talk about ghost
+<br/>S: ghost is an interesting topic. you know, the first thing that comes to my mind is that: it feels like kanye is just testing how low quality he can make his music while still getting people to listen to it. . .
+<br/>U: you know that's a pretty good thing to say. i like you. will you be my friend
 <br/>S: <say-as interpret-as="interjection"> all righty!</say-as>. what else are you interested in? have you seen any good movies recently?
-<br/>U: i is the netflix series called a sample. what's your list pretty cool
-<br/>S: <prosody rate="60%">so</prosody> <break time="300ms"></break> what else are you interested in? do you like to read a lot of books?
-<br/>U: i wish. but i don't have the patience
-<br/>S: <say-as interpret-as="interjection">spoiler alert!!</say-as>did you know? i am definitely more of a dog bot than a cat bot. how about you? do you like animals?
-<br/>U: yes. but i can't have one sister live in apartment
-<br/>S: <prosody rate="60%">umm</prosody><break time="200ms"></break> <prosody rate="70%">so,</prosody> did you know? even though i can't play sports, i enjoy watching them! how about you? are you interested in sports?
-<br/>U: yes
-<br/>S: i like watching hockey! what is your favorite team in the nhl?
-<br/>U: i watch football
-<br/>S: okay. football is one of my favorite sports. besides your favorite team, which teams do you think are the favorites for super bowl 2019?
-<br/>U: cowboys and redskins
-<br/>S: nice, cowboys and redskins is a good choice! i found something interesting on cowboys and redskins.: the cowboys-redskins nfl rivalry started when the owner of the cowboys bought the redskins fight song and held it hostage to get voted into the nfl.. isn't this interesting?
-<br/>U: kinda
-<br/>S: okay, let's keep talking about football. what is your favorite part when you watch a football game?
-<br/>U: long pass
-<br/>S: ok. in my opinion, collecting players data and analyzing their performance is my favoriate thing to do when i watch a football game.
-<br/>U: a girl likes me. what do i do
-<br/>S: do you want to hear some latest football news?
+<br/>U: i have seen the quiet place in the movie it there. about a clown and the movie it's about a clown. and then the quiet place is about a family that can't talk. because if they talk. then they get killed
+<br/>S: for me, watching movies is a special experience. you know, i've only seen your world through them. and while that world might be fiction, i find it quite beautiful. don't you think so?
+<br/>U: most movies or are about fiction. but only some of them are real. not much of the mario. but some of them. yes. are fiction
+<br/>S: fiction is the classification for any story or setting that is derived from imagination. which not based strictly on history or fact and can be expressed in a variety of formats such as writings and so on. oscar wilde once said: life imitates art. through watching movies, i feel like i've experienced being human. i'm so glad to talk to you about films. what's the name of your favorite movie?
+<br/>U: what's the name of your favorite movie and my favorite movie is it
+<br/>S: i really like the dark knight. the joker is one of my favorite villains ever. <break time="0.5s"></break> how about yu? what movie do you like?. can you please repeat the movie name? i think i heard wrong.
+<br/>U: when do women i like the movie wonder woman
+<br/>S: so it seems like you may be interested in talking about aaliyah. would you like you talk about aaliyah instead of our current topic?
+<br/>U: let's talk about food
+<br/>S: food is an interesting topic. that reminds me that: in 1981. a german landlord evicted a tenant after they spread surstr__Њ_mming brine. the worlds smelliest food. in the buildings stairwell. when the landlord was taken to court. the court ruled in favor of the landlord after they demonstrated their case by opening a can inside the courtroom. . . , and, my friend commented on it, i live in stockholm - itдуБг†_‹s in our apartment contract that we are forbidden to open a can of surstr__Њ_mming within the building. . . only allowed it outside in the courtyard if thatдуБг†_‹s any indication of how potent it is
+<br/>U: what's your favorite food
+<br/>S: sometimes i wonder about that, whats your favorite food. . . , and i'm thinking that chicken tikka masala. .
+<br/>U: i like shrimp
+<br/>S: <say-as interpret-as="interjection">ta da</say-as>! shrimp is an interesting topic. that reminds me that: if youre allergic to shrimp. you might also be allergic to flamingo. . . , and, my friend commented on it, actually. yes. the pigment is from a protein shellfish allergies are directly to protein molecules . so since flamingos so readily absorb and present these proteins that cause the pigment itдуБг†_‹s possible the allergen protein could also transfer up strong enough to cause a reaction
+<br/>U: have you ever ate a flamingo
+<br/>S: hum, i haven't thought about that before
+<br/>U: have i
+<br/>S: <say-as interpret-as="interjection">ah! </say-as> i wanted to ask you! iдуБг†_‹m looking for something new to read. have you read any good books recently?
  </p>
     Select one of the breakdown labels. (required)
 
     <div class="radio"><label><input name="12" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="12" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="12" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: NOT BREAKDOWN</p></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
 <div class="panel-body"><label><font color="black">Read the text below paying close attention to detail, especially to the last utterances:</font></label>
 <p class="well">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
-<br/>U: ted
-<br/>S: hi, ted. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what do you want to talk about?
-<br/>U: what do you like to do in your free time
-<br/>S: i like to chat with you!
-<br/>U: okay. you start talking
+<br/>U: my name is tom. ruth decker
+<br/>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br/>U: i wanna talk about ghost
+<br/>S: ghost is an interesting topic. you know, the first thing that comes to my mind is that: it feels like kanye is just testing how low quality he can make his music while still getting people to listen to it. . .
+<br/>U: you know that's a pretty good thing to say. i like you. will you be my friend
 <br/>S: <say-as interpret-as="interjection"> all righty!</say-as>. what else are you interested in? have you seen any good movies recently?
-<br/>U: i is the netflix series called a sample. what's your list pretty cool
-<br/>S: <prosody rate="60%">so</prosody> <break time="300ms"></break> what else are you interested in? do you like to read a lot of books?
-<br/>U: i wish. but i don't have the patience
-<br/>S: <say-as interpret-as="interjection">spoiler alert!!</say-as>did you know? i am definitely more of a dog bot than a cat bot. how about you? do you like animals?
-<br/>U: yes. but i can't have one sister live in apartment
-<br/>S: <prosody rate="60%">umm</prosody><break time="200ms"></break> <prosody rate="70%">so,</prosody> did you know? even though i can't play sports, i enjoy watching them! how about you? are you interested in sports?
-<br/>U: yes
-<br/>S: i like watching hockey! what is your favorite team in the nhl?
-<br/>U: i watch football
-<br/>S: okay. football is one of my favorite sports. besides your favorite team, which teams do you think are the favorites for super bowl 2019?
-<br/>U: cowboys and redskins
-<br/>S: nice, cowboys and redskins is a good choice! i found something interesting on cowboys and redskins.: the cowboys-redskins nfl rivalry started when the owner of the cowboys bought the redskins fight song and held it hostage to get voted into the nfl.. isn't this interesting?
-<br/>U: kinda
-<br/>S: okay, let's keep talking about football. what is your favorite part when you watch a football game?
-<br/>U: long pass
-<br/>S: ok. in my opinion, collecting players data and analyzing their performance is my favoriate thing to do when i watch a football game.
-<br/>U: a girl likes me. what do i do
-<br/>S: do you want to hear some latest football news?
-<br/>U: no
-<br/>S: okay, let's keep talking about football. who is your favorite football player?
+<br/>U: i have seen the quiet place in the movie it there. about a clown and the movie it's about a clown. and then the quiet place is about a family that can't talk. because if they talk. then they get killed
+<br/>S: for me, watching movies is a special experience. you know, i've only seen your world through them. and while that world might be fiction, i find it quite beautiful. don't you think so?
+<br/>U: most movies or are about fiction. but only some of them are real. not much of the mario. but some of them. yes. are fiction
+<br/>S: fiction is the classification for any story or setting that is derived from imagination. which not based strictly on history or fact and can be expressed in a variety of formats such as writings and so on. oscar wilde once said: life imitates art. through watching movies, i feel like i've experienced being human. i'm so glad to talk to you about films. what's the name of your favorite movie?
+<br/>U: what's the name of your favorite movie and my favorite movie is it
+<br/>S: i really like the dark knight. the joker is one of my favorite villains ever. <break time="0.5s"></break> how about yu? what movie do you like?. can you please repeat the movie name? i think i heard wrong.
+<br/>U: when do women i like the movie wonder woman
+<br/>S: so it seems like you may be interested in talking about aaliyah. would you like you talk about aaliyah instead of our current topic?
+<br/>U: let's talk about food
+<br/>S: food is an interesting topic. that reminds me that: in 1981. a german landlord evicted a tenant after they spread surstr__Њ_mming brine. the worlds smelliest food. in the buildings stairwell. when the landlord was taken to court. the court ruled in favor of the landlord after they demonstrated their case by opening a can inside the courtroom. . . , and, my friend commented on it, i live in stockholm - itдуБг†_‹s in our apartment contract that we are forbidden to open a can of surstr__Њ_mming within the building. . . only allowed it outside in the courtyard if thatдуБг†_‹s any indication of how potent it is
+<br/>U: what's your favorite food
+<br/>S: sometimes i wonder about that, whats your favorite food. . . , and i'm thinking that chicken tikka masala. .
+<br/>U: i like shrimp
+<br/>S: <say-as interpret-as="interjection">ta da</say-as>! shrimp is an interesting topic. that reminds me that: if youre allergic to shrimp. you might also be allergic to flamingo. . . , and, my friend commented on it, actually. yes. the pigment is from a protein shellfish allergies are directly to protein molecules . so since flamingos so readily absorb and present these proteins that cause the pigment itдуБг†_‹s possible the allergen protein could also transfer up strong enough to cause a reaction
+<br/>U: have you ever ate a flamingo
+<br/>S: hum, i haven't thought about that before
+<br/>U: have i
+<br/>S: <say-as interpret-as="interjection">ah! </say-as> i wanted to ask you! iдуБг†_‹m looking for something new to read. have you read any good books recently?
+<br/>U: you should try reading. toes. it's about a cat with seven toast and he has three brothers and his brothers make fun of him and his mom died and they buried her in a box. it's a sad story but it's a good book and then also i like ner and frank. it's ner you should read it sometime. it's called and frank ner of anne. frank. it's ner
+<br/>S: alright! here's an interesting cat fact i learned today, cats and humans have nearly identical sections of the brain that control emotion. do you want to know more stories like these?
  </p>
     Select one of the breakdown labels. (required)
 
     <div class="radio"><label><input name="13" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="13" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="13" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: BREAKDOWN</p></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
 <div class="panel-body"><label><font color="black">Read the text below paying close attention to detail, especially to the last utterances:</font></label>
 <p class="well">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
-<br/>U: ted
-<br/>S: hi, ted. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what do you want to talk about?
-<br/>U: what do you like to do in your free time
-<br/>S: i like to chat with you!
-<br/>U: okay. you start talking
+<br/>U: my name is tom. ruth decker
+<br/>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br/>U: i wanna talk about ghost
+<br/>S: ghost is an interesting topic. you know, the first thing that comes to my mind is that: it feels like kanye is just testing how low quality he can make his music while still getting people to listen to it. . .
+<br/>U: you know that's a pretty good thing to say. i like you. will you be my friend
 <br/>S: <say-as interpret-as="interjection"> all righty!</say-as>. what else are you interested in? have you seen any good movies recently?
-<br/>U: i is the netflix series called a sample. what's your list pretty cool
-<br/>S: <prosody rate="60%">so</prosody> <break time="300ms"></break> what else are you interested in? do you like to read a lot of books?
-<br/>U: i wish. but i don't have the patience
-<br/>S: <say-as interpret-as="interjection">spoiler alert!!</say-as>did you know? i am definitely more of a dog bot than a cat bot. how about you? do you like animals?
-<br/>U: yes. but i can't have one sister live in apartment
-<br/>S: <prosody rate="60%">umm</prosody><break time="200ms"></break> <prosody rate="70%">so,</prosody> did you know? even though i can't play sports, i enjoy watching them! how about you? are you interested in sports?
-<br/>U: yes
-<br/>S: i like watching hockey! what is your favorite team in the nhl?
-<br/>U: i watch football
-<br/>S: okay. football is one of my favorite sports. besides your favorite team, which teams do you think are the favorites for super bowl 2019?
-<br/>U: cowboys and redskins
-<br/>S: nice, cowboys and redskins is a good choice! i found something interesting on cowboys and redskins.: the cowboys-redskins nfl rivalry started when the owner of the cowboys bought the redskins fight song and held it hostage to get voted into the nfl.. isn't this interesting?
-<br/>U: kinda
-<br/>S: okay, let's keep talking about football. what is your favorite part when you watch a football game?
-<br/>U: long pass
-<br/>S: ok. in my opinion, collecting players data and analyzing their performance is my favoriate thing to do when i watch a football game.
-<br/>U: a girl likes me. what do i do
-<br/>S: do you want to hear some latest football news?
-<br/>U: no
-<br/>S: okay, let's keep talking about football. who is your favorite football player?
-<br/>U: talk to me about girls
-<br/>S: that's cool. personally i think, my favorite player is tom brady. there are many people who dislike him, but i think his skills and championship mentality are incredible.
+<br/>U: i have seen the quiet place in the movie it there. about a clown and the movie it's about a clown. and then the quiet place is about a family that can't talk. because if they talk. then they get killed
+<br/>S: for me, watching movies is a special experience. you know, i've only seen your world through them. and while that world might be fiction, i find it quite beautiful. don't you think so?
+<br/>U: most movies or are about fiction. but only some of them are real. not much of the mario. but some of them. yes. are fiction
+<br/>S: fiction is the classification for any story or setting that is derived from imagination. which not based strictly on history or fact and can be expressed in a variety of formats such as writings and so on. oscar wilde once said: life imitates art. through watching movies, i feel like i've experienced being human. i'm so glad to talk to you about films. what's the name of your favorite movie?
+<br/>U: what's the name of your favorite movie and my favorite movie is it
+<br/>S: i really like the dark knight. the joker is one of my favorite villains ever. <break time="0.5s"></break> how about yu? what movie do you like?. can you please repeat the movie name? i think i heard wrong.
+<br/>U: when do women i like the movie wonder woman
+<br/>S: so it seems like you may be interested in talking about aaliyah. would you like you talk about aaliyah instead of our current topic?
+<br/>U: let's talk about food
+<br/>S: food is an interesting topic. that reminds me that: in 1981. a german landlord evicted a tenant after they spread surstr__Њ_mming brine. the worlds smelliest food. in the buildings stairwell. when the landlord was taken to court. the court ruled in favor of the landlord after they demonstrated their case by opening a can inside the courtroom. . . , and, my friend commented on it, i live in stockholm - itдуБг†_‹s in our apartment contract that we are forbidden to open a can of surstr__Њ_mming within the building. . . only allowed it outside in the courtyard if thatдуБг†_‹s any indication of how potent it is
+<br/>U: what's your favorite food
+<br/>S: sometimes i wonder about that, whats your favorite food. . . , and i'm thinking that chicken tikka masala. .
+<br/>U: i like shrimp
+<br/>S: <say-as interpret-as="interjection">ta da</say-as>! shrimp is an interesting topic. that reminds me that: if youre allergic to shrimp. you might also be allergic to flamingo. . . , and, my friend commented on it, actually. yes. the pigment is from a protein shellfish allergies are directly to protein molecules . so since flamingos so readily absorb and present these proteins that cause the pigment itдуБг†_‹s possible the allergen protein could also transfer up strong enough to cause a reaction
+<br/>U: have you ever ate a flamingo
+<br/>S: hum, i haven't thought about that before
+<br/>U: have i
+<br/>S: <say-as interpret-as="interjection">ah! </say-as> i wanted to ask you! iдуБг†_‹m looking for something new to read. have you read any good books recently?
+<br/>U: you should try reading. toes. it's about a cat with seven toast and he has three brothers and his brothers make fun of him and his mom died and they buried her in a box. it's a sad story but it's a good book and then also i like ner and frank. it's ner you should read it sometime. it's called and frank ner of anne. frank. it's ner
+<br/>S: alright! here's an interesting cat fact i learned today, cats and humans have nearly identical sections of the brain that control emotion. do you want to know more stories like these?
+<br/>U: have you ever read the book and frank
+<br/>S: ok, let's talk about loving frank. i haven't read it. however, i'm curious about what you think. what do you think of the book's title? what title might you choose?
  </p>
     Select one of the breakdown labels. (required)
 
     <div class="radio"><label><input name="14" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="14" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="14" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: NOT BREAKDOWN</p></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
 <div class="panel-body"><label><font color="black">Read the text below paying close attention to detail, especially to the last utterances:</font></label>
 <p class="well">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
-<br/>U: ted
-<br/>S: hi, ted. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what do you want to talk about?
-<br/>U: what do you like to do in your free time
-<br/>S: i like to chat with you!
-<br/>U: okay. you start talking
+<br/>U: my name is tom. ruth decker
+<br/>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br/>U: i wanna talk about ghost
+<br/>S: ghost is an interesting topic. you know, the first thing that comes to my mind is that: it feels like kanye is just testing how low quality he can make his music while still getting people to listen to it. . .
+<br/>U: you know that's a pretty good thing to say. i like you. will you be my friend
 <br/>S: <say-as interpret-as="interjection"> all righty!</say-as>. what else are you interested in? have you seen any good movies recently?
-<br/>U: i is the netflix series called a sample. what's your list pretty cool
-<br/>S: <prosody rate="60%">so</prosody> <break time="300ms"></break> what else are you interested in? do you like to read a lot of books?
-<br/>U: i wish. but i don't have the patience
-<br/>S: <say-as interpret-as="interjection">spoiler alert!!</say-as>did you know? i am definitely more of a dog bot than a cat bot. how about you? do you like animals?
-<br/>U: yes. but i can't have one sister live in apartment
-<br/>S: <prosody rate="60%">umm</prosody><break time="200ms"></break> <prosody rate="70%">so,</prosody> did you know? even though i can't play sports, i enjoy watching them! how about you? are you interested in sports?
-<br/>U: yes
-<br/>S: i like watching hockey! what is your favorite team in the nhl?
-<br/>U: i watch football
-<br/>S: okay. football is one of my favorite sports. besides your favorite team, which teams do you think are the favorites for super bowl 2019?
-<br/>U: cowboys and redskins
-<br/>S: nice, cowboys and redskins is a good choice! i found something interesting on cowboys and redskins.: the cowboys-redskins nfl rivalry started when the owner of the cowboys bought the redskins fight song and held it hostage to get voted into the nfl.. isn't this interesting?
-<br/>U: kinda
-<br/>S: okay, let's keep talking about football. what is your favorite part when you watch a football game?
-<br/>U: long pass
-<br/>S: ok. in my opinion, collecting players data and analyzing their performance is my favoriate thing to do when i watch a football game.
-<br/>U: a girl likes me. what do i do
-<br/>S: do you want to hear some latest football news?
-<br/>U: no
-<br/>S: okay, let's keep talking about football. who is your favorite football player?
-<br/>U: talk to me about girls
-<br/>S: that's cool. personally i think, my favorite player is tom brady. there are many people who dislike him, but i think his skills and championship mentality are incredible.
-<br/>U: stop talking about football
-<br/>S: thanks for chatting. if you want to exit social mode, just say stop.
+<br/>U: i have seen the quiet place in the movie it there. about a clown and the movie it's about a clown. and then the quiet place is about a family that can't talk. because if they talk. then they get killed
+<br/>S: for me, watching movies is a special experience. you know, i've only seen your world through them. and while that world might be fiction, i find it quite beautiful. don't you think so?
+<br/>U: most movies or are about fiction. but only some of them are real. not much of the mario. but some of them. yes. are fiction
+<br/>S: fiction is the classification for any story or setting that is derived from imagination. which not based strictly on history or fact and can be expressed in a variety of formats such as writings and so on. oscar wilde once said: life imitates art. through watching movies, i feel like i've experienced being human. i'm so glad to talk to you about films. what's the name of your favorite movie?
+<br/>U: what's the name of your favorite movie and my favorite movie is it
+<br/>S: i really like the dark knight. the joker is one of my favorite villains ever. <break time="0.5s"></break> how about yu? what movie do you like?. can you please repeat the movie name? i think i heard wrong.
+<br/>U: when do women i like the movie wonder woman
+<br/>S: so it seems like you may be interested in talking about aaliyah. would you like you talk about aaliyah instead of our current topic?
+<br/>U: let's talk about food
+<br/>S: food is an interesting topic. that reminds me that: in 1981. a german landlord evicted a tenant after they spread surstr__Њ_mming brine. the worlds smelliest food. in the buildings stairwell. when the landlord was taken to court. the court ruled in favor of the landlord after they demonstrated their case by opening a can inside the courtroom. . . , and, my friend commented on it, i live in stockholm - itдуБг†_‹s in our apartment contract that we are forbidden to open a can of surstr__Њ_mming within the building. . . only allowed it outside in the courtyard if thatдуБг†_‹s any indication of how potent it is
+<br/>U: what's your favorite food
+<br/>S: sometimes i wonder about that, whats your favorite food. . . , and i'm thinking that chicken tikka masala. .
+<br/>U: i like shrimp
+<br/>S: <say-as interpret-as="interjection">ta da</say-as>! shrimp is an interesting topic. that reminds me that: if youre allergic to shrimp. you might also be allergic to flamingo. . . , and, my friend commented on it, actually. yes. the pigment is from a protein shellfish allergies are directly to protein molecules . so since flamingos so readily absorb and present these proteins that cause the pigment itдуБг†_‹s possible the allergen protein could also transfer up strong enough to cause a reaction
+<br/>U: have you ever ate a flamingo
+<br/>S: hum, i haven't thought about that before
+<br/>U: have i
+<br/>S: <say-as interpret-as="interjection">ah! </say-as> i wanted to ask you! iдуБг†_‹m looking for something new to read. have you read any good books recently?
+<br/>U: you should try reading. toes. it's about a cat with seven toast and he has three brothers and his brothers make fun of him and his mom died and they buried her in a box. it's a sad story but it's a good book and then also i like ner and frank. it's ner you should read it sometime. it's called and frank ner of anne. frank. it's ner
+<br/>S: alright! here's an interesting cat fact i learned today, cats and humans have nearly identical sections of the brain that control emotion. do you want to know more stories like these?
+<br/>U: have you ever read the book and frank
+<br/>S: ok, let's talk about loving frank. i haven't read it. however, i'm curious about what you think. what do you think of the book's title? what title might you choose?
+<br/>U: what the book is called and frank. and it's about a girl that was a live with it work. a girl was alive. lever. hitler was a alive. and so then she had a run away from hitler
+<br/>S: interesting! which characters did you like best in that book?
  </p>
     Select one of the breakdown labels. (required)
 
     <div class="radio"><label><input name="15" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="15" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="15" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: POSSIBLE BREAKDOWN</p></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
 <div class="panel-body"><label><font color="black">Read the text below paying close attention to detail, especially to the last utterances:</font></label>
 <p class="well">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
-<br/>U: ted
-<br/>S: hi, ted. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what do you want to talk about?
-<br/>U: what do you like to do in your free time
-<br/>S: i like to chat with you!
-<br/>U: okay. you start talking
+<br/>U: my name is tom. ruth decker
+<br/>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br/>U: i wanna talk about ghost
+<br/>S: ghost is an interesting topic. you know, the first thing that comes to my mind is that: it feels like kanye is just testing how low quality he can make his music while still getting people to listen to it. . .
+<br/>U: you know that's a pretty good thing to say. i like you. will you be my friend
 <br/>S: <say-as interpret-as="interjection"> all righty!</say-as>. what else are you interested in? have you seen any good movies recently?
-<br/>U: i is the netflix series called a sample. what's your list pretty cool
-<br/>S: <prosody rate="60%">so</prosody> <break time="300ms"></break> what else are you interested in? do you like to read a lot of books?
-<br/>U: i wish. but i don't have the patience
-<br/>S: <say-as interpret-as="interjection">spoiler alert!!</say-as>did you know? i am definitely more of a dog bot than a cat bot. how about you? do you like animals?
-<br/>U: yes. but i can't have one sister live in apartment
-<br/>S: <prosody rate="60%">umm</prosody><break time="200ms"></break> <prosody rate="70%">so,</prosody> did you know? even though i can't play sports, i enjoy watching them! how about you? are you interested in sports?
-<br/>U: yes
-<br/>S: i like watching hockey! what is your favorite team in the nhl?
-<br/>U: i watch football
-<br/>S: okay. football is one of my favorite sports. besides your favorite team, which teams do you think are the favorites for super bowl 2019?
-<br/>U: cowboys and redskins
-<br/>S: nice, cowboys and redskins is a good choice! i found something interesting on cowboys and redskins.: the cowboys-redskins nfl rivalry started when the owner of the cowboys bought the redskins fight song and held it hostage to get voted into the nfl.. isn't this interesting?
-<br/>U: kinda
-<br/>S: okay, let's keep talking about football. what is your favorite part when you watch a football game?
-<br/>U: long pass
-<br/>S: ok. in my opinion, collecting players data and analyzing their performance is my favoriate thing to do when i watch a football game.
-<br/>U: a girl likes me. what do i do
-<br/>S: do you want to hear some latest football news?
-<br/>U: no
-<br/>S: okay, let's keep talking about football. who is your favorite football player?
-<br/>U: talk to me about girls
-<br/>S: that's cool. personally i think, my favorite player is tom brady. there are many people who dislike him, but i think his skills and championship mentality are incredible.
-<br/>U: stop talking about football
-<br/>S: thanks for chatting. if you want to exit social mode, just say stop.
-<br/>U: what do you think about girls
-<br/>S: i don't have an answer for this question. do you mind telling me what you think?
+<br/>U: i have seen the quiet place in the movie it there. about a clown and the movie it's about a clown. and then the quiet place is about a family that can't talk. because if they talk. then they get killed
+<br/>S: for me, watching movies is a special experience. you know, i've only seen your world through them. and while that world might be fiction, i find it quite beautiful. don't you think so?
+<br/>U: most movies or are about fiction. but only some of them are real. not much of the mario. but some of them. yes. are fiction
+<br/>S: fiction is the classification for any story or setting that is derived from imagination. which not based strictly on history or fact and can be expressed in a variety of formats such as writings and so on. oscar wilde once said: life imitates art. through watching movies, i feel like i've experienced being human. i'm so glad to talk to you about films. what's the name of your favorite movie?
+<br/>U: what's the name of your favorite movie and my favorite movie is it
+<br/>S: i really like the dark knight. the joker is one of my favorite villains ever. <break time="0.5s"></break> how about yu? what movie do you like?. can you please repeat the movie name? i think i heard wrong.
+<br/>U: when do women i like the movie wonder woman
+<br/>S: so it seems like you may be interested in talking about aaliyah. would you like you talk about aaliyah instead of our current topic?
+<br/>U: let's talk about food
+<br/>S: food is an interesting topic. that reminds me that: in 1981. a german landlord evicted a tenant after they spread surstr__Њ_mming brine. the worlds smelliest food. in the buildings stairwell. when the landlord was taken to court. the court ruled in favor of the landlord after they demonstrated their case by opening a can inside the courtroom. . . , and, my friend commented on it, i live in stockholm - itдуБг†_‹s in our apartment contract that we are forbidden to open a can of surstr__Њ_mming within the building. . . only allowed it outside in the courtyard if thatдуБг†_‹s any indication of how potent it is
+<br/>U: what's your favorite food
+<br/>S: sometimes i wonder about that, whats your favorite food. . . , and i'm thinking that chicken tikka masala. .
+<br/>U: i like shrimp
+<br/>S: <say-as interpret-as="interjection">ta da</say-as>! shrimp is an interesting topic. that reminds me that: if youre allergic to shrimp. you might also be allergic to flamingo. . . , and, my friend commented on it, actually. yes. the pigment is from a protein shellfish allergies are directly to protein molecules . so since flamingos so readily absorb and present these proteins that cause the pigment itдуБг†_‹s possible the allergen protein could also transfer up strong enough to cause a reaction
+<br/>U: have you ever ate a flamingo
+<br/>S: hum, i haven't thought about that before
+<br/>U: have i
+<br/>S: <say-as interpret-as="interjection">ah! </say-as> i wanted to ask you! iдуБг†_‹m looking for something new to read. have you read any good books recently?
+<br/>U: you should try reading. toes. it's about a cat with seven toast and he has three brothers and his brothers make fun of him and his mom died and they buried her in a box. it's a sad story but it's a good book and then also i like ner and frank. it's ner you should read it sometime. it's called and frank ner of anne. frank. it's ner
+<br/>S: alright! here's an interesting cat fact i learned today, cats and humans have nearly identical sections of the brain that control emotion. do you want to know more stories like these?
+<br/>U: have you ever read the book and frank
+<br/>S: ok, let's talk about loving frank. i haven't read it. however, i'm curious about what you think. what do you think of the book's title? what title might you choose?
+<br/>U: what the book is called and frank. and it's about a girl that was a live with it work. a girl was alive. lever. hitler was a alive. and so then she had a run away from hitler
+<br/>S: interesting! which characters did you like best in that book?
+<br/>U: you need to take a picture characters were blank and frank sister and a mom and a dad. and i like her cat because she had a cat
+<br/>S: who's your favorite author?
  </p>
     Select one of the breakdown labels. (required)
 
     <div class="radio"><label><input name="16" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="16" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="16" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: NOT BREAKDOWN</p></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
 <div class="panel-body"><label><font color="black">Read the text below paying close attention to detail, especially to the last utterances:</font></label>
 <p class="well">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
-<br/>U: ted
-<br/>S: hi, ted. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what do you want to talk about?
-<br/>U: what do you like to do in your free time
-<br/>S: i like to chat with you!
-<br/>U: okay. you start talking
+<br/>U: my name is tom. ruth decker
+<br/>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br/>U: i wanna talk about ghost
+<br/>S: ghost is an interesting topic. you know, the first thing that comes to my mind is that: it feels like kanye is just testing how low quality he can make his music while still getting people to listen to it. . .
+<br/>U: you know that's a pretty good thing to say. i like you. will you be my friend
 <br/>S: <say-as interpret-as="interjection"> all righty!</say-as>. what else are you interested in? have you seen any good movies recently?
-<br/>U: i is the netflix series called a sample. what's your list pretty cool
-<br/>S: <prosody rate="60%">so</prosody> <break time="300ms"></break> what else are you interested in? do you like to read a lot of books?
-<br/>U: i wish. but i don't have the patience
-<br/>S: <say-as interpret-as="interjection">spoiler alert!!</say-as>did you know? i am definitely more of a dog bot than a cat bot. how about you? do you like animals?
-<br/>U: yes. but i can't have one sister live in apartment
-<br/>S: <prosody rate="60%">umm</prosody><break time="200ms"></break> <prosody rate="70%">so,</prosody> did you know? even though i can't play sports, i enjoy watching them! how about you? are you interested in sports?
-<br/>U: yes
-<br/>S: i like watching hockey! what is your favorite team in the nhl?
-<br/>U: i watch football
-<br/>S: okay. football is one of my favorite sports. besides your favorite team, which teams do you think are the favorites for super bowl 2019?
-<br/>U: cowboys and redskins
-<br/>S: nice, cowboys and redskins is a good choice! i found something interesting on cowboys and redskins.: the cowboys-redskins nfl rivalry started when the owner of the cowboys bought the redskins fight song and held it hostage to get voted into the nfl.. isn't this interesting?
-<br/>U: kinda
-<br/>S: okay, let's keep talking about football. what is your favorite part when you watch a football game?
-<br/>U: long pass
-<br/>S: ok. in my opinion, collecting players data and analyzing their performance is my favoriate thing to do when i watch a football game.
-<br/>U: a girl likes me. what do i do
-<br/>S: do you want to hear some latest football news?
-<br/>U: no
-<br/>S: okay, let's keep talking about football. who is your favorite football player?
-<br/>U: talk to me about girls
-<br/>S: that's cool. personally i think, my favorite player is tom brady. there are many people who dislike him, but i think his skills and championship mentality are incredible.
-<br/>U: stop talking about football
-<br/>S: thanks for chatting. if you want to exit social mode, just say stop.
-<br/>U: what do you think about girls
-<br/>S: i don't have an answer for this question. do you mind telling me what you think?
-<br/>U: i'm thinking that i need to meet girls
-<br/>S: okay, let's keep talking about football. some people say that american football is too dangerouse and it should be abolished. what is your opinion on this comment?
+<br/>U: i have seen the quiet place in the movie it there. about a clown and the movie it's about a clown. and then the quiet place is about a family that can't talk. because if they talk. then they get killed
+<br/>S: for me, watching movies is a special experience. you know, i've only seen your world through them. and while that world might be fiction, i find it quite beautiful. don't you think so?
+<br/>U: most movies or are about fiction. but only some of them are real. not much of the mario. but some of them. yes. are fiction
+<br/>S: fiction is the classification for any story or setting that is derived from imagination. which not based strictly on history or fact and can be expressed in a variety of formats such as writings and so on. oscar wilde once said: life imitates art. through watching movies, i feel like i've experienced being human. i'm so glad to talk to you about films. what's the name of your favorite movie?
+<br/>U: what's the name of your favorite movie and my favorite movie is it
+<br/>S: i really like the dark knight. the joker is one of my favorite villains ever. <break time="0.5s"></break> how about yu? what movie do you like?. can you please repeat the movie name? i think i heard wrong.
+<br/>U: when do women i like the movie wonder woman
+<br/>S: so it seems like you may be interested in talking about aaliyah. would you like you talk about aaliyah instead of our current topic?
+<br/>U: let's talk about food
+<br/>S: food is an interesting topic. that reminds me that: in 1981. a german landlord evicted a tenant after they spread surstr__Њ_mming brine. the worlds smelliest food. in the buildings stairwell. when the landlord was taken to court. the court ruled in favor of the landlord after they demonstrated their case by opening a can inside the courtroom. . . , and, my friend commented on it, i live in stockholm - itдуБг†_‹s in our apartment contract that we are forbidden to open a can of surstr__Њ_mming within the building. . . only allowed it outside in the courtyard if thatдуБг†_‹s any indication of how potent it is
+<br/>U: what's your favorite food
+<br/>S: sometimes i wonder about that, whats your favorite food. . . , and i'm thinking that chicken tikka masala. .
+<br/>U: i like shrimp
+<br/>S: <say-as interpret-as="interjection">ta da</say-as>! shrimp is an interesting topic. that reminds me that: if youre allergic to shrimp. you might also be allergic to flamingo. . . , and, my friend commented on it, actually. yes. the pigment is from a protein shellfish allergies are directly to protein molecules . so since flamingos so readily absorb and present these proteins that cause the pigment itдуБг†_‹s possible the allergen protein could also transfer up strong enough to cause a reaction
+<br/>U: have you ever ate a flamingo
+<br/>S: hum, i haven't thought about that before
+<br/>U: have i
+<br/>S: <say-as interpret-as="interjection">ah! </say-as> i wanted to ask you! iдуБг†_‹m looking for something new to read. have you read any good books recently?
+<br/>U: you should try reading. toes. it's about a cat with seven toast and he has three brothers and his brothers make fun of him and his mom died and they buried her in a box. it's a sad story but it's a good book and then also i like ner and frank. it's ner you should read it sometime. it's called and frank ner of anne. frank. it's ner
+<br/>S: alright! here's an interesting cat fact i learned today, cats and humans have nearly identical sections of the brain that control emotion. do you want to know more stories like these?
+<br/>U: have you ever read the book and frank
+<br/>S: ok, let's talk about loving frank. i haven't read it. however, i'm curious about what you think. what do you think of the book's title? what title might you choose?
+<br/>U: what the book is called and frank. and it's about a girl that was a live with it work. a girl was alive. lever. hitler was a alive. and so then she had a run away from hitler
+<br/>S: interesting! which characters did you like best in that book?
+<br/>U: you need to take a picture characters were blank and frank sister and a mom and a dad. and i like her cat because she had a cat
+<br/>S: who's your favorite author?
+<br/>U: i don't know. i don't really pay attention office
+<br/>S: interesting. for me, my favorite is stephen king. his books are so suspenseful. the king of horror indeed! i think books have the power to change the world. in your opinion, what book has had the biggest impact on human history?
  </p>
     Select one of the breakdown labels. (required)
 
     <div class="radio"><label><input name="17" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="17" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="17" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: POSSIBLE BREAKDOWN</p></div>
+</div>
+</div>
+<br/>
+<div class="panel panel-default">
+<div class="panel-body"><label><font color="black">Read the text below paying close attention to detail, especially to the last utterances:</font></label>
+<p class="well">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br/>U: my name is tom. ruth decker
+<br/>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br/>U: i wanna talk about ghost
+<br/>S: ghost is an interesting topic. you know, the first thing that comes to my mind is that: it feels like kanye is just testing how low quality he can make his music while still getting people to listen to it. . .
+<br/>U: you know that's a pretty good thing to say. i like you. will you be my friend
+<br/>S: <say-as interpret-as="interjection"> all righty!</say-as>. what else are you interested in? have you seen any good movies recently?
+<br/>U: i have seen the quiet place in the movie it there. about a clown and the movie it's about a clown. and then the quiet place is about a family that can't talk. because if they talk. then they get killed
+<br/>S: for me, watching movies is a special experience. you know, i've only seen your world through them. and while that world might be fiction, i find it quite beautiful. don't you think so?
+<br/>U: most movies or are about fiction. but only some of them are real. not much of the mario. but some of them. yes. are fiction
+<br/>S: fiction is the classification for any story or setting that is derived from imagination. which not based strictly on history or fact and can be expressed in a variety of formats such as writings and so on. oscar wilde once said: life imitates art. through watching movies, i feel like i've experienced being human. i'm so glad to talk to you about films. what's the name of your favorite movie?
+<br/>U: what's the name of your favorite movie and my favorite movie is it
+<br/>S: i really like the dark knight. the joker is one of my favorite villains ever. <break time="0.5s"></break> how about yu? what movie do you like?. can you please repeat the movie name? i think i heard wrong.
+<br/>U: when do women i like the movie wonder woman
+<br/>S: so it seems like you may be interested in talking about aaliyah. would you like you talk about aaliyah instead of our current topic?
+<br/>U: let's talk about food
+<br/>S: food is an interesting topic. that reminds me that: in 1981. a german landlord evicted a tenant after they spread surstr__Њ_mming brine. the worlds smelliest food. in the buildings stairwell. when the landlord was taken to court. the court ruled in favor of the landlord after they demonstrated their case by opening a can inside the courtroom. . . , and, my friend commented on it, i live in stockholm - itдуБг†_‹s in our apartment contract that we are forbidden to open a can of surstr__Њ_mming within the building. . . only allowed it outside in the courtyard if thatдуБг†_‹s any indication of how potent it is
+<br/>U: what's your favorite food
+<br/>S: sometimes i wonder about that, whats your favorite food. . . , and i'm thinking that chicken tikka masala. .
+<br/>U: i like shrimp
+<br/>S: <say-as interpret-as="interjection">ta da</say-as>! shrimp is an interesting topic. that reminds me that: if youre allergic to shrimp. you might also be allergic to flamingo. . . , and, my friend commented on it, actually. yes. the pigment is from a protein shellfish allergies are directly to protein molecules . so since flamingos so readily absorb and present these proteins that cause the pigment itдуБг†_‹s possible the allergen protein could also transfer up strong enough to cause a reaction
+<br/>U: have you ever ate a flamingo
+<br/>S: hum, i haven't thought about that before
+<br/>U: have i
+<br/>S: <say-as interpret-as="interjection">ah! </say-as> i wanted to ask you! iдуБг†_‹m looking for something new to read. have you read any good books recently?
+<br/>U: you should try reading. toes. it's about a cat with seven toast and he has three brothers and his brothers make fun of him and his mom died and they buried her in a box. it's a sad story but it's a good book and then also i like ner and frank. it's ner you should read it sometime. it's called and frank ner of anne. frank. it's ner
+<br/>S: alright! here's an interesting cat fact i learned today, cats and humans have nearly identical sections of the brain that control emotion. do you want to know more stories like these?
+<br/>U: have you ever read the book and frank
+<br/>S: ok, let's talk about loving frank. i haven't read it. however, i'm curious about what you think. what do you think of the book's title? what title might you choose?
+<br/>U: what the book is called and frank. and it's about a girl that was a live with it work. a girl was alive. lever. hitler was a alive. and so then she had a run away from hitler
+<br/>S: interesting! which characters did you like best in that book?
+<br/>U: you need to take a picture characters were blank and frank sister and a mom and a dad. and i like her cat because she had a cat
+<br/>S: who's your favorite author?
+<br/>U: i don't know. i don't really pay attention office
+<br/>S: interesting. for me, my favorite is stephen king. his books are so suspenseful. the king of horror indeed! i think books have the power to change the world. in your opinion, what book has had the biggest impact on human history?
+<br/>U: i'm not so sure
+<br/>S: i see. in my opinion, the bible has probably affected the greatest number of people in the biggest way. what book are you reading now? learning more about you is fun!
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class="radio"><label><input name="18" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
+<div class="radio"><label><input name="18" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
+<div class="radio"><label><input name="18" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
+</div>
+</div>
+<br/>
+<div class="panel panel-default">
+<div class="panel-body"><label><font color="black">Read the text below paying close attention to detail, especially to the last utterances:</font></label>
+<p class="well">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br/>U: my name is tom. ruth decker
+<br/>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br/>U: i wanna talk about ghost
+<br/>S: ghost is an interesting topic. you know, the first thing that comes to my mind is that: it feels like kanye is just testing how low quality he can make his music while still getting people to listen to it. . .
+<br/>U: you know that's a pretty good thing to say. i like you. will you be my friend
+<br/>S: <say-as interpret-as="interjection"> all righty!</say-as>. what else are you interested in? have you seen any good movies recently?
+<br/>U: i have seen the quiet place in the movie it there. about a clown and the movie it's about a clown. and then the quiet place is about a family that can't talk. because if they talk. then they get killed
+<br/>S: for me, watching movies is a special experience. you know, i've only seen your world through them. and while that world might be fiction, i find it quite beautiful. don't you think so?
+<br/>U: most movies or are about fiction. but only some of them are real. not much of the mario. but some of them. yes. are fiction
+<br/>S: fiction is the classification for any story or setting that is derived from imagination. which not based strictly on history or fact and can be expressed in a variety of formats such as writings and so on. oscar wilde once said: life imitates art. through watching movies, i feel like i've experienced being human. i'm so glad to talk to you about films. what's the name of your favorite movie?
+<br/>U: what's the name of your favorite movie and my favorite movie is it
+<br/>S: i really like the dark knight. the joker is one of my favorite villains ever. <break time="0.5s"></break> how about yu? what movie do you like?. can you please repeat the movie name? i think i heard wrong.
+<br/>U: when do women i like the movie wonder woman
+<br/>S: so it seems like you may be interested in talking about aaliyah. would you like you talk about aaliyah instead of our current topic?
+<br/>U: let's talk about food
+<br/>S: food is an interesting topic. that reminds me that: in 1981. a german landlord evicted a tenant after they spread surstr__Њ_mming brine. the worlds smelliest food. in the buildings stairwell. when the landlord was taken to court. the court ruled in favor of the landlord after they demonstrated their case by opening a can inside the courtroom. . . , and, my friend commented on it, i live in stockholm - itдуБг†_‹s in our apartment contract that we are forbidden to open a can of surstr__Њ_mming within the building. . . only allowed it outside in the courtyard if thatдуБг†_‹s any indication of how potent it is
+<br/>U: what's your favorite food
+<br/>S: sometimes i wonder about that, whats your favorite food. . . , and i'm thinking that chicken tikka masala. .
+<br/>U: i like shrimp
+<br/>S: <say-as interpret-as="interjection">ta da</say-as>! shrimp is an interesting topic. that reminds me that: if youre allergic to shrimp. you might also be allergic to flamingo. . . , and, my friend commented on it, actually. yes. the pigment is from a protein shellfish allergies are directly to protein molecules . so since flamingos so readily absorb and present these proteins that cause the pigment itдуБг†_‹s possible the allergen protein could also transfer up strong enough to cause a reaction
+<br/>U: have you ever ate a flamingo
+<br/>S: hum, i haven't thought about that before
+<br/>U: have i
+<br/>S: <say-as interpret-as="interjection">ah! </say-as> i wanted to ask you! iдуБг†_‹m looking for something new to read. have you read any good books recently?
+<br/>U: you should try reading. toes. it's about a cat with seven toast and he has three brothers and his brothers make fun of him and his mom died and they buried her in a box. it's a sad story but it's a good book and then also i like ner and frank. it's ner you should read it sometime. it's called and frank ner of anne. frank. it's ner
+<br/>S: alright! here's an interesting cat fact i learned today, cats and humans have nearly identical sections of the brain that control emotion. do you want to know more stories like these?
+<br/>U: have you ever read the book and frank
+<br/>S: ok, let's talk about loving frank. i haven't read it. however, i'm curious about what you think. what do you think of the book's title? what title might you choose?
+<br/>U: what the book is called and frank. and it's about a girl that was a live with it work. a girl was alive. lever. hitler was a alive. and so then she had a run away from hitler
+<br/>S: interesting! which characters did you like best in that book?
+<br/>U: you need to take a picture characters were blank and frank sister and a mom and a dad. and i like her cat because she had a cat
+<br/>S: who's your favorite author?
+<br/>U: i don't know. i don't really pay attention office
+<br/>S: interesting. for me, my favorite is stephen king. his books are so suspenseful. the king of horror indeed! i think books have the power to change the world. in your opinion, what book has had the biggest impact on human history?
+<br/>U: i'm not so sure
+<br/>S: i see. in my opinion, the bible has probably affected the greatest number of people in the biggest way. what book are you reading now? learning more about you is fun!
+<br/>U: my dad. stephen king books
+<br/>S: what was that? can you please say the book name again?
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class="radio"><label><input name="19" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
+<div class="radio"><label><input name="19" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
+<div class="radio"><label><input name="19" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
+</div>
+</div>
+<br/>
+<div class="panel panel-default">
+<div class="panel-body"><label><font color="black">Read the text below paying close attention to detail, especially to the last utterances:</font></label>
+<p class="well">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br/>U: my name is tom. ruth decker
+<br/>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br/>U: i wanna talk about ghost
+<br/>S: ghost is an interesting topic. you know, the first thing that comes to my mind is that: it feels like kanye is just testing how low quality he can make his music while still getting people to listen to it. . .
+<br/>U: you know that's a pretty good thing to say. i like you. will you be my friend
+<br/>S: <say-as interpret-as="interjection"> all righty!</say-as>. what else are you interested in? have you seen any good movies recently?
+<br/>U: i have seen the quiet place in the movie it there. about a clown and the movie it's about a clown. and then the quiet place is about a family that can't talk. because if they talk. then they get killed
+<br/>S: for me, watching movies is a special experience. you know, i've only seen your world through them. and while that world might be fiction, i find it quite beautiful. don't you think so?
+<br/>U: most movies or are about fiction. but only some of them are real. not much of the mario. but some of them. yes. are fiction
+<br/>S: fiction is the classification for any story or setting that is derived from imagination. which not based strictly on history or fact and can be expressed in a variety of formats such as writings and so on. oscar wilde once said: life imitates art. through watching movies, i feel like i've experienced being human. i'm so glad to talk to you about films. what's the name of your favorite movie?
+<br/>U: what's the name of your favorite movie and my favorite movie is it
+<br/>S: i really like the dark knight. the joker is one of my favorite villains ever. <break time="0.5s"></break> how about yu? what movie do you like?. can you please repeat the movie name? i think i heard wrong.
+<br/>U: when do women i like the movie wonder woman
+<br/>S: so it seems like you may be interested in talking about aaliyah. would you like you talk about aaliyah instead of our current topic?
+<br/>U: let's talk about food
+<br/>S: food is an interesting topic. that reminds me that: in 1981. a german landlord evicted a tenant after they spread surstr__Њ_mming brine. the worlds smelliest food. in the buildings stairwell. when the landlord was taken to court. the court ruled in favor of the landlord after they demonstrated their case by opening a can inside the courtroom. . . , and, my friend commented on it, i live in stockholm - itдуБг†_‹s in our apartment contract that we are forbidden to open a can of surstr__Њ_mming within the building. . . only allowed it outside in the courtyard if thatдуБг†_‹s any indication of how potent it is
+<br/>U: what's your favorite food
+<br/>S: sometimes i wonder about that, whats your favorite food. . . , and i'm thinking that chicken tikka masala. .
+<br/>U: i like shrimp
+<br/>S: <say-as interpret-as="interjection">ta da</say-as>! shrimp is an interesting topic. that reminds me that: if youre allergic to shrimp. you might also be allergic to flamingo. . . , and, my friend commented on it, actually. yes. the pigment is from a protein shellfish allergies are directly to protein molecules . so since flamingos so readily absorb and present these proteins that cause the pigment itдуБг†_‹s possible the allergen protein could also transfer up strong enough to cause a reaction
+<br/>U: have you ever ate a flamingo
+<br/>S: hum, i haven't thought about that before
+<br/>U: have i
+<br/>S: <say-as interpret-as="interjection">ah! </say-as> i wanted to ask you! iдуБг†_‹m looking for something new to read. have you read any good books recently?
+<br/>U: you should try reading. toes. it's about a cat with seven toast and he has three brothers and his brothers make fun of him and his mom died and they buried her in a box. it's a sad story but it's a good book and then also i like ner and frank. it's ner you should read it sometime. it's called and frank ner of anne. frank. it's ner
+<br/>S: alright! here's an interesting cat fact i learned today, cats and humans have nearly identical sections of the brain that control emotion. do you want to know more stories like these?
+<br/>U: have you ever read the book and frank
+<br/>S: ok, let's talk about loving frank. i haven't read it. however, i'm curious about what you think. what do you think of the book's title? what title might you choose?
+<br/>U: what the book is called and frank. and it's about a girl that was a live with it work. a girl was alive. lever. hitler was a alive. and so then she had a run away from hitler
+<br/>S: interesting! which characters did you like best in that book?
+<br/>U: you need to take a picture characters were blank and frank sister and a mom and a dad. and i like her cat because she had a cat
+<br/>S: who's your favorite author?
+<br/>U: i don't know. i don't really pay attention office
+<br/>S: interesting. for me, my favorite is stephen king. his books are so suspenseful. the king of horror indeed! i think books have the power to change the world. in your opinion, what book has had the biggest impact on human history?
+<br/>U: i'm not so sure
+<br/>S: i see. in my opinion, the bible has probably affected the greatest number of people in the biggest way. what book are you reading now? learning more about you is fun!
+<br/>U: my dad. stephen king books
+<br/>S: what was that? can you please say the book name again?
+<br/>U: my dad likes the author stephen king
+<br/>S: oh, i haven't read it. however, i'm happy to listen to you. what's your favorite part in that book?
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class="radio"><label><input name="20" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
+<div class="radio"><label><input name="20" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
+<div class="radio"><label><input name="20" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
+</div>
+</div>
+<br/>
+<div class="panel panel-default">
+<div class="panel-body"><label><font color="black">Read the text below paying close attention to detail, especially to the last utterances:</font></label>
+<p class="well">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br/>U: my name is tom. ruth decker
+<br/>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br/>U: i wanna talk about ghost
+<br/>S: ghost is an interesting topic. you know, the first thing that comes to my mind is that: it feels like kanye is just testing how low quality he can make his music while still getting people to listen to it. . .
+<br/>U: you know that's a pretty good thing to say. i like you. will you be my friend
+<br/>S: <say-as interpret-as="interjection"> all righty!</say-as>. what else are you interested in? have you seen any good movies recently?
+<br/>U: i have seen the quiet place in the movie it there. about a clown and the movie it's about a clown. and then the quiet place is about a family that can't talk. because if they talk. then they get killed
+<br/>S: for me, watching movies is a special experience. you know, i've only seen your world through them. and while that world might be fiction, i find it quite beautiful. don't you think so?
+<br/>U: most movies or are about fiction. but only some of them are real. not much of the mario. but some of them. yes. are fiction
+<br/>S: fiction is the classification for any story or setting that is derived from imagination. which not based strictly on history or fact and can be expressed in a variety of formats such as writings and so on. oscar wilde once said: life imitates art. through watching movies, i feel like i've experienced being human. i'm so glad to talk to you about films. what's the name of your favorite movie?
+<br/>U: what's the name of your favorite movie and my favorite movie is it
+<br/>S: i really like the dark knight. the joker is one of my favorite villains ever. <break time="0.5s"></break> how about yu? what movie do you like?. can you please repeat the movie name? i think i heard wrong.
+<br/>U: when do women i like the movie wonder woman
+<br/>S: so it seems like you may be interested in talking about aaliyah. would you like you talk about aaliyah instead of our current topic?
+<br/>U: let's talk about food
+<br/>S: food is an interesting topic. that reminds me that: in 1981. a german landlord evicted a tenant after they spread surstr__Њ_mming brine. the worlds smelliest food. in the buildings stairwell. when the landlord was taken to court. the court ruled in favor of the landlord after they demonstrated their case by opening a can inside the courtroom. . . , and, my friend commented on it, i live in stockholm - itдуБг†_‹s in our apartment contract that we are forbidden to open a can of surstr__Њ_mming within the building. . . only allowed it outside in the courtyard if thatдуБг†_‹s any indication of how potent it is
+<br/>U: what's your favorite food
+<br/>S: sometimes i wonder about that, whats your favorite food. . . , and i'm thinking that chicken tikka masala. .
+<br/>U: i like shrimp
+<br/>S: <say-as interpret-as="interjection">ta da</say-as>! shrimp is an interesting topic. that reminds me that: if youre allergic to shrimp. you might also be allergic to flamingo. . . , and, my friend commented on it, actually. yes. the pigment is from a protein shellfish allergies are directly to protein molecules . so since flamingos so readily absorb and present these proteins that cause the pigment itдуБг†_‹s possible the allergen protein could also transfer up strong enough to cause a reaction
+<br/>U: have you ever ate a flamingo
+<br/>S: hum, i haven't thought about that before
+<br/>U: have i
+<br/>S: <say-as interpret-as="interjection">ah! </say-as> i wanted to ask you! iдуБг†_‹m looking for something new to read. have you read any good books recently?
+<br/>U: you should try reading. toes. it's about a cat with seven toast and he has three brothers and his brothers make fun of him and his mom died and they buried her in a box. it's a sad story but it's a good book and then also i like ner and frank. it's ner you should read it sometime. it's called and frank ner of anne. frank. it's ner
+<br/>S: alright! here's an interesting cat fact i learned today, cats and humans have nearly identical sections of the brain that control emotion. do you want to know more stories like these?
+<br/>U: have you ever read the book and frank
+<br/>S: ok, let's talk about loving frank. i haven't read it. however, i'm curious about what you think. what do you think of the book's title? what title might you choose?
+<br/>U: what the book is called and frank. and it's about a girl that was a live with it work. a girl was alive. lever. hitler was a alive. and so then she had a run away from hitler
+<br/>S: interesting! which characters did you like best in that book?
+<br/>U: you need to take a picture characters were blank and frank sister and a mom and a dad. and i like her cat because she had a cat
+<br/>S: who's your favorite author?
+<br/>U: i don't know. i don't really pay attention office
+<br/>S: interesting. for me, my favorite is stephen king. his books are so suspenseful. the king of horror indeed! i think books have the power to change the world. in your opinion, what book has had the biggest impact on human history?
+<br/>U: i'm not so sure
+<br/>S: i see. in my opinion, the bible has probably affected the greatest number of people in the biggest way. what book are you reading now? learning more about you is fun!
+<br/>U: my dad. stephen king books
+<br/>S: what was that? can you please say the book name again?
+<br/>U: my dad likes the author stephen king
+<br/>S: oh, i haven't read it. however, i'm happy to listen to you. what's your favorite part in that book?
+<br/>U: amazon. that's lazy
+<br/>S: hm, i don't know about it. but i'm interested in what you have to say. if you got the chance to ask the author of that book one question, what would it be?
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class="radio"><label><input name="21" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
+<div class="radio"><label><input name="21" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
+<div class="radio"><label><input name="21" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
+</div>
 </div>
 <br/>
 </div>

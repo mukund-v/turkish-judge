@@ -15,14 +15,14 @@
 
     <div class="columns is-centered">
       <div class="column is-one-third">
-        <form method="POST" action="" class="box">
+        <form method="POST" action="/makeappeal" class="box">
           <p><strong>HIT:</strong> {{hit_data['HITId']}}</p>
           <p><strong>WorkerID:</strong> {{hit_data['WorkerId']}}</p>
-          <br/>
+          <p><strong>Sandbox link:</strong><a href={{hit_data['sandboxLink']}}>{{hit_data['sandboxLink']}}</a></p>
           <div class="field">
             <label class="label">Explanation</label>
             <div class="control">
-              <input type="text" placeholder="Requester sucks" class="input" name="name" required>
+              <input type="text" placeholder="Requester sucks" class="input" name="explanation" required>
             </div>
           </div>
           <br/>
