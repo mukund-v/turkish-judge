@@ -43,7 +43,7 @@ def signin():
             session['username'] = user['name']
             resp = dumps(user)
             return (render_template('requester.html'))
-        else: 
+        else:
             return (render_template('index.html', signinerror=True))
     else:
         return not_found()
@@ -52,7 +52,6 @@ def signin():
 @app.route('/signup', methods=['GET'])
 def signup():
     return (render_template('signUp.html'))
-
 
 
 '''
@@ -120,7 +119,6 @@ Requester page.
 @app.route('/requester', methods=['POST'])
 def requester():
     return (render_template('requester.html'))
-
 
 
 '''
