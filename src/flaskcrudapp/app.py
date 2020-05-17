@@ -71,7 +71,7 @@ def add_user():
     
     if _name and _email and _password and request.method == 'POST':
         _hashed_password = generate_password_hash(_password)
-        id = users_db.insert({"name":_name, "req_id":_reqid, "email":_email,"pwd":_hashed_password})
+        id = users_db.insert({"name":_name, "req_id":_reqid, "email":_email, "pwd":_hashed_password, "hits": []})
 
         session['username'] = _name
 
@@ -130,10 +130,15 @@ Upload csv data to database.
 def upload():
     file = request.files['inputFile']
     filename = file.filename
-    csvs_db.delete_many({})
     if '.' in filename and filename.split(".")[-1] in ALLOWED_EXTENSIONS:
         rejected = parse_csv(input=file)
         csvs_db.insert(rejected)
+        batch_ids = set()
+        for reject in rejected:
+            batch_ids.add(reject["HITId"])
+        current_hits = users_db.find_one({"name":session["username"]})["hits"]
+        current_hits.extend(batch_ids)
+        users_db.update_one({"name":session["username"]}, {"$set":{"hits":current_hits}}) 
         resp = jsonify("File upload accepted!")
         resp.status_code = 202  # 202 is that the request has been accepted for processing but not yet completed
         return resp
