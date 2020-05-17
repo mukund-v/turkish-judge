@@ -13,7 +13,10 @@ def parse_csv(input):
     ]
     only_relevant_columns = rejected[["WorkerId", "AssignmentId", "HITId", "Answer"]]
     rejected_w_id = only_relevant_columns.rename(columns={"AssignmentId":"_id"})
-    return json.loads(rejected_w_id.to_json(orient='records'))
+    reject_json = json.loads(rejected_w_id.to_json(orient='records'))
+    for hit in reject_json:
+        hit["Status"] = "NA"
+    return reject_json
 
 
 def align_xmls(question_xml, answer_xml):
@@ -45,7 +48,7 @@ def align_xmls(question_xml, answer_xml):
 
 def create_task():
     mturk = connect_to_MTurk()
-    fileloader = FileSystemLoader('templates')      # Accesses the directory 'templates' in the same classpath as this code file. 'templates' contains files for HTML/XML templates
+    fileloader = FileSystemLoader('templates1')      # Accesses the directory 'templates' in the same classpath as this code file. 'templates' contains files for HTML/XML templates
     env = Environment(loader=fileloader)            # Establishes the environment to load a specific file from the templates diretory
 
     task_template = env.get_template('task.xml')
