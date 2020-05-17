@@ -16,9 +16,11 @@
     <div class="columns is-centered">
       <div class="column is-one-third">
         <form method="POST" action="/makeappeal" class="box">
+
           <p><strong>HIT:</strong> {{hit_data['HITId']}}</p>
           <p><strong>WorkerID:</strong> {{hit_data['WorkerId']}}</p>
           <p><strong>Sandbox link:</strong><a href={{hit_data['sandboxLink']}}>{{hit_data['sandboxLink']}}</a></p>
+
           <div class="field">
             <label class="label">Explanation</label>
             <div class="control">
@@ -26,11 +28,13 @@
             </div>
           </div>
           <br/>
+          
           <div class="field">
             <button class="button is-dark">
               Submit
             </button>
           </div>
+          
         </form>
       </div>
     </div>
