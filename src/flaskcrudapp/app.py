@@ -150,15 +150,17 @@ Upload csv data to database.
 def upload():
     file = request.files['inputFile']
     filename = file.filename
+    requester_info = users_db.find_one({"name":session["username"]})
     if '.' in filename and filename.split(".")[-1] in ALLOWED_EXTENSIONS:
         rejected = parse_csv(input=file)
-        csvs_db.insert(rejected)
         batch_ids = set()
         for reject in rejected:
             batch_ids.add(reject["HITId"])
-        current_hits = users_db.find_one({"name":session["username"]})["hits"]
+            reject["req_id"] = requester_info["req_id"]
+        csvs_db.insert(rejected)
+        current_hits = requester_info["hits"]
         current_hits.extend(batch_ids)
-        users_db.update_one({"name":session["username"]}, {"$set":{"hits":current_hits}}) 
+        users_db.update_one({"name":session["username"]}, {"$set":{"hits":current_hits}})
         resp = jsonify("File upload accepted!")
         resp.status_code = 202  # 202 is that the request has been accepted for processing but not yet completed
         return resp
