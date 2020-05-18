@@ -36,17 +36,14 @@ def align_xmls(question_xml, answer_xml):
             q_value = q_id_split[1]
             for q in questions:
                 if q["name"]==q_number and q["value"]==q_value:
-                    parent = q.parent.parent.parent
-                    question_tag = question.new_tag("p")
-                    question_tag.string = "Worker answered: {}".format(q_value)
-                    parent.append(question_tag) 
+                    q["checked"] = "checked"
     with open("templates1/task.html", 'w') as output:
         print (question.find("crowd-form"),file=output)
 
 def create_appeal(sandbox_link, explanation):
     mturk = connect_to_MTurk()
     new_hit = mturk.create_hit(
-        Title = 'HIT rejection reviewing TEST',
+        Title = 'HIT rejection reviewing TEST2',
         Description = 'Judge whether the rejectection was fair or unfair',
         Keywords = 'fairness, jury, adjudication',
         Reward = '0.01',
@@ -84,7 +81,7 @@ def create_task(question_xml, answer_xml, HITId):
       print(output,file=f)
     task = open(file='task.xml',mode='r').read()
     new_hit = mturk.create_hit(
-        Title = 'Appeal of {} TEST'.format(HITId),
+        Title = 'Appeal of {} TEST2'.format(HITId),
         Description = 'Review this filled out HIT to determine whether the worker completed it correctly',
         Keywords = 'fairness, jury, adjudication',
         Reward = '0.01',
