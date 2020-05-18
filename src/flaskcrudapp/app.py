@@ -9,6 +9,7 @@ import os
 import pandas as pd
 import json
 
+
 with open('./config.json', 'r') as input:
     config = json.load(input)
 
@@ -20,7 +21,6 @@ app.config['MONGO_URI']= config["mongo"]
 mongo = PyMongo(app)
 users_db = mongo.db.users
 csvs_db = mongo.db.csvs
-
 
 
 @app.route('/')
