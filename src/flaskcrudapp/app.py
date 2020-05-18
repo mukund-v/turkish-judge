@@ -139,7 +139,7 @@ Requester page.
 @app.route('/requester')
 def requester():
     if session.get('logged_in'):
-        return (render_template('requester.html', username=session.get('username')))
+        return (render_template('requester.html', username=session.get('username'), batch_name_error=request.args.get('batch_name_error')))
     return redirect(url_for('index'))
 
 '''
@@ -147,22 +147,39 @@ Upload csv data to database.
 '''
 @app.route("/upload", methods=["POST"])
 def upload():
+    csvs_db.delete_many({})
     file = request.files['inputFile']
     filename = file.filename
+
+    batch_name = request.form['batch_name']
+
+    # TODO change this to reqid
     requester_info = users_db.find_one({"name":session["username"]})
+
+    # TODO change this to reqid
+    if csvs_db.find_one({"batch_name":batch_name, "name":session["username"]}):
+        return redirect(url_for('requester', batch_name_error=True))
+
     if '.' in filename and filename.split(".")[-1] in ALLOWED_EXTENSIONS:
         rejected = parse_csv(input=file)
         batch_ids = set()
+
         for reject in rejected:
             batch_ids.add(reject["HITId"])
             reject["req_id"] = requester_info["req_id"]
+            reject["batch_name"] = batch_name
+
         csvs_db.insert(rejected)
         current_hits = requester_info["hits"]
         current_hits.extend(batch_ids)
+
+        # TODO change this to reqid
         users_db.update_one({"name":session["username"]}, {"$set":{"hits":current_hits}})
+
         resp = jsonify("File upload accepted!")
         resp.status_code = 202  # 202 is that the request has been accepted for processing but not yet completed
         return resp
+
     else:
         return unsupported_media_type()
 
