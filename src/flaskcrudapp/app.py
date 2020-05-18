@@ -112,6 +112,7 @@ def appeal():
     result = csvs_db.find_one({"WorkerId":_worker_id, "HITId":_HIT_id})
 
     if not result:
+
         return (redirect(url_for('index', appealerror=True)))
 
     sandbox_link = result['sandboxLink']
@@ -126,6 +127,7 @@ def appeal():
         'WorkerEmail' : worker_email
     }
     session["sandboxLink"] = sandbox_link
+    session['WorkerEmail'] = worker_email
     return (render_template('appeal.html', hit_data=hit_data))
 
 
@@ -136,7 +138,7 @@ Submitting appeal
 def make_appeal():
     _form = request.form 
     _explanation = _form["explanation"]
-    _email = _form["email"] if _form["email"] else ""
+    _email = _form["email"] if _form["email"] else session['WorkerEmail']
     hit_id = create_appeal(sandbox_link=session["sandboxLink"], explanation=_explanation)
     csvs_db.update_one({"sandboxLink": session["sandboxLink"]}, {"$set": {"Status":"Appealed", "AppealId":hit_id, "WorkerEmail":_email}})
     return redirect(url_for('index', appealsuccess=True, appealId=hit_id))
