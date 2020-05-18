@@ -113,8 +113,11 @@ def appeal():
     if not result:
         return (redirect(url_for('index', appealerror=True)))
 
-    sandbox_link = result["sandboxLink"]
-    worker_email = result['WorkerEmail']
+    sandbox_link = result['sandboxLink']
+    try:
+        worker_email = result['WorkerEmail'] 
+    except:
+        worker_email = ''
     hit_data = {
         'HITId' : _HIT_id,
         'WorkerId' : _worker_id,
@@ -132,7 +135,7 @@ Submitting appeal
 def make_appeal():
     _form = request.form 
     _explanation = _form["explanation"]
-    _email = _form["email"]
+    _email = _form["email"] if _form["email"] else ""
     hit_id = create_appeal(sandbox_link=session["sandboxLink"], explanation=_explanation)
     csvs_db.update_one({"sandboxLink": session["sandboxLink"]}, {"$set": {"Status":"Appealed", "AppealId":hit_id, "WorkerEmail":_email}})
     return redirect(url_for('index', appealsuccess=True, appealId=hit_id))
