@@ -43,9 +43,9 @@ def signin():
     if _email and _password:
         user = users_db.find_one({"email": _email})
         if user and check_password_hash(user["pwd"], _password):
+            session['req_id'] = user['req_id']
             session['username'] = user['name']
             session['logged_in'] = True
-            resp = dumps(user)
             return redirect(url_for('requester'))
         else:
             return (redirect(url_for('index', signinerror=True)))
@@ -84,13 +84,14 @@ def add_user():
 
     if users_db.find_one({"email" : _email}) or users_db.find_one({"reqID" : _reqid}):
         return redirect(url_for('signup', signuperror=True))
-        return not_found('user with that email / requester id already exists!')
     
     if _name and _email and _password and request.method == 'POST':
         _hashed_password = generate_password_hash(_password)
         id = users_db.insert({"name":_name, "req_id":_reqid, "email":_email, "pwd":_hashed_password, "hits": []})
 
         session['username'] = _name
+        session['req_id'] = _reqid
+        session['logged_in'] = True
 
         resp = jsonify('User added successfully')
         resp.status_code = 200
@@ -140,14 +141,16 @@ def make_appeal():
     csvs_db.update_one({"sandboxLink": session["sandboxLink"]}, {"$set": {"Status":"Appealed", "AppealId":hit_id, "WorkerEmail":_email}})
     return redirect(url_for('index', appealsuccess=True, appealId=hit_id))
 
+
 '''
 Requester page.
 '''
 @app.route('/requester')
 def requester():
     if session.get('logged_in'):
-        return (render_template('requester.html', username=session.get('username')))
+        return (render_template('requester.html', username=session.get('username'), batch_name_error=request.args.get('batch_name_error')))
     return redirect(url_for('index'))
+
 
 '''
 Upload csv data to database.
@@ -156,21 +159,30 @@ Upload csv data to database.
 def upload():
     file = request.files['inputFile']
     filename = file.filename
-    requester_info = users_db.find_one({"name":session["username"]})
-    csvs_db.delete_many({})
+    batch_name = request.form['batch_name']
+    requester_info = users_db.find_one({"req_id":session["req_id"]})
+    if csvs_db.find_one({"batch_name":batch_name, "req_id":session["req_id"]}):
+        return redirect(url_for('requester', batch_name_error=True))
     if '.' in filename and filename.split(".")[-1] in ALLOWED_EXTENSIONS:
         rejected = parse_csv(input=file)
         batch_ids = set()
+
         for reject in rejected:
             batch_ids.add(reject["HITId"])
             reject["req_id"] = requester_info["req_id"]
+            reject["batch_name"] = batch_name
+
         csvs_db.insert(rejected)
         current_hits = requester_info["hits"]
         current_hits.extend(batch_ids)
-        users_db.update_one({"name":session["username"]}, {"$set":{"hits":current_hits}})
+
+        # TODO change this to reqid
+        users_db.update_one({"req_id":session["req_id"]}, {"$set":{"hits":current_hits}})
+
         resp = jsonify("File upload accepted!")
         resp.status_code = 202  # 202 is that the request has been accepted for processing but not yet completed
         return resp
+
     else:
         return unsupported_media_type()
 
