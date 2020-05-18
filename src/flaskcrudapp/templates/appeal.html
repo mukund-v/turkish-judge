@@ -18,17 +18,26 @@
         <form method="POST" action="/makeappeal" class="box">
 
           <p><strong>HIT:</strong> {{hit_data['HITId']}}</p>
-          <p><strong>WorkerID:</strong> {{hit_data['WorkerId']}}</p><br/>
+          <p><strong>WorkerID:</strong> {{hit_data['WorkerId']}}</p>
           <p><strong>Sandbox link: </strong><a href={{hit_data['sandboxLink']}}>here</a></p>
-          <br/>
           <div class="field">
-            <label class="label">Explanation</label>
+            <label class="label">Explanation:</label>
             <div class="control">
               <input type="text" placeholder="Requester sucks" class="input" name="explanation" required>
             </div>
           </div>
-          <br/>
-          
+          {% if hit_data['WorkerEmail']!="" %}
+          <p><strong>Is this still your preferred email:</strong> {{hit_data['WorkerEmail']}}? If not, enter a new one below.</p>
+          {% endif %}
+          <div class="field">
+            <label class="label">Optionally enter an email to get updates about your HIT:</label>
+            <div class="control has-icons-left">
+              <input type="email" placeholder="e.g. bobsmith@gmail.com" class="input" name="email">
+              <span class="icon is-small is-left">
+                <i class="fa fa-envelope"></i>
+              </span>
+            </div>
+          </div>
           <div class="field">
             <button class="button is-dark">
               Submit
