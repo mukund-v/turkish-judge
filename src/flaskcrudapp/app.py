@@ -150,6 +150,7 @@ Upload csv data to database.
 def upload():
     file = request.files['inputFile']
     filename = file.filename
+    csvs_db.delete_many({})
     if '.' in filename and filename.split(".")[-1] in ALLOWED_EXTENSIONS:
         rejected = parse_csv(input=file)
         csvs_db.insert(rejected)

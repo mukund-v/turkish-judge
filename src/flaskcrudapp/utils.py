@@ -18,25 +18,31 @@ def parse_csv(input):
     only_relevant_columns = rejected[["WorkerId", "AssignmentId", "HITId", "Question", "Answer"]]
     rejected_w_id = only_relevant_columns.rename(columns={"AssignmentId":"_id"})
     reject_json = json.loads(rejected_w_id.to_json(orient='records'))
-    print (reject_json)
     for hit in reject_json:
+        print (hit["Answer"])
         hit["Status"] = "NA"
         hit["sandboxLink"] = create_task(question_xml=hit["Question"], answer_xml=hit["Answer"], HITId=hit["HITId"])
     return reject_json
 
 def align_xmls(question_xml, answer_xml):
     question = BeautifulSoup(question_xml, 'lxml')
-    answer = BeautifulSoup(answer_xml, 'xml')
+    answer = BeautifulSoup(answer_xml, 'lxml')
+    print (answer)
     questions = question.find_all("input")
-    answers = answer.find_all("Answer")
+    answers = answer.find_all("answer")
+    print ('hrerere12232')
+    print (answers)
     for answer in answers:
-        if answer.find("FreeText").text=="true":
-            q_id = answer.find("QuestionIdentifier").text
+        print ("hererere", answer.find("freetext").text)
+        if answer.find("freetext").text=="true":
+            print ("here")
+            q_id = answer.find("questionidentifier").text
             q_id_split = q_id.split(".")
             q_number = q_id_split[0]
             q_value = q_id_split[1]
             for q in questions:
                 if q["name"]==q_number and q["value"]==q_value:
+                    print ("here")
                     parent = q.parent.parent.parent
                     question_tag = question.new_tag("p")
                     question_tag.string = "Worker answered: {}".format(q_value)
