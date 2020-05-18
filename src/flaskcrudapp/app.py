@@ -43,9 +43,9 @@ def signin():
     if _email and _password:
         user = users_db.find_one({"email": _email})
         if user and check_password_hash(user["pwd"], _password):
+            session['req_id'] = user['req_id']
             session['username'] = user['name']
             session['logged_in'] = True
-            resp = dumps(user)
             return redirect(url_for('requester'))
         else:
             return (redirect(url_for('index', signinerror=True)))
@@ -90,6 +90,8 @@ def add_user():
         id = users_db.insert({"name":_name, "req_id":_reqid, "email":_email, "pwd":_hashed_password, "hits": []})
 
         session['username'] = _name
+        session['req_id'] = _reqid
+        session['logged_in'] = True
 
         resp = jsonify('User added successfully')
         resp.status_code = 200
@@ -133,6 +135,7 @@ def make_appeal():
     csvs_db.update_one({"sandboxLink": session["sandboxLink"]}, {"$set": {"Status":"Appealed", "AppealId":hit_id}})
     return redirect(url_for('index', appealsuccess=True, appealId=hit_id))
 
+
 '''
 Requester page.
 '''
@@ -142,22 +145,20 @@ def requester():
         return (render_template('requester.html', username=session.get('username'), batch_name_error=request.args.get('batch_name_error')))
     return redirect(url_for('index'))
 
+
 '''
 Upload csv data to database.
 '''
 @app.route("/upload", methods=["POST"])
 def upload():
-    csvs_db.delete_many({})
     file = request.files['inputFile']
     filename = file.filename
 
     batch_name = request.form['batch_name']
 
-    # TODO change this to reqid
-    requester_info = users_db.find_one({"name":session["username"]})
+    requester_info = users_db.find_one({"req_id":session["req_id"]})
 
-    # TODO change this to reqid
-    if csvs_db.find_one({"batch_name":batch_name, "name":session["username"]}):
+    if csvs_db.find_one({"batch_name":batch_name, "req_id":session["req_id"]}):
         return redirect(url_for('requester', batch_name_error=True))
 
     if '.' in filename and filename.split(".")[-1] in ALLOWED_EXTENSIONS:
@@ -174,7 +175,7 @@ def upload():
         current_hits.extend(batch_ids)
 
         # TODO change this to reqid
-        users_db.update_one({"name":session["username"]}, {"$set":{"hits":current_hits}})
+        users_db.update_one({"req_id":session["req_id"]}, {"$set":{"hits":current_hits}})
 
         resp = jsonify("File upload accepted!")
         resp.status_code = 202  # 202 is that the request has been accepted for processing but not yet completed
