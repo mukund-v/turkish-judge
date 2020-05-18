@@ -15,10 +15,21 @@
     <div class="columns is-centered">
       <div class="column is-one-third">
         <div class="box">
-          <h2 class="title">Input a CSV:</h1>
+          <h1 class="title is-4">Upload a Batch (CSV):</h1>
           <form method="POST" action="/upload" enctype="multipart/form-data">
             <div class="form-group">
-              <label for="inputFile">File input</label>
+              <div class="field">
+                <label class="label">Batch Name</label>
+                <div class="control">
+                  <input type="text" placeholder="e.g. text generation task" class="input" name="batch_name" required>
+                </div>
+              </div>
+              {% if batch_name_error %}
+              <p class=error style="color:red"><strong>Error: </strong> Batch with that name already exists!</p>
+              <br />
+              {% endif %}
+              <br/>
+              <label for="inputFile"><strong>File input</strong></label>
               <br/><br/>
               <input type="file" name="inputFile">
             </div>
