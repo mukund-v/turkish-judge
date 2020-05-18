@@ -84,7 +84,6 @@ def add_user():
 
     if users_db.find_one({"email" : _email}) or users_db.find_one({"reqID" : _reqid}):
         return redirect(url_for('signup', signuperror=True))
-        return not_found('user with that email / requester id already exists!')
     
     if _name and _email and _password and request.method == 'POST':
         _hashed_password = generate_password_hash(_password)
