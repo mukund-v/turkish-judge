@@ -110,12 +110,15 @@ def appeal():
     _worker_id = _form["turkerId"]
     _HIT_id = _form["HITId"]
     result = csvs_db.find_one({"WorkerId":_worker_id, "HITId":_HIT_id})
-
+    appeal = False 
     if not result:
-
-        return (redirect(url_for('index', appealerror=True)))
+        result = csvs_db.find_one({"WorkerId": _worker_id, "AppealId":_HIT_id})
+        if not result:
+            return (redirect(url_for('index', appealerror=True)))
+        appeal = True
 
     sandbox_link = result['sandboxLink']
+    status = result['Status']
     try:
         worker_email = result['WorkerEmail'] 
     except:
@@ -124,7 +127,9 @@ def appeal():
         'HITId' : _HIT_id,
         'WorkerId' : _worker_id,
         'sandboxLink' : sandbox_link,
-        'WorkerEmail' : worker_email
+        'WorkerEmail' : worker_email,
+        'Status' : status,
+        'Appeal' : appeal
     }
     session["sandboxLink"] = sandbox_link
     session['WorkerEmail'] = worker_email
@@ -140,7 +145,18 @@ def make_appeal():
     _explanation = _form["explanation"]
     _email = _form["email"] if _form["email"] else session['WorkerEmail']
     hit_id = create_appeal(sandbox_link=session["sandboxLink"], explanation=_explanation)
-    csvs_db.update_one({"sandboxLink": session["sandboxLink"]}, {"$set": {"Status":"Appealed", "AppealId":hit_id, "WorkerEmail":_email}})
+    csvs_db.update_one(
+        {
+            "sandboxLink": session["sandboxLink"]
+        }, 
+        {
+            "$set": {
+                "Status":"Under review", 
+                "AppealId":hit_id, 
+                "WorkerEmail":_email
+            }
+        }
+    )
     return redirect(url_for('index', appealsuccess=True, appealId=hit_id))
 
 
@@ -150,7 +166,18 @@ Requester page.
 @app.route('/requester')
 def requester():
     if session.get('logged_in'):
-        return (render_template('requester.html', username=session.get('username'), batch_name_error=request.args.get('batch_name_error')))
+        hits = list(csvs_db.find(
+                {
+                    "req_id":session['req_id']
+                }, 
+                {
+                    "HITId":1, 
+                    "Status":1, 
+                    "sandboxLink":1    # only want these fields from the db
+                }
+        ))
+        return (render_template('requester.html', username=session.get('username'), 
+                batch_name_error=request.args.get('batch_name_error'), hits=hits))
     return redirect(url_for('index'))
 
 

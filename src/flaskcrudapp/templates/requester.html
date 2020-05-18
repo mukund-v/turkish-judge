@@ -14,6 +14,25 @@
     
     <div class="columns is-centered">
       <div class="column is-one-third">
+          <div class="box">
+            <h1 class="title is-4">HIT statuses:</h1>
+            <table style="width:100%">
+                <tr>
+                    <th>HIT Number</th>
+                    <th>Status</th>
+                    <th>Sandbox Link</th>
+                </tr>
+                {% for hit in hits %}
+                <tr>
+                    <td>{{loop.index}}</td>
+                    <td>{{hit['Status']}}</td>
+                    <td><a href={{hit['sandboxLink']}} target="_blank">Click here</a></td>
+                </tr>
+                {% endfor %}
+            </table>
+          </div>
+      </div>
+      <div class="column is-one-third">
         <div class="box">
           <h1 class="title is-4">Upload a Batch (CSV):</h1>
           <form method="POST" action="/upload" enctype="multipart/form-data">
