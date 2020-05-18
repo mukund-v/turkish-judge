@@ -19,7 +19,6 @@ def parse_csv(input):
     rejected_w_id = only_relevant_columns.rename(columns={"AssignmentId":"_id"})
     reject_json = json.loads(rejected_w_id.to_json(orient='records'))
     for hit in reject_json:
-        print (hit["Answer"])
         hit["Status"] = "NA"
         hit["sandboxLink"] = create_task(question_xml=hit["Question"], answer_xml=hit["Answer"], HITId=hit["HITId"])
     return reject_json
@@ -27,22 +26,16 @@ def parse_csv(input):
 def align_xmls(question_xml, answer_xml):
     question = BeautifulSoup(question_xml, 'lxml')
     answer = BeautifulSoup(answer_xml, 'lxml')
-    print (answer)
     questions = question.find_all("input")
     answers = answer.find_all("answer")
-    print ('hrerere12232')
-    print (answers)
-    for answer in answers:
-        print ("hererere", answer.find("freetext").text)
-        if answer.find("freetext").text=="true":
-            print ("here")
-            q_id = answer.find("questionidentifier").text
+    for ans in answers:
+        if ans.find("freetext").text=="true":
+            q_id = ans.find("questionidentifier").text
             q_id_split = q_id.split(".")
             q_number = q_id_split[0]
             q_value = q_id_split[1]
             for q in questions:
                 if q["name"]==q_number and q["value"]==q_value:
-                    print ("here")
                     parent = q.parent.parent.parent
                     question_tag = question.new_tag("p")
                     question_tag.string = "Worker answered: {}".format(q_value)
@@ -53,7 +46,7 @@ def align_xmls(question_xml, answer_xml):
 def create_appeal(sandbox_link, explanation):
     mturk = connect_to_MTurk()
     new_hit = mturk.create_hit(
-        Title = 'HIT rejection reviewing',
+        Title = 'HIT rejection reviewing TEST',
         Description = 'Judge whether the rejectection was fair or unfair',
         Keywords = 'fairness, jury, adjudication',
         Reward = '0.01',
@@ -74,8 +67,9 @@ def create_appeal(sandbox_link, explanation):
           }
         ]
     )
-    return new_hit['HIT']['HITId']
     print ("https://workersandbox.mturk.com/mturk/preview?groupId=" + new_hit['HIT']['HITGroupId'])
+    return new_hit['HIT']['HITId']
+    
 
 
 def create_task(question_xml, answer_xml, HITId):
@@ -90,7 +84,7 @@ def create_task(question_xml, answer_xml, HITId):
       print(output,file=f)
     task = open(file='task.xml',mode='r').read()
     new_hit = mturk.create_hit(
-        Title = 'Appeal of {}'.format(HITId),
+        Title = 'Appeal of {} TEST'.format(HITId),
         Description = 'Review this filled out HIT to determine whether the worker completed it correctly',
         Keywords = 'fairness, jury, adjudication',
         Reward = '0.01',
@@ -101,6 +95,7 @@ def create_task(question_xml, answer_xml, HITId):
         QualificationRequirements = [],
         Question = task
     )
+    print ("https://workersandbox.mturk.com/mturk/preview?groupId=" + new_hit['HIT']['HITGroupId'])
     return "https://workersandbox.mturk.com/mturk/preview?groupId=" + new_hit['HIT']['HITGroupId']
 
 def connect_to_MTurk(sandbox=True):
