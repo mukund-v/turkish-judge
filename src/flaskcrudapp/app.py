@@ -114,10 +114,12 @@ def appeal():
         return (redirect(url_for('index', appealerror=True)))
 
     sandbox_link = result["sandboxLink"]
+    worker_email = result['WorkerEmail']
     hit_data = {
         'HITId' : _HIT_id,
         'WorkerId' : _worker_id,
-        'sandboxLink' : sandbox_link
+        'sandboxLink' : sandbox_link,
+        'WorkerEmail' : worker_email
     }
     session["sandboxLink"] = sandbox_link
     return (render_template('appeal.html', hit_data=hit_data))
@@ -130,8 +132,9 @@ Submitting appeal
 def make_appeal():
     _form = request.form 
     _explanation = _form["explanation"]
+    _email = _form["email"]
     hit_id = create_appeal(sandbox_link=session["sandboxLink"], explanation=_explanation)
-    csvs_db.update_one({"sandboxLink": session["sandboxLink"]}, {"$set": {"Status":"Appealed", "AppealId":hit_id}})
+    csvs_db.update_one({"sandboxLink": session["sandboxLink"]}, {"$set": {"Status":"Appealed", "AppealId":hit_id, "WorkerEmail":_email}})
     return redirect(url_for('index', appealsuccess=True, appealId=hit_id))
 
 '''
@@ -151,6 +154,7 @@ def upload():
     file = request.files['inputFile']
     filename = file.filename
     requester_info = users_db.find_one({"name":session["username"]})
+    csvs_db.delete_many({})
     if '.' in filename and filename.split(".")[-1] in ALLOWED_EXTENSIONS:
         rejected = parse_csv(input=file)
         batch_ids = set()
