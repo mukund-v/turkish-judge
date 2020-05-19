@@ -19,7 +19,7 @@
 
           <p><strong>HIT:</strong> {{hit_data['HITId']}}</p>
           <p><strong>WorkerID:</strong> {{hit_data['WorkerId']}}</p>
-          {% if hit_data['Appeal'] %}
+          {% if hit_data['Status']!='NA' %}
           <p><strong>Status: </strong>{{hit_data['Status']}}</p>
           {% else %}
           <p><strong>Sandbox link: </strong><a href={{hit_data['sandboxLink']}}>here</a></p>
@@ -34,7 +34,7 @@
           <p><strong>Is this still your preferred email:</strong> {{hit_data['WorkerEmail']}}? If not, enter a new one below.</p>
           {% endif %}
           <div class="field">
-            <label class="label">Enter an email to get updates about your HIT:</label>
+            <label class="label">Enter an email to get updates about your appeal:</label>
             <div class="control has-icons-left">
               <input type="email" placeholder="(Optional)" class="input" name="email">
               <span class="icon is-small is-left">

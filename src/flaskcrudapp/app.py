@@ -108,13 +108,8 @@ def appeal():
     _worker_id = _form["turkerId"]
     _HIT_id = _form["HITId"]
     result = csvs_db.find_one({"WorkerId":_worker_id, "HITId":_HIT_id})
-    appeal = False 
     if not result:
-        result = csvs_db.find_one({"WorkerId": _worker_id, "AppealId":_HIT_id})
-        if not result:
-            return (redirect(url_for('index', appealerror=True)))
-        appeal = True
-
+        return (redirect(url_for('index', appealerror=True)))
     sandbox_link = result['sandboxLink']
     status = result['Status']
     try:
@@ -126,8 +121,7 @@ def appeal():
         'WorkerId' : _worker_id,
         'sandboxLink' : sandbox_link,
         'WorkerEmail' : worker_email,
-        'Status' : status,
-        'Appeal' : appeal
+        'Status' : status
     }
     session["sandboxLink"] = sandbox_link
     session['WorkerEmail'] = worker_email
@@ -155,7 +149,8 @@ def make_appeal():
             }
         }
     )
-    return redirect(url_for('index', appealsuccess=True, appealId=hit_id))
+    entry = csvs_db.find_one({"AppealId":hit_id}, {"HITId":1})
+    return redirect(url_for('index', appealsuccess=True, appealId=entry["HITId"]))
 
 
 '''
