@@ -21,13 +21,35 @@ users_db = mongo.db.users
 csvs_db = mongo.db.csvs
 
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
     if session.get('logged_in'):
         return redirect(url_for('requester'))
-    return (render_template('index.html', signupsuccess=request.args.get('signupsuccess'),
-            appealsuccess=request.args.get('appealsuccess'), appealId=request.args.get('appealId'),
-            signinerror=request.args.get('signinerror'), appealerror=request.args.get('appealerror')))
+
+    if request.method == 'POST':
+        signupsuccess = session['signupsuccess'] if 'signupsuccess' in session else None
+        signinerror = session['signinerror'] if 'signinerror' in session else None
+        
+        appealsuccess = session['appealsuccess'] if 'appealsuccess' in session else None
+        appealerror = session['appealerror'] if 'appealerror' in session else None
+
+        emailsuccess = session['emailsuccess'] if 'emailsuccess' in session else None
+        
+        HITId = session['HITId'] if 'HITId' in session else None
+        worker_email = session['WorkerEmail'] if 'WorkerEmail' in session else None
+
+        session.clear()
+
+        return (render_template('index.html',
+            signupsuccess=signupsuccess, signinerror=signinerror,
+            appealsuccess=appealsuccess, appealerror=appealerror,
+            emailsuccess=emailsuccess,
+            HITId=HITId, worker_email=worker_email
+        ))
+    
+    else:
+        return(render_template('index.html'))
+    
 
 '''
 Signin route.
@@ -46,7 +68,8 @@ def signin():
             session['logged_in'] = True
             return redirect(url_for('requester'))
         else:
-            return (redirect(url_for('index', signinerror=True)))
+            session['signinerror'] = True
+            return (redirect(url_for('index'), code=307))
     else:
         return not_found()
 
@@ -74,7 +97,6 @@ Add a requester as a user in database and redirects to requester page.
 @app.route('/add', methods=['POST'])
 def add_user():
     _form = request.form
-
     _name = _form['name']
     _email = _form['email']
     _password = _form['pwd']
@@ -93,7 +115,7 @@ def add_user():
 
         resp = jsonify('User added successfully')
         resp.status_code = 200
-        return (redirect(url_for('index', signupsuccess=True)))
+        return (redirect(url_for('index')))
     
     else:
         return not_found()
@@ -107,15 +129,21 @@ def appeal():
     _form = request.form 
     _worker_id = _form["turkerId"]
     _HIT_id = _form["HITId"]
+
     result = csvs_db.find_one({"WorkerId":_worker_id, "HITId":_HIT_id})
+    
     if not result:
-        return (redirect(url_for('index', appealerror=True)))
+        session['appealerror'] = True
+        return (redirect(url_for('index'), code=307))
+    
     sandbox_link = result['sandboxLink']
     status = result['Status']
+    
     try:
         worker_email = result['WorkerEmail'] 
     except:
         worker_email = ''
+    
     hit_data = {
         'HITId' : _HIT_id,
         'WorkerId' : _worker_id,
@@ -123,8 +151,12 @@ def appeal():
         'WorkerEmail' : worker_email,
         'Status' : status
     }
+
     session["sandboxLink"] = sandbox_link
-    session['WorkerEmail'] = worker_email
+    session["WorkerEmail"] = worker_email
+    session["WorkerId"] = _worker_id
+    session["HITId"] = _HIT_id
+
     return (render_template('appeal.html', hit_data=hit_data))
 
 
@@ -133,24 +165,56 @@ Submitting appeal
 '''
 @app.route('/makeappeal', methods=['POST'])
 def make_appeal():
-    _form = request.form 
-    _explanation = _form["explanation"]
+
+    # TODO: make sure this is called after the '/appeal' route or check that session vars are set
+
+    _form = request.form
     _email = _form["email"] if _form["email"] else session['WorkerEmail']
-    hit_id = create_appeal(sandbox_link=session["sandboxLink"], explanation=_explanation)
-    csvs_db.update_one(
-        {
-            "sandboxLink": session["sandboxLink"]
-        }, 
-        {
-            "$set": {
-                "Status":"Under review", 
-                "AppealId":hit_id, 
-                "WorkerEmail":_email
+    _worker_id = session["WorkerId"]
+    _HIT_id = session["HITId"]
+
+    hit_data = csvs_db.find_one({"WorkerId":_worker_id, "HITId":_HIT_id})
+
+    if hit_data["Status"] == "NA":
+        _explanation = _form["explanation"]
+        appeal_id = create_appeal(sandbox_link=session["sandboxLink"], explanation=_explanation)
+
+        csvs_db.update_one(
+            {
+                "WorkerId" : _worker_id,
+                "HITId" : _HIT_id
+            }, 
+            {
+                "$set": {
+                    "Status":"Under review",
+                    "AppealId":appeal_id, 
+                    "WorkerEmail":_email,
+                    "Explanation":_explanation
+                }
             }
-        }
-    )
-    entry = csvs_db.find_one({"AppealId":hit_id}, {"HITId":1})
-    return redirect(url_for('index', appealsuccess=True, appealId=entry["HITId"]))
+        )
+
+        session['appealsuccess'] = True
+
+        return redirect(url_for('index'), code=307)
+
+    else:
+        csvs_db.update_one(
+            {
+                "WorkerId" : _worker_id,
+                "HITId" : _HIT_id
+            }, 
+            {
+                "$set": {
+                    "WorkerEmail":_email,
+                }
+            }
+        )
+
+        session['emailsuccess'] = True
+        session['WorkerEmail'] = _email
+
+        return redirect(url_for('index'), code=307)
 
 
 '''
@@ -196,8 +260,10 @@ def upload():
     filename = file.filename
     batch_name = request.form['batch_name']
     requester_info = users_db.find_one({"req_id":session["req_id"]})
+
     if csvs_db.find_one({"batch_name":batch_name, "req_id":session["req_id"]}):
         return redirect(url_for('requester', batch_name_error=True))
+    
     if '.' in filename and filename.split(".")[-1] in ALLOWED_EXTENSIONS:
         rejected = parse_csv(input=file)
         batch_ids = set()

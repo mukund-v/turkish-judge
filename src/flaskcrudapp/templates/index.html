@@ -10,7 +10,7 @@
   <section class="section">
 
     <br /> <br />
-    <h2 class="title" align="center">Welcome to Turkish Judge!</h2>
+    <h2 class="title is-2" align="center">Welcome to Turkish Judge!</h2>
     <br />
 
     <div class="columns is-centered">
@@ -83,7 +83,14 @@
           <br />
           {% endif %}
           {% if appealsuccess %}
-          <p class=error style="color:coral"><strong>Success: </strong>Your appeal has been posted. To check the status come back and enter your Turker ID and the HIT ID: {{appealId}}.</p>
+          <p class=error style="color:coral"><strong>Success: </strong>Your appeal has been posted. <br/><br/>
+          To check the status or change your associated email, come back and enter your Turker ID and the HIT ID: {{HITId}}.
+          </p>
+          <br />
+          {% endif %}
+          {% if emailsuccess %}
+          <p class=error style="color:coral"><strong>Success: </strong>Your associated email has been successfully updated to {{worker_email}}. <br/><br/>
+          To check the status or change your associated email, come back and enter your Turker ID and the HIT ID: {{HITId}}.</p>
           <br />
           {% endif %}
           <div class="field">
