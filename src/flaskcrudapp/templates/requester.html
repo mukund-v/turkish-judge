@@ -4,6 +4,7 @@
     <title>Requesters</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://kit.fontawesome.com/8e599f3795.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <section class="section">
@@ -14,8 +15,27 @@
     
     <div class="columns is-centered">
       <div class="column is-one-third">
+        <div class="box">
+          <h1 class="title is-4">Uploaded Batches:</h1>
+          {% if batches|length == 0 %}
+          <p>No batches uploaded yet! You can upload one on the panel to the right.</p>
+          {% endif %}
+          {% for batch in batches %}
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                {{batch}}
+              </p>
+              <a href="/batch/{{batch}}" class="card-header-icon">
+                <span class="icon">
+                  <i class="fas fa-link"></i>
+                </span>
+              </a>
+            </header>
+          </div>
+          {% endfor %}
+        </div>
           <div class="box">
-            <h1 class="title is-4">HIT statuses:</h1>
             <table style="width:100%">
                 <tr>
                     <th>HIT Number</th>

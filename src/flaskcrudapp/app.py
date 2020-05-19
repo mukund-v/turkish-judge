@@ -159,25 +159,44 @@ Requester page.
 @app.route('/requester')
 def requester():
     if session.get('logged_in'):
-        # batches = list(users_db.find_one({
-        #     "req_id" : session["req_id"]
-        # },
-        # {
-        #     "batches" : 1
-        # }))
-        hits = list(csvs_db.find(
-                {
-                    "req_id":session['req_id']
-                }, 
-                {
-                    "HITId":1, 
-                    "Status":1, 
-                    "sandboxLink":1    # only want these fields from the db
-                }
-        ))
+        requester_info = users_db.find_one({
+            "req_id" : session["req_id"]
+        })
+        # hits = list(csvs_db.find(
+        #         {
+        #             "req_id":session['req_id']
+        #         }, 
+        #         {
+        #             "HITId":1, 
+        #             "Status":1, 
+        #             "sandboxLink":1    # only want these fields from the db
+        #         }
+        # ))
+        print(requester_info)
         return (render_template('requester.html', username=session.get('username'), 
-                batch_name_error=request.args.get('batch_name_error'), hits=hits))
+                batch_name_error=request.args.get('batch_name_error'), batches=requester_info['batches']))
     return redirect(url_for('index'))
+
+
+'''
+'''
+@app.route('/batch/<batch_name>')
+def batch_page(batch_name):
+    print(batch_name)
+    hits = list(csvs_db.find(
+        {
+            "req_id" : session["req_id"],
+            "batch_name" : batch_name
+        }, 
+        {
+            "HITId":1, 
+            "Status":1, 
+            "sandboxLink":1    # only want these fields from the db
+        }
+    ))
+    
+    if hits:
+        return (render_template('batch.html', batch_name=batch_name, hits=hits))
 
 
 '''
@@ -185,6 +204,7 @@ Upload csv data to database.
 '''
 @app.route("/upload", methods=["POST"])
 def upload():
+    csvs_db.delete_many({})
     file = request.files['inputFile']
     filename = file.filename
     batch_name = request.form['batch_name']
@@ -201,10 +221,7 @@ def upload():
             reject["batch_name"] = batch_name
 
         csvs_db.insert(rejected)
-        current_batches = requester_info["batches"]
-        current_batches.extend(batch_name)
-
-        users_db.update_one({"req_id":session["req_id"]}, {"$set":{"batches":current_hits}})
+        users_db.update_one({"req_id":session["req_id"]}, {"$addToSet":{"batches":batch_name}})
 
         resp = jsonify("File upload accepted!")
         resp.status_code = 202  # 202 is that the request has been accepted for processing but not yet completed
