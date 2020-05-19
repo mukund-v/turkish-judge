@@ -85,7 +85,7 @@ def add_user():
     
     if _name and _email and _password and request.method == 'POST':
         _hashed_password = generate_password_hash(_password)
-        id = users_db.insert({"name":_name, "req_id":_reqid, "email":_email, "pwd":_hashed_password, "hits": []})
+        id = users_db.insert({"name":_name, "req_id":_reqid, "email":_email, "pwd":_hashed_password, "batches": []})
 
         session['username'] = _name
         session['req_id'] = _reqid
@@ -159,6 +159,12 @@ Requester page.
 @app.route('/requester')
 def requester():
     if session.get('logged_in'):
+        # batches = list(users_db.find_one({
+        #     "req_id" : session["req_id"]
+        # },
+        # {
+        #     "batches" : 1
+        # }))
         hits = list(csvs_db.find(
                 {
                     "req_id":session['req_id']
@@ -195,11 +201,10 @@ def upload():
             reject["batch_name"] = batch_name
 
         csvs_db.insert(rejected)
-        current_hits = requester_info["hits"]
-        current_hits.extend(batch_ids)
+        current_batches = requester_info["batches"]
+        current_batches.extend(batch_name)
 
-        # TODO change this to reqid
-        users_db.update_one({"req_id":session["req_id"]}, {"$set":{"hits":current_hits}})
+        users_db.update_one({"req_id":session["req_id"]}, {"$set":{"batches":current_hits}})
 
         resp = jsonify("File upload accepted!")
         resp.status_code = 202  # 202 is that the request has been accepted for processing but not yet completed
