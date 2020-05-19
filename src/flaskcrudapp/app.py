@@ -162,17 +162,6 @@ def requester():
         requester_info = users_db.find_one({
             "req_id" : session["req_id"]
         })
-        # hits = list(csvs_db.find(
-        #         {
-        #             "req_id":session['req_id']
-        #         }, 
-        #         {
-        #             "HITId":1, 
-        #             "Status":1, 
-        #             "sandboxLink":1    # only want these fields from the db
-        #         }
-        # ))
-        print(requester_info)
         return (render_template('requester.html', username=session.get('username'), 
                 batch_name_error=request.args.get('batch_name_error'), batches=requester_info['batches']))
     return redirect(url_for('index'))
@@ -182,7 +171,6 @@ def requester():
 '''
 @app.route('/batch/<batch_name>')
 def batch_page(batch_name):
-    print(batch_name)
     hits = list(csvs_db.find(
         {
             "req_id" : session["req_id"],
@@ -204,7 +192,6 @@ Upload csv data to database.
 '''
 @app.route("/upload", methods=["POST"])
 def upload():
-    csvs_db.delete_many({})
     file = request.files['inputFile']
     filename = file.filename
     batch_name = request.form['batch_name']
