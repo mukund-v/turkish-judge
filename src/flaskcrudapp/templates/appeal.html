@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Submit an Appeal</title>
+    <title>Appeal Dashboard</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
@@ -10,31 +10,37 @@
   <section class="section">
 
     <br /> <br />
-    <h2 class="title" align="center">Submit an Appeal:</h2>
+    <h1 class="title is-2" align="center">Appeal Dashboard:</h1>
     <br />
-
     <div class="columns is-centered">
       <div class="column is-half">
+        <div class="box">
+          <h1  class="title is-3">Current appeal:</h1>
+          <p><strong>HIT ID:</strong> {{hit_data['HITId']}}</p>
+          <p><strong>Worker ID:</strong> {{hit_data['WorkerId']}}</p>
+          {% if hit_data['Status']!='NA' %}
+          <p><strong>Status:</strong> {{hit_data['Status']}}</p>
+          {% else %}
+          <p><strong>Status: </strong> Not yet appealed. You can appeal this HIT using the panel below.
+          <p><strong>Sandbox link to your original HIT: </strong><a href={{hit_data['sandboxLink']}}>here</a></p>
+          {% endif %}
+        </div>
         <form method="POST" action="/makeappeal" class="box">
 
-          <p><strong>HIT:</strong> {{hit_data['HITId']}}</p>
-          <p><strong>WorkerID:</strong> {{hit_data['WorkerId']}}</p>
-          {% if hit_data['Status']!='NA' %}
-          <p><strong>Status: </strong>{{hit_data['Status']}}</p>
-          {% else %}
-          <p><strong>Sandbox link: </strong><a href={{hit_data['sandboxLink']}}>here</a></p>
+          {% if hit_data['Status']=='NA' %}
           <div class="field">
             <label class="label">Explanation:</label>
             <div class="control">
-              <input type="text" placeholder="Requester sucks" class="input" name="explanation" required>
+              <input type="text" placeholder="e.g. The instructions were unclear" class="input" name="explanation" required>
             </div>
           </div>
           {% endif %}
           {% if hit_data['WorkerEmail']!="" %}
-          <p><strong>Is this still your preferred email:</strong> {{hit_data['WorkerEmail']}}? If not, enter a new one below.</p>
+          <p>Is <strong>{{hit_data['WorkerEmail']}}</strong> still your preferred email? If not, enter a new one below.</p>
+          <br/>
           {% endif %}
           <div class="field">
-            <label class="label">Enter an email to get updates about your appeal:</label>
+            <label class="label">Enter an email to get updates on your appeal:</label>
             <div class="control has-icons-left">
               <input type="email" placeholder="(Optional)" class="input" name="email">
               <span class="icon is-small is-left">
@@ -49,6 +55,7 @@
           </div>
 
         </form>
+        <p>Click <a href="/">here</a> to return to the home page.</p>
       </div>
     </div>
   </section>
