@@ -85,7 +85,7 @@ def add_user():
     
     if _name and _email and _password and request.method == 'POST':
         _hashed_password = generate_password_hash(_password)
-        id = users_db.insert({"name":_name, "req_id":_reqid, "email":_email, "pwd":_hashed_password, "hits": []})
+        id = users_db.insert({"name":_name, "req_id":_reqid, "email":_email, "pwd":_hashed_password, "batches": []})
 
         session['username'] = _name
         session['req_id'] = _reqid
@@ -159,19 +159,32 @@ Requester page.
 @app.route('/requester')
 def requester():
     if session.get('logged_in'):
-        hits = list(csvs_db.find(
-                {
-                    "req_id":session['req_id']
-                }, 
-                {
-                    "HITId":1, 
-                    "Status":1, 
-                    "sandboxLink":1    # only want these fields from the db
-                }
-        ))
+        requester_info = users_db.find_one({
+            "req_id" : session["req_id"]
+        })
         return (render_template('requester.html', username=session.get('username'), 
-                batch_name_error=request.args.get('batch_name_error'), hits=hits))
+                batch_name_error=request.args.get('batch_name_error'), batches=requester_info['batches']))
     return redirect(url_for('index'))
+
+
+'''
+'''
+@app.route('/batch/<batch_name>')
+def batch_page(batch_name):
+    hits = list(csvs_db.find(
+        {
+            "req_id" : session["req_id"],
+            "batch_name" : batch_name
+        }, 
+        {
+            "HITId":1, 
+            "Status":1, 
+            "sandboxLink":1    # only want these fields from the db
+        }
+    ))
+    
+    if hits:
+        return (render_template('batch.html', batch_name=batch_name, hits=hits))
 
 
 '''
@@ -195,11 +208,7 @@ def upload():
             reject["batch_name"] = batch_name
 
         csvs_db.insert(rejected)
-        current_hits = requester_info["hits"]
-        current_hits.extend(batch_ids)
-
-        # TODO change this to reqid
-        users_db.update_one({"req_id":session["req_id"]}, {"$set":{"hits":current_hits}})
+        users_db.update_one({"req_id":session["req_id"]}, {"$addToSet":{"batches":batch_name}})
 
         resp = jsonify("File upload accepted!")
         resp.status_code = 202  # 202 is that the request has been accepted for processing but not yet completed

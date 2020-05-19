@@ -127,10 +127,10 @@ Please refrain from joining this task if you are a non-native speaker of English
  </p>
     Select one of the breakdown labels. (required)
 
-    <div class="radio"><label><input name="1" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
+    <div class="radio"><label><input checked="checked" name="1" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="1" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="1" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: NOT BREAKDOWN</p></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
@@ -143,10 +143,10 @@ Please refrain from joining this task if you are a non-native speaker of English
  </p>
     Select one of the breakdown labels. (required)
 
-    <div class="radio"><label><input name="2" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
+    <div class="radio"><label><input checked="checked" name="2" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="2" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="2" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: NOT BREAKDOWN</p></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
@@ -162,9 +162,9 @@ Please refrain from joining this task if you are a non-native speaker of English
     Select one of the breakdown labels. (required)
 
     <div class="radio"><label><input name="3" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
-<div class="radio"><label><input name="3" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
+<div class="radio"><label><input checked="checked" name="3" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="3" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: POSSIBLE BREAKDOWN</p></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
@@ -181,10 +181,10 @@ Please refrain from joining this task if you are a non-native speaker of English
  </p>
     Select one of the breakdown labels. (required)
 
-    <div class="radio"><label><input name="4" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
+    <div class="radio"><label><input checked="checked" name="4" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="4" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="4" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: NOT BREAKDOWN</p></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
@@ -203,10 +203,10 @@ Please refrain from joining this task if you are a non-native speaker of English
  </p>
     Select one of the breakdown labels. (required)
 
-    <div class="radio"><label><input name="5" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
+    <div class="radio"><label><input checked="checked" name="5" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="5" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="5" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: NOT BREAKDOWN</p></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
@@ -227,10 +227,10 @@ Please refrain from joining this task if you are a non-native speaker of English
  </p>
     Select one of the breakdown labels. (required)
 
-    <div class="radio"><label><input name="6" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
+    <div class="radio"><label><input checked="checked" name="6" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="6" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="6" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: NOT BREAKDOWN</p></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
@@ -255,8 +255,8 @@ Please refrain from joining this task if you are a non-native speaker of English
 
     <div class="radio"><label><input name="7" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="7" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
-<div class="radio"><label><input name="7" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: BREAKDOWN</p></div>
+<div class="radio"><label><input checked="checked" name="7" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
@@ -281,10 +281,10 @@ Please refrain from joining this task if you are a non-native speaker of English
  </p>
     Select one of the breakdown labels. (required)
 
-    <div class="radio"><label><input name="8" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
+    <div class="radio"><label><input checked="checked" name="8" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="8" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="8" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: NOT BREAKDOWN</p></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
@@ -311,10 +311,10 @@ Please refrain from joining this task if you are a non-native speaker of English
  </p>
     Select one of the breakdown labels. (required)
 
-    <div class="radio"><label><input name="9" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
+    <div class="radio"><label><input checked="checked" name="9" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="9" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="9" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: NOT BREAKDOWN</p></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
@@ -343,10 +343,10 @@ Please refrain from joining this task if you are a non-native speaker of English
  </p>
     Select one of the breakdown labels. (required)
 
-    <div class="radio"><label><input name="10" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
+    <div class="radio"><label><input checked="checked" name="10" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="10" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="10" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: NOT BREAKDOWN</p></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
@@ -377,10 +377,10 @@ Please refrain from joining this task if you are a non-native speaker of English
  </p>
     Select one of the breakdown labels. (required)
 
-    <div class="radio"><label><input name="11" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
+    <div class="radio"><label><input checked="checked" name="11" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="11" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="11" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: NOT BREAKDOWN</p></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
@@ -414,9 +414,9 @@ Please refrain from joining this task if you are a non-native speaker of English
     Select one of the breakdown labels. (required)
 
     <div class="radio"><label><input name="12" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
-<div class="radio"><label><input name="12" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
+<div class="radio"><label><input checked="checked" name="12" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="12" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: POSSIBLE BREAKDOWN</p></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
@@ -451,10 +451,10 @@ Please refrain from joining this task if you are a non-native speaker of English
  </p>
     Select one of the breakdown labels. (required)
 
-    <div class="radio"><label><input name="13" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
+    <div class="radio"><label><input checked="checked" name="13" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="13" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="13" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: NOT BREAKDOWN</p></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
@@ -491,10 +491,10 @@ Please refrain from joining this task if you are a non-native speaker of English
  </p>
     Select one of the breakdown labels. (required)
 
-    <div class="radio"><label><input name="14" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
+    <div class="radio"><label><input checked="checked" name="14" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="14" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="14" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: NOT BREAKDOWN</p></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
@@ -533,10 +533,10 @@ Please refrain from joining this task if you are a non-native speaker of English
  </p>
     Select one of the breakdown labels. (required)
 
-    <div class="radio"><label><input name="15" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
+    <div class="radio"><label><input checked="checked" name="15" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="15" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="15" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: NOT BREAKDOWN</p></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
@@ -577,10 +577,10 @@ Please refrain from joining this task if you are a non-native speaker of English
  </p>
     Select one of the breakdown labels. (required)
 
-    <div class="radio"><label><input name="16" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
+    <div class="radio"><label><input checked="checked" name="16" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="16" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="16" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: NOT BREAKDOWN</p></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
@@ -625,8 +625,8 @@ Please refrain from joining this task if you are a non-native speaker of English
 
     <div class="radio"><label><input name="17" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="17" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
-<div class="radio"><label><input name="17" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: BREAKDOWN</p></div>
+<div class="radio"><label><input checked="checked" name="17" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
@@ -673,8 +673,8 @@ Please refrain from joining this task if you are a non-native speaker of English
 
     <div class="radio"><label><input name="18" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="18" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
-<div class="radio"><label><input name="18" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: BREAKDOWN</p></div>
+<div class="radio"><label><input checked="checked" name="18" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
@@ -722,9 +722,9 @@ Please refrain from joining this task if you are a non-native speaker of English
     Select one of the breakdown labels. (required)
 
     <div class="radio"><label><input name="19" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
-<div class="radio"><label><input name="19" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
+<div class="radio"><label><input checked="checked" name="19" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="19" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: POSSIBLE BREAKDOWN</p></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
@@ -773,10 +773,10 @@ Please refrain from joining this task if you are a non-native speaker of English
  </p>
     Select one of the breakdown labels. (required)
 
-    <div class="radio"><label><input name="20" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
+    <div class="radio"><label><input checked="checked" name="20" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="20" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="20" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: NOT BREAKDOWN</p></div>
+</div>
 </div>
 <br/>
 <div class="panel panel-default">
@@ -829,8 +829,8 @@ Please refrain from joining this task if you are a non-native speaker of English
 
     <div class="radio"><label><input name="21" required="true" type="radio" value="NOT BREAKDOWN"/><font color="green">NOT A BREAKDOWN </font></label></div>
 <div class="radio"><label><input name="21" required="true" type="radio" value="POSSIBLE BREAKDOWN"/><font color="#ffbf00">POSSIBLE BREAKDOWN </font></label></div>
-<div class="radio"><label><input name="21" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
-<p>Worker answered: BREAKDOWN</p></div>
+<div class="radio"><label><input checked="checked" name="21" required="true" type="radio" value="BREAKDOWN"/><font color="red">BREAKDOWN </font></label></div>
+</div>
 </div>
 <br/>
 </div>

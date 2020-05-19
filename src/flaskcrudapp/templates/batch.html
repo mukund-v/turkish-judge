@@ -1,0 +1,35 @@
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Batch</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://kit.fontawesome.com/8e599f3795.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="section">
+      
+      <div class="columns is-centered">
+        <div class="column is-one-third">
+            <div class="box">
+              <h1 class="title is-4">Batch <strong>{{batch_name}}</strong> HITs</h1>
+              <table style="width:100%">
+                  <tr>
+                      <th>HIT Number</th>
+                      <th>Status</th>
+                      <th>Sandbox Link</th>
+                  </tr>
+                  {% for hit in hits %}
+                  <tr>
+                      <td>{{loop.index}}</td>
+                      <td>{{hit['Status']}}</td>
+                      <td><a href={{hit['sandboxLink']}} target="_blank">Click here</a></td>
+                  </tr>
+                  {% endfor %}
+              </table>
+            </div>
+        </div>
+        </div>
+    </section>
+  </body>
+  
