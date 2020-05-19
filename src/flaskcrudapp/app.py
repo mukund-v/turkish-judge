@@ -74,7 +74,6 @@ Add a requester as a user in database and redirects to requester page.
 @app.route('/add', methods=['POST'])
 def add_user():
     _form = request.form
-
     _name = _form['name']
     _email = _form['email']
     _password = _form['pwd']
@@ -107,15 +106,20 @@ def appeal():
     _form = request.form 
     _worker_id = _form["turkerId"]
     _HIT_id = _form["HITId"]
+
     result = csvs_db.find_one({"WorkerId":_worker_id, "HITId":_HIT_id})
+    
     if not result:
         return (redirect(url_for('index', appealerror=True)))
+    
     sandbox_link = result['sandboxLink']
     status = result['Status']
+    
     try:
         worker_email = result['WorkerEmail'] 
     except:
         worker_email = ''
+    
     hit_data = {
         'HITId' : _HIT_id,
         'WorkerId' : _worker_id,
@@ -123,6 +127,7 @@ def appeal():
         'WorkerEmail' : worker_email,
         'Status' : status
     }
+
     session["sandboxLink"] = sandbox_link
     session['WorkerEmail'] = worker_email
     return (render_template('appeal.html', hit_data=hit_data))
@@ -137,6 +142,7 @@ def make_appeal():
     _explanation = _form["explanation"]
     _email = _form["email"] if _form["email"] else session['WorkerEmail']
     hit_id = create_appeal(sandbox_link=session["sandboxLink"], explanation=_explanation)
+    
     csvs_db.update_one(
         {
             "sandboxLink": session["sandboxLink"]
@@ -149,6 +155,7 @@ def make_appeal():
             }
         }
     )
+    
     entry = csvs_db.find_one({"AppealId":hit_id}, {"HITId":1})
     return redirect(url_for('index', appealsuccess=True, appealId=entry["HITId"]))
 
@@ -196,8 +203,10 @@ def upload():
     filename = file.filename
     batch_name = request.form['batch_name']
     requester_info = users_db.find_one({"req_id":session["req_id"]})
+
     if csvs_db.find_one({"batch_name":batch_name, "req_id":session["req_id"]}):
         return redirect(url_for('requester', batch_name_error=True))
+    
     if '.' in filename and filename.split(".")[-1] in ALLOWED_EXTENSIONS:
         rejected = parse_csv(input=file)
         batch_ids = set()
