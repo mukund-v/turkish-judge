@@ -1,6 +1,5 @@
 from flask import Flask, jsonify, redirect, request, render_template, send_from_directory, session, url_for, redirect
 from flask_pymongo import PyMongo
-from flask_bootstrap import Bootstrap
 from werkzeug.security import generate_password_hash, check_password_hash
 from bson.json_util import dumps
 from bson.objectid import ObjectId
@@ -15,7 +14,6 @@ with open('./config.json', 'r') as input:
 
 ALLOWED_EXTENSIONS = {"csv", "tsv"}
 app = Flask(__name__)
-# Bootstrap(app)
 app.secret_key="secretkey"
 app.config['MONGO_URI']= config["mongo"]
 mongo = PyMongo(app)
