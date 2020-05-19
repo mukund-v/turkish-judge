@@ -20,7 +20,7 @@ def parse_csv(input):
     reject_json = json.loads(rejected_w_id.to_json(orient='records'))
     for hit in reject_json:
         hit["Status"] = "NA"
-        hit["sandboxLink"] = create_task(question_xml=hit["Question"], answer_xml=hit["Answer"], HITId=hit["hit_id"])
+        hit["sandboxLink"] = create_task(question_xml=hit["Question"], answer_xml=hit["Answer"], HITId=hit["_id"])
     return reject_json
 
 def align_xmls(question_xml, answer_xml):
