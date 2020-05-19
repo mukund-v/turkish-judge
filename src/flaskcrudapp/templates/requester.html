@@ -8,7 +8,6 @@
 </head>
 <body>
   <section class="section">
-
     <br /> <br />
     <h2 class="title" align="center">Requesters</h2>
     <br />
@@ -35,22 +34,6 @@
           </div>
           {% endfor %}
         </div>
-          <div class="box">
-            <table style="width:100%">
-                <tr>
-                    <th>HIT Number</th>
-                    <th>Status</th>
-                    <th>Sandbox Link</th>
-                </tr>
-                {% for hit in hits %}
-                <tr>
-                    <td>{{loop.index}}</td>
-                    <td>{{hit['Status']}}</td>
-                    <td><a href={{hit['sandboxLink']}} target="_blank">Click here</a></td>
-                </tr>
-                {% endfor %}
-            </table>
-          </div>
       </div>
       <div class="column is-one-third">
         <div class="box">
@@ -76,7 +59,8 @@
             <button type="submit" class="btn btn-default">Submit</button>
           </form>
         </div>
-          You are currently logged in as {{username}}. Click <a href="/signout">here</a> to log out.
+        <p>You are currently logged in as {{username}}. Click <a href="/signout">here</a> to log out.</p>
+      </div>
     </div>
   </section>
 </body>
