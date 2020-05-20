@@ -14,7 +14,7 @@ with open("config.json", 'r') as input:
 def parse_csv(input):
     df = pd.read_csv(input)
     rejected = df[
-        df["AssignmentStatus"]=="Approved"  # testing csv has all 'Approved'
+        df["AssignmentStatus"]=="Approved"  # TODO change to 'Rejected' testing csv has all 'Approved'
     ]
     only_relevant_columns = rejected[["WorkerId", "AssignmentId", "HITId", "Question", "Answer"]]
     rejected_w_id = only_relevant_columns.rename(columns={"AssignmentId":"_id"})
