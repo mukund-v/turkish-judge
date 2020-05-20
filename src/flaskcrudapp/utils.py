@@ -11,6 +11,7 @@ from example import example_question, example_answer
 with open("config.json", 'r') as input:
     config = json.loads(input.read())
 
+# TODO this method shoud be able to accept arbitrary column names that indicate rejections
 def parse_csv(input):
     df = pd.read_csv(input)
     rejected = df[
