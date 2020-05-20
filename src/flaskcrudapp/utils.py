@@ -49,7 +49,7 @@ def create_appeal(sandbox_link, explanation):
         Description = 'Judge whether the rejectection was fair or unfair',
         Keywords = 'fairness, jury, adjudication',
         Reward = '0.01',
-        MaxAssignments = 5,
+        MaxAssignments = 3,
         LifetimeInSeconds = 1209600,
         AssignmentDurationInSeconds = 5400,
         AutoApprovalDelayInSeconds = 3600,
@@ -77,17 +77,14 @@ def create_task(question_xml, answer_xml, HITId):
     fileloader = FileSystemLoader('templates1')      # Accesses the directory 'templates' in the same classpath as this code file. 'templates' contains files for HTML/XML templates
     env = Environment(loader=fileloader)            # Establishes the environment to load a specific file from the templates diretory
     task_template = env.get_template('task.xml')
-    output = task_template.render()
-
-    with open('task.xml', 'w') as f:
-      print(output,file=f)
-    task = open(file='task.xml',mode='r').read()
+    task = task_template.render()
+    
     new_hit = mturk.create_hit(
-        Title = 'Appeal of {} TEST2'.format(HITId),
+        Title = 'Appeal of rejected HIT {}'.format(HITId),
         Description = 'Review this filled out HIT to determine whether the worker completed it correctly',
         Keywords = 'fairness, jury, adjudication',
         Reward = '0.01',
-        MaxAssignments = 5,
+        MaxAssignments = 3,
         LifetimeInSeconds = 1209600,
         AssignmentDurationInSeconds = 5400,
         AutoApprovalDelayInSeconds =3600,
