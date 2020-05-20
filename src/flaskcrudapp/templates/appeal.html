@@ -22,8 +22,8 @@
           <p><strong>Status:</strong> {{hit_data['Status']}}</p>
           {% else %}
           <p><strong>Status: </strong> Not yet appealed. You can appeal this HIT using the panel below.
-          <p><strong>Sandbox link to your original HIT: </strong><a href={{hit_data['sandboxLink']}}>here</a></p>
           {% endif %}
+          <p><strong>Sandbox link to your original HIT: </strong><a href={{hit_data['sandboxLink']}}>here</a></p>
         </div>
         <form method="POST" action="/makeappeal" class="box">
 
