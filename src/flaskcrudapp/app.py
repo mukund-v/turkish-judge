@@ -286,7 +286,6 @@ def upload():
     filename = file.filename
     batch_name = request.form['batch_name']
     requester_info = users_db.find_one({"req_id":session["req_id"]})
-    csvs_db.delete_many({})
     if csvs_db.find_one({"batch_name":batch_name, "req_id":session["req_id"]}):
         return redirect(url_for('requester', batch_name_error=True))
     
