@@ -1,12 +1,16 @@
 from flask import Flask, jsonify, redirect, request, render_template, send_from_directory, session, url_for, redirect
 from flask_pymongo import PyMongo
+from apscheduler.scheduler import Scheduler
 from werkzeug.security import generate_password_hash, check_password_hash
 from bson.json_util import dumps
 from bson.objectid import ObjectId
+from time import sleep
 from utils import *
 import os
 import pandas as pd
 import json
+import atexit 
+
 
 
 with open('./config.json', 'r') as input:
@@ -19,6 +23,22 @@ app.config['MONGO_URI']= config["mongo"]
 mongo = PyMongo(app)
 users_db = mongo.db.users
 csvs_db = mongo.db.csvs
+
+cron = Scheduler(daemon=True)
+cron.start()
+
+@cron.interval_schedule(hours=1)
+def update_HIT_statuses():
+    appeals = csvs_db.find({"Status" : "Under review"})
+    for appeal in appeals:
+        appeal_id = appeal["AppealId"]
+        appeal_results = get_results(appeal_id)
+        if not appeal_results.empty:
+            fair  = appeal_results[appeal_results['judgement']=='fair']['judgement'].count()
+            unfair = appeal_results[appeal_results['judgement']=='unfair']['judgement'].count()
+            csvs_db.update_one({"AppealId":appeal_id}, {"$inc": {"Fair": int(fair), "Unfair": int(unfair)}})
+    csvs_db.update({"Fair": {"$gte":2}}, {"$set": {"Status": "Rejection confirmed"}}) 
+    csvs_db.update({"Unfair": {"$gte":2}}, { "$set": {"Status": "Rejection overturned"}})
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -189,7 +209,9 @@ def make_appeal():
                     "Status":"Under review",
                     "AppealId":appeal_id, 
                     "WorkerEmail":_email,
-                    "Explanation":_explanation
+                    "Explanation":_explanation,
+                    "Fair": 0,
+                    "Unfair": 0
                 }
             }
         )
@@ -260,16 +282,14 @@ def upload():
     filename = file.filename
     batch_name = request.form['batch_name']
     requester_info = users_db.find_one({"req_id":session["req_id"]})
-
+    csvs_db.delete_many({})
     if csvs_db.find_one({"batch_name":batch_name, "req_id":session["req_id"]}):
         return redirect(url_for('requester', batch_name_error=True))
     
     if '.' in filename and filename.split(".")[-1] in ALLOWED_EXTENSIONS:
         rejected = parse_csv(input=file)
-        batch_ids = set()
 
         for reject in rejected:
-            batch_ids.add(reject["HITId"])
             reject["req_id"] = requester_info["req_id"]
             reject["batch_name"] = batch_name
 
@@ -282,6 +302,7 @@ def upload():
 
     else:
         return unsupported_media_type()
+
 
 
 '''
@@ -327,4 +348,3 @@ def unsupported_media_type(error=None):
 
 if __name__=="__main__":
     app.run(debug=True)
-
