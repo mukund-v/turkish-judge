@@ -299,7 +299,7 @@ Route to get tab icon.
 '''
 @app.route('/favicon.ico')
 def favicon():
-    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico')
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.png')
 
 
 @app.errorhandler(404)
