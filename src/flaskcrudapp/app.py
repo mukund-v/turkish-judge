@@ -261,15 +261,19 @@ def requester():
 '''
 @app.route('/batch/<batch_name>')
 def batch_page(batch_name):
+    #TODO case when we don't find HITs
     hits = list(csvs_db.find(
         {
             "req_id" : session["req_id"],
             "batch_name" : batch_name
         }, 
-        {
+        {   
+            "_id" : 1,
             "HITId":1, 
-            "Status":1, 
-            "sandboxLink":1    # only want these fields from the db
+            "Status":1,
+            "sandboxLink":1,    # only want these fields from the db
+            "Explanation":1,
+            "WorkerId":1
         }
     ))
     
@@ -295,6 +299,7 @@ def upload():
         for reject in rejected:
             reject["req_id"] = requester_info["req_id"]
             reject["batch_name"] = batch_name
+            reject["Explanation"] = ""
 
         csvs_db.insert(rejected)
         users_db.update_one({"req_id":session["req_id"]}, {"$addToSet":{"batches":batch_name}})
