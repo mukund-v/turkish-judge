@@ -2,6 +2,7 @@ import pandas as pd
 import json as json
 import csv 
 import boto3
+import xmltodict
 from bs4 import BeautifulSoup
 from jinja2 import Environment, FileSystemLoader, Template
 from example import example_question, example_answer
@@ -43,14 +44,14 @@ def align_xmls(question_xml, answer_xml):
 def create_appeal(sandbox_link, explanation):
     mturk = connect_to_MTurk()
     new_hit = mturk.create_hit(
-        Title = 'HIT rejection reviewing TEST2',
+        Title = 'Adjudicate appealed HIT rejections',
         Description = 'Judge whether the rejectection was fair or unfair',
         Keywords = 'fairness, jury, adjudication',
         Reward = '0.01',
         MaxAssignments = 5,
         LifetimeInSeconds = 1209600,
         AssignmentDurationInSeconds = 5400,
-        AutoApprovalDelayInSeconds = 1,
+        AutoApprovalDelayInSeconds = 3600,
         QualificationRequirements = [],
         HITLayoutId = "3S61CKY9NO0FW7HAPT77VH7YQLZOB2", # this Id is for sandbox, there is a different one for marketplace
         HITLayoutParameters = [
@@ -88,12 +89,29 @@ def create_task(question_xml, answer_xml, HITId):
         MaxAssignments = 5,
         LifetimeInSeconds = 1209600,
         AssignmentDurationInSeconds = 5400,
-        AutoApprovalDelayInSeconds = 1,
+        AutoApprovalDelayInSeconds =3600,
         QualificationRequirements = [],
         Question = task
     )
     print ("https://workersandbox.mturk.com/mturk/preview?groupId=" + new_hit['HIT']['HITGroupId'])
     return "https://workersandbox.mturk.com/mturk/preview?groupId=" + new_hit['HIT']['HITGroupId']
+
+def get_results(HITID):
+  mturk = connect_to_MTurk()
+  keys = config["HITkeys"]
+  all_results = []
+  results = mturk.list_assignments_for_hit(HITId=HITID, AssignmentStatuses=["Submitted"])
+  if results['NumResults'] > 0:  
+      for assignment in results['Assignments']:   
+          xml_doc = xmltodict.parse(assignment['Answer'])
+          print("Worker's answer was:")
+          print("For input field: " + xml_doc['QuestionFormAnswers']['Answer']['QuestionIdentifier'])
+          print("Submitted answer: " + xml_doc['QuestionFormAnswers']['Answer']['FreeText'])
+          assignment[xml_doc['QuestionFormAnswers']['Answer']['QuestionIdentifier']] = xml_doc['QuestionFormAnswers']['Answer']['FreeText']
+          all_results.append(assignment)
+          mturk.approve_assignment(AssignmentId=assignment["AssignmentId"])
+  return pd.DataFrame(all_results, columns=keys)
+
 
 def connect_to_MTurk(sandbox=True):
   '''
@@ -148,3 +166,4 @@ def writeIDS(inputfile,outputfile):
         rows.append(line.split(" ")[2])
 
   writetxtfile(outputfile,rows)
+
