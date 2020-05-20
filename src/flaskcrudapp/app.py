@@ -41,6 +41,10 @@ def update_HIT_statuses():
     csvs_db.update({"Unfair": {"$gte":2}}, { "$set": {"Status": "Rejection overturned"}})
 
 
+# Shutdown the cron thread when the web process is stopped
+atexit.register(lambda: cron.shutdown(wait=False))
+
+
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if session.get('logged_in'):
