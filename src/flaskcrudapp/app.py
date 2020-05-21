@@ -304,9 +304,7 @@ def upload():
         csvs_db.insert(rejected)
         users_db.update_one({"req_id":session["req_id"]}, {"$addToSet":{"batches":batch_name}})
 
-        resp = jsonify("File upload accepted!")
-        resp.status_code = 202  # 202 is that the request has been accepted for processing but not yet completed
-        return resp
+        return redirect(url_for('requester'))
 
     else:
         return unsupported_media_type()
