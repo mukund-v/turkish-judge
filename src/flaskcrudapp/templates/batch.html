@@ -5,14 +5,66 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="https://kit.fontawesome.com/8e599f3795.js" crossorigin="anonymous"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 </head>
 <body>
     <section class="section">
-      
       <div class="columns is-centered">
-        <div class="column is-one-third">
+        <div class="column is-half">
+            <p>Click <a href="/requester">here</a> to return back to the requester page.</p><br/>
             <div class="box">
               <h1 class="title is-4">Batch <strong>{{batch_name}}</strong> HITs</h1>
+              {% for hit in hits %}
+              <div class="card">
+                <header class="card-header">
+                  <p class="card-header-title">
+                    AID: {{hit['_id']}}
+                  </p>
+                  <div></div>
+                  <span class="icon">
+                    
+                  </span>
+                  <a class = "card-header-icon modal-button" data-target = "#{{hit['HITId']}}">
+                    <span class="icon">
+                      {% if hit['Status'] == "Rejection confirmed" %}
+                      <i class="fas fa-circle" style="color:red; padding-right: 7;"></i>
+                      {% elif hit['Status'] == "Rejection overturned" %}
+                      <i class="fas fa-circle" style="color:greenyellow; padding-right: 7;"></i>
+                      {% elif hit['Status'] == "Under review" %}
+                      <i class="fas fa-circle" style="color:purple; padding-right: 7;"></i>
+                      {% else %}
+                      <i class="fas fa-circle" style="color:orange; padding-right: 7;"></i>
+                      {% endif %}
+                      <i class="fas fa-arrow-right"></i>
+                    </span>
+                  </a>
+                </header>
+              </div>
+              <div id="{{hit['HITId']}}" class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                  <header class="modal-card-head">
+                    <p class="modal-card-title">HIT View</p>
+                    <button class="delete" aria-label="close"></button>
+                  </header>
+                  <section class="modal-card-body">
+                    <p>
+                    <strong>Assignment ID: </strong>{{hit['_id']}} <br/>
+                    <strong>HIT ID: </strong>{{hit['HITId']}} <br/>
+                    <strong>Worker ID: </strong>{{hit['WorkerId']}} <br/><br/>
+
+                    <strong>Status: </strong>{{hit['Status']}}<br/>
+                    <strong>Sandbox Link: </strong><a href={{hit['sandboxLink']}} target="_blank">Click here</a><br/>
+                    {% if 'Explanation' in hit and hit['Explanation'] != "" %}
+                    <br/>
+                    <strong>Worker Explanation: </strong> {{hit['Explanation']}}
+                    {% endif %}
+                    </p>
+                  </section>
+                </div>
+              </div>
+              {% endfor %}
+              <!--
               <table style="width:100%">
                   <tr>
                       <th>HIT Number</th>
@@ -27,15 +79,35 @@
                   </tr>
                   {% endfor %}
               </table>
+              -->
             </div>
         </div>
       </div>
+      <br/>
       <div align="center">
         <span class="icon" style="width : 200px;">
         <span style="padding-right: 10"> Turkish Judge</span>
         <i class="fas fa-gavel fa-2x"></i>
         </span>
       </div>
-    </section>
-  </body>
+  </section>
+  <script>
+    $(".modal-button").click(function() {
+      console.log("here");
+      var target = $(this).data("target");
+      $("html").addClass("is-clipped");
+      $(target).addClass("is-active");
+    });
+    
+    $(".delete").click(function() {
+      $("html").removeClass("is-clipped");
+      $(this).parent().parent().parent().removeClass("is-active");
+    });
+
+    $(".modal-background").click(function() {
+      $("html").removeClass("is-clipped");
+      $(this).parent().removeClass("is-active");
+    });
+  </script>
+</body>
   
