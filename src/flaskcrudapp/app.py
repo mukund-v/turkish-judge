@@ -276,7 +276,12 @@ def batch_page(batch_name):
             "WorkerId":1
         }
     ))
-    
+    total = len(hits)
+    num_appealed = 0    # keep track of how many appealed in Batch
+    num_overturned = 0  # how many overturned out of the appeals
+    num_confirmed = 0   # how many rejections confirmed out of the appeals
+    for hit in hits:
+        pass
     if hits:
         return (render_template('batch.html', batch_name=batch_name, hits=hits))
 
