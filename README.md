@@ -1,7 +1,5 @@
-# turkish-judge
-Turkish Judge
-
-Implementation of the Turkish Judge platform as a Flask application.
+# Turkish Judge
+Implementation of a crowd-based adjudication platform for Amazon Mechanical Turk as a Flask application. This application manages and stores Requester csv uploads and worker grievance submissions in MongoDB.
 
 ## Running the application
 First create a virtual environment using virtualenv, e.g.:
