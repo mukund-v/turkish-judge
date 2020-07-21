@@ -9,12 +9,48 @@
 </head>
 <body>
     <section class="section">
-      <div class="columns is-centered">
+      <p>Click <a href="/requester">here</a> to return back to the requester page.</p><br/>
+      <div class='columns is-centered'>
+          <div class="column is-half">
+              <div class="box">
+                  <h1 class="title is-4">Batch <strong>{{batch_name}}</strong> Statistics</h1>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Worker</th>
+                    <th>Rejections</th>
+                    <th>Appeals</th>
+                    <th>Confirmed</th>
+                    <th>Overturned</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for worker in batch_stats['rejected_workers'] %}
+                  <tr>
+                    <th>{{loop.index}}</th>
+                    <td>{{worker}}</td>
+                    <td>{{batch_stats['rejected_workers'][worker]}}</td>
+                    <td>{{batch_stats['appealing_workers'][worker]}}</td>
+                    <td>{{batch_stats['confirmed_workers'][worker]}}</td>
+                    <td>{{batch_stats['overturned_workers'][worker]}}</td>
+                  </tr> 
+                  {% endfor %}
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th>Totals</th>
+                    <th>{{batch_stats['num_workers']}}</th>
+                    <th>{{batch_stats['num_rejected']}}</th>
+                    <th>{{batch_stats['num_appealed']}}</th>
+                    <th>{{batch_stats['num_confirmed']}}</th>
+                    <th>{{batch_stats['num_overturned']}}</th>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
         <div class="column is-half">
-            <p>Click <a href="/requester">here</a> to return back to the requester page.</p><br/>
-            <strong>Rejections appealed: </strong>{{batch_stats['num_appealed']}}<br/>
-            <strong>Rejections confirmed: </strong>{{batch_stats['num_confirmed']}}<br/>
-            <strong>Rejections overturned: </strong>{{batch_stats['num_overturned']}}<br/>
             <div class="box">
               <h1 class="title is-4">Batch <strong>{{batch_name}}</strong> HITs</h1>
               {% for hit in hits %}

@@ -289,25 +289,37 @@ def make_batch_stats(hits):
     num_appealed = 0    # keep track of how many appealed in Batch
     num_overturned = 0  # how many overturned out of the appeals
     num_confirmed = 0   # how many rejections confirmed out of the appeals
+    num_rejected = 0    # how many HITs rejected 
     workers = set()
+    rejected_workers = Counter()
     appealing_workers = Counter()
+    confirmed_workers = Counter()
+    overturned_workers = Counter()
     for hit in hits:
         worker = hit["WorkerId"]
         workers.add(worker)
-        appealing_workers[worker] += 1
+        rejected_workers[worker] += 1
+        num_rejected += 1
         if hit["Status"] != "NA":
+            appealing_workers[worker] += 1
             num_appealed += 1
         if hit["Status"] == "Rejection confirmed":
             num_confirmed += 1
+            confirmed_workers[worker] += 1
         elif hit["Status"] == "Rejection overturned":
             num_overturned += 1
+            overturned_workers[worker] += 1
     return {
+        "num_rejected": num_rejected,
         "num_appealed": num_appealed,
         "num_overturned": num_overturned,
         "num_confirmed": num_confirmed,
         "total": len(hits),
         "num_workers": len(workers),
-
+        "appealing_workers": appealing_workers,
+        "confirmed_workers": confirmed_workers,
+        "overturned_workers": overturned_workers,
+        "rejected_workers": rejected_workers
     }
 
 '''
