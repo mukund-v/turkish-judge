@@ -12,6 +12,9 @@
       <div class="columns is-centered">
         <div class="column is-half">
             <p>Click <a href="/requester">here</a> to return back to the requester page.</p><br/>
+            <strong>Rejections appealed: </strong>{{batch_stats['num_appealed']}}<br/>
+            <strong>Rejections confirmed: </strong>{{batch_stats['num_confirmed']}}<br/>
+            <strong>Rejections overturned: </strong>{{batch_stats['num_overturned']}}<br/>
             <div class="box">
               <h1 class="title is-4">Batch <strong>{{batch_name}}</strong> HITs</h1>
               {% for hit in hits %}

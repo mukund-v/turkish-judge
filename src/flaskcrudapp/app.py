@@ -5,6 +5,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from bson.json_util import dumps
 from bson.objectid import ObjectId
 from time import sleep
+from collections import Counter
 from utils import *
 import os
 import pandas as pd
@@ -276,15 +277,38 @@ def batch_page(batch_name):
             "WorkerId":1
         }
     ))
-    total = len(hits)
+    batch_stats = make_batch_stats(hits)
+    if hits:
+        return (render_template('batch.html', batch_name=batch_name, hits=hits, batch_stats=batch_stats))
+
+'''
+Helper function to make batch stats
+Arg: list of HITs in the batch
+'''
+def make_batch_stats(hits):
     num_appealed = 0    # keep track of how many appealed in Batch
     num_overturned = 0  # how many overturned out of the appeals
     num_confirmed = 0   # how many rejections confirmed out of the appeals
+    workers = set()
+    appealing_workers = Counter()
     for hit in hits:
-        pass
-    if hits:
-        return (render_template('batch.html', batch_name=batch_name, hits=hits))
+        worker = hit["WorkerId"]
+        workers.add(worker)
+        appealing_workers[worker] += 1
+        if hit["Status"] != "NA":
+            num_appealed += 1
+        if hit["Status"] == "Rejection confirmed":
+            num_confirmed += 1
+        elif hit["Status"] == "Rejection overturned":
+            num_overturned += 1
+    return {
+        "num_appealed": num_appealed,
+        "num_overturned": num_overturned,
+        "num_confirmed": num_confirmed,
+        "total": len(hits),
+        "num_workers": len(workers),
 
+    }
 
 '''
 Upload csv data to database.
