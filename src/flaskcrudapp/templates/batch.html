@@ -12,8 +12,8 @@
       <p>Click <a href="/requester">here</a> to return back to the requester page.</p><br/>
       <div class='columns is-centered'>
           <div class="column is-half">
-              <div class="box">
-                  <h1 class="title is-4">Batch <strong>{{batch_name}}</strong> Statistics</h1>
+            <div class="box">
+              <h1 class="title is-4">Batch <strong>{{batch_name}}</strong> Statistics</h1>
               <table class="table">
                 <thead>
                   <tr>
@@ -51,74 +51,69 @@
             </div>
           </div>
         <div class="column is-half">
-            <div class="box">
-              <h1 class="title is-4">Batch <strong>{{batch_name}}</strong> HITs</h1>
-              {% for hit in hits %}
-              <div class="card">
-                <header class="card-header">
-                  <p class="card-header-title">
-                    AID: {{hit['_id']}}
-                  </p>
-                  <div></div>
-                  <span class="icon">
-                    
-                  </span>
-                  <a class = "card-header-icon modal-button" data-target = "#{{hit['HITId']}}">
+          <div class="box">
+            <h1 class="title is-4">Batch <strong>{{batch_name}}</strong> HITs</h1>
+            <table class="table table-responsive" id="batch-assignments">
+              <thead>
+                <tr>
+                  <th>Assignment</th>
+                  <th>Worker</th>
+                  <th>Status</th>
+                  <th>Confirmed</th>
+                  <th>Overturned</th>
+                  <th>Approve<br/><label for='select_all_approve'>(All </label><input id='select_all_approve' name="select_all_approve" value="1" type="checkbox">)</th>
+                  <th>Reject<br/><label for='select_all_reject'>(All </label><input id='select_all_reject'name="select_all_reject" value="1" type="checkbox" >)</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for hit in hits %}
+                <tr>
+                  <th><a class="modal-button" data-target = "#{{hit['HITId']}}">{{ hit['_id'][-3:] }}</a></th>
+                  <div id="{{hit['HITId']}}" class="modal">
+                    <div class="modal-background"></div>
+                    <div class="modal-card">
+                      <header class="modal-card-head">
+                        <p class="modal-card-title">HIT View</p>
+                        <button class="delete" aria-label="close"></button>
+                      </header>
+                      <section class="modal-card-body">
+                        <p>
+                        <strong>Assignment ID: </strong>{{hit['_id']}} <br/>
+                        <strong>HIT ID: </strong>{{hit['HITId']}} <br/>
+                        <strong>Worker ID: </strong>{{hit['WorkerId']}} <br/><br/>
+    
+                        <strong>Status: </strong>{{hit['Status']}}<br/>
+                        <strong>Sandbox Link: </strong><a href={{hit['sandboxLink']}} target="_blank">Click here</a><br/>
+                        {% if 'Explanation' in hit and hit['Explanation'] != "" %}
+                        <br/>
+                        <strong>Worker Explanation: </strong> {{hit['Explanation']}}
+                        {% endif %}
+                        </p>
+                      </section>
+                    </div>
+                  </div>
+                  <td>{{ hit['WorkerId'][-3:] }}</td>
+                  <td>
                     <span class="icon">
-                      {% if hit['Status'] == "Rejection confirmed" %}
+                      {% if hit['Status'] == "Confirmed" %}
+                      <i class="fas fa-circle" style="color:green; padding-right: 7;"></i>
+                      {% elif hit['Status'] == "Overturned" %}
                       <i class="fas fa-circle" style="color:red; padding-right: 7;"></i>
-                      {% elif hit['Status'] == "Rejection overturned" %}
-                      <i class="fas fa-circle" style="color:greenyellow; padding-right: 7;"></i>
-                      {% elif hit['Status'] == "Under review" %}
-                      <i class="fas fa-circle" style="color:purple; padding-right: 7;"></i>
+                      {% elif hit['Status'] == "Adjudication" %}
+                      <i class="fas fa-circle" style="color:brown; padding-right: 7;"></i>
                       {% else %}
-                      <i class="fas fa-circle" style="color:orange; padding-right: 7;"></i>
+                      <i class="fas fa-circle" style="color:gray; padding-right: 7;"></i>
                       {% endif %}
-                      <i class="fas fa-arrow-right"></i>
                     </span>
-                  </a>
-                </header>
-              </div>
-              <div id="{{hit['HITId']}}" class="modal">
-                <div class="modal-background"></div>
-                <div class="modal-card">
-                  <header class="modal-card-head">
-                    <p class="modal-card-title">HIT View</p>
-                    <button class="delete" aria-label="close"></button>
-                  </header>
-                  <section class="modal-card-body">
-                    <p>
-                    <strong>Assignment ID: </strong>{{hit['_id']}} <br/>
-                    <strong>HIT ID: </strong>{{hit['HITId']}} <br/>
-                    <strong>Worker ID: </strong>{{hit['WorkerId']}} <br/><br/>
-
-                    <strong>Status: </strong>{{hit['Status']}}<br/>
-                    <strong>Sandbox Link: </strong><a href={{hit['sandboxLink']}} target="_blank">Click here</a><br/>
-                    {% if 'Explanation' in hit and hit['Explanation'] != "" %}
-                    <br/>
-                    <strong>Worker Explanation: </strong> {{hit['Explanation']}}
-                    {% endif %}
-                    </p>
-                  </section>
-                </div>
-              </div>
-              {% endfor %}
-              <!--
-              <table style="width:100%">
-                  <tr>
-                      <th>HIT Number</th>
-                      <th>Status</th>
-                      <th>Sandbox Link</th>
-                  </tr>
-                  {% for hit in hits %}
-                  <tr>
-                      <td>{{loop.index}}</td>
-                      <td>{{hit['Status']}}</td>
-                      <td><a href={{hit['sandboxLink']}} target="_blank">Click here</a></td>
-                  </tr>
-                  {% endfor %}
-              </table>
-              -->
+                  </td>
+                  <td>{{ hit['Fair'] }}</td>
+                  <td>{{ hit['Unfair'] }}</td>
+                  <td><input type="radio" name="{{ hit['_id'] }}" value="approve"/></td>
+                  <td><input type="radio" name="{{ hit['_id'] }}" value="reject"/></td>
+                </tr> 
+                {% endfor %}
+              </tbody>
+            </table>
             </div>
         </div>
       </div>
@@ -131,6 +126,48 @@
       </div>
   </section>
   <script>
+    var dataTable = document.getElementById('batch-assignments');
+    var checkAllApprove = dataTable.querySelector('input[name="select_all_approve"]');
+    var checkAllReject = dataTable.querySelector('input[name="select_all_reject"]');
+    var inputs = dataTable.querySelectorAll('tbody>tr>td>input');
+
+    checkAllApprove.addEventListener('change', function() {
+      if (checkAllApprove.checked) {
+        inputs.forEach(function(input) {
+          if (input.value=="approve") {
+            input.checked = true;
+            checkAllReject.checked = false;
+          }
+        });  
+      }
+      else {
+        inputs.forEach(function(input) {
+            if (input.value=="approve") {
+              input.checked = false;            }
+          });
+      }
+    });
+
+
+    checkAllReject.addEventListener('change', function() {
+      if (checkAllReject.checked) {
+        inputs.forEach(function(input) {
+          if (input.value=="reject") {
+            input.checked = true;
+            checkAllApprove.checked = false;
+          }
+        });  
+      }
+      else {
+        inputs.forEach(function(input) {
+          if (input.value=="reject") {
+            input.checked = false;
+          }
+        });
+      }
+    });
+
+
     $(".modal-button").click(function() {
       console.log("here");
       var target = $(this).data("target");

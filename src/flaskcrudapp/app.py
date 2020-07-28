@@ -30,7 +30,7 @@ cron.start()
 
 @cron.interval_schedule(hours=1)
 def update_HIT_statuses():
-    appeals = csvs_db.find({"Status" : "Under review"})
+    appeals = csvs_db.find({"Status" : "Adjudication"})
     for appeal in appeals:
         appeal_id = appeal["AppealId"]
         appeal_results = get_results(appeal_id)
@@ -38,8 +38,8 @@ def update_HIT_statuses():
             fair  = appeal_results[appeal_results['judgement']=='fair']['judgement'].count()
             unfair = appeal_results[appeal_results['judgement']=='unfair']['judgement'].count()
             csvs_db.update_one({"AppealId":appeal_id}, {"$inc": {"Fair": int(fair), "Unfair": int(unfair)}})
-    csvs_db.update({"Fair": {"$gte":2}}, {"$set": {"Status": "Rejection confirmed"}}) 
-    csvs_db.update({"Unfair": {"$gte":2}}, { "$set": {"Status": "Rejection overturned"}})
+    csvs_db.update({"Fair": {"$gte":2}}, {"$set": {"Status": "Confirmed"}}) 
+    csvs_db.update({"Unfair": {"$gte":2}}, { "$set": {"Status": "Overturned"}})
 
 
 # Shutdown the cron thread when the web process is stopped
@@ -211,7 +211,7 @@ def make_appeal():
             }, 
             {
                 "$set": {
-                    "Status":"Under review",
+                    "Status":"Adjudication",
                     "AppealId":appeal_id, 
                     "WorkerEmail":_email,
                     "Explanation":_explanation,
@@ -274,7 +274,9 @@ def batch_page(batch_name):
             "Status":1,
             "sandboxLink":1,    # only want these fields from the db
             "Explanation":1,
-            "WorkerId":1
+            "WorkerId":1,
+            "Fair":1,
+            "Unfair":1
         }
     ))
     batch_stats = make_batch_stats(hits)
@@ -303,10 +305,10 @@ def make_batch_stats(hits):
         if hit["Status"] != "NA":
             appealing_workers[worker] += 1
             num_appealed += 1
-        if hit["Status"] == "Rejection confirmed":
+        if hit["Status"] == "Confirmed":
             num_confirmed += 1
             confirmed_workers[worker] += 1
-        elif hit["Status"] == "Rejection overturned":
+        elif hit["Status"] == "Overturned":
             num_overturned += 1
             overturned_workers[worker] += 1
     return {
