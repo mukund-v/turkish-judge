@@ -146,14 +146,15 @@
     checkAllApprove.addEventListener('change', function() {
       if (checkAllApprove.checked) {
         inputs.forEach(function(input) {
-          if (input.value=="approve") {
+          if (input.value=="confirm") {
             input.checked = true;
+            checkAllReject.checked = false;
           }
         });  
       }
       else {
         inputs.forEach(function(input) {
-            if (input.value=="approve") {
+            if (input.value=="confirm") {
               input.checked = false;            }
           });
       }
@@ -163,7 +164,7 @@
     checkAllReject.addEventListener('change', function() {
       if (checkAllReject.checked) {
         inputs.forEach(function(input) {
-          if (input.value=="reject") {
+          if (input.value=="overturn") {
             input.checked = true;
             checkAllApprove.checked = false;
           }
@@ -171,7 +172,7 @@
       }
       else {
         inputs.forEach(function(input) {
-          if (input.value=="reject") {
+          if (input.value=="overturn") {
             input.checked = false;
           }
         });
