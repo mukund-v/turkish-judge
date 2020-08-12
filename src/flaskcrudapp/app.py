@@ -1,16 +1,21 @@
-from flask import Flask, jsonify, redirect, request, render_template, send_from_directory, session, url_for, redirect
+from flask import Flask, jsonify, redirect, request, render_template, send_from_directory, session, url_for, redirect, make_response, stream_with_context
 from flask_pymongo import PyMongo
 from apscheduler.scheduler import Scheduler
 from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.wrappers import Response
 from bson.json_util import dumps
 from bson.objectid import ObjectId
 from time import sleep
 from collections import Counter
 from utils import *
+from datetime import datetime
+from io import StringIO
 import os
 import pandas as pd
 import json
 import atexit 
+import csv
+
 
 
 
@@ -282,6 +287,34 @@ def batch_page(batch_name):
     batch_stats = make_batch_stats(hits)
     if hits:
         return (render_template('batch.html', batch_name=batch_name, hits=hits, batch_stats=batch_stats))
+
+@app.route('/batch/<batch_name>/judgements', methods=['POST', 'GET'])
+def generate_csv(batch_name):
+    @stream_with_context
+    def generate():
+        _form = request.form.to_dict()
+        output = []
+        data = StringIO()
+        writer = csv.writer(data)
+        writer.writerow(('AssignmentId', 'Approve', 'Reject'))
+        yield data.getvalue()
+        data.seek(0)
+        data.truncate(0)
+        print (_form)
+        for assignment in _form:
+            if  _form[assignment] == 'overturn':
+                writer.writerow((assignment, 'X', ''))
+                yield data.getvalue()
+                data.seek(0)
+                data.truncate(0)
+            elif _form[assignment] == 'confirm':
+                writer.writerow((assignment, '', 'X'))
+                yield data.getvalue()
+                data.seek(0)
+                data.truncate(0)
+    response = Response(generate(), mimetype='text/csv')
+    response.headers.set('{}-judgements'.format(batch_name), 'attachment', filename='{}-judgements.csv'.format(batch_name))
+    return response
 
 '''
 Helper function to make batch stats

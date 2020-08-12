@@ -53,67 +53,79 @@
         <div class="column is-half">
           <div class="box">
             <h1 class="title is-4">Batch <strong>{{batch_name}}</strong> HITs</h1>
-            <table class="table table-responsive" id="batch-assignments">
-              <thead>
-                <tr>
-                  <th>Assignment</th>
-                  <th>Worker</th>
-                  <th>Status</th>
-                  <th>Confirmed</th>
-                  <th>Overturned</th>
-                  <th>Approve<br/><label for='select_all_approve'>(All </label><input id='select_all_approve' name="select_all_approve" value="1" type="checkbox">)</th>
-                  <th>Reject<br/><label for='select_all_reject'>(All </label><input id='select_all_reject'name="select_all_reject" value="1" type="checkbox" >)</th>
-                </tr>
-              </thead>
-              <tbody>
-                {% for hit in hits %}
-                <tr>
-                  <th><a class="modal-button" data-target = "#{{hit['HITId']}}">{{ hit['_id'][-3:] }}</a></th>
-                  <div id="{{hit['HITId']}}" class="modal">
-                    <div class="modal-background"></div>
-                    <div class="modal-card">
-                      <header class="modal-card-head">
-                        <p class="modal-card-title">HIT View</p>
-                        <button class="delete" aria-label="close"></button>
-                      </header>
-                      <section class="modal-card-body">
-                        <p>
-                        <strong>Assignment ID: </strong>{{hit['_id']}} <br/>
-                        <strong>HIT ID: </strong>{{hit['HITId']}} <br/>
-                        <strong>Worker ID: </strong>{{hit['WorkerId']}} <br/><br/>
-    
-                        <strong>Status: </strong>{{hit['Status']}}<br/>
-                        <strong>Sandbox Link: </strong><a href={{hit['sandboxLink']}} target="_blank">Click here</a><br/>
-                        {% if 'Explanation' in hit and hit['Explanation'] != "" %}
-                        <br/>
-                        <strong>Worker Explanation: </strong> {{hit['Explanation']}}
-                        {% endif %}
-                        </p>
-                      </section>
+
+            <form  action="/batch/{{batch_name}}/judgements" method="POST" target="_blank" enctype="multipart/form-data">
+              <table class="table table-responsive" id="batch-assignments">
+                <thead>
+                  <tr>
+                    <th>Assignment</th>
+                    <th>Worker</th>
+                    <th>Status</th>
+                    <th>Confirmed</th>
+                    <th>Overturned</th>
+                    <th>Confirm<br/><label for='select_all_approve'>(All </label><input id='select_all_approve' name="select_all_approve" value="1" type="checkbox">)</th>
+                    <th>Overturn<br/><label for='select_all_reject'>(All </label><input id='select_all_reject'name="select_all_reject" value="1" type="checkbox" >)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for hit in hits %}
+                  <tr>
+                    <th><a class="modal-button" data-target = "#{{hit['HITId']}}">{{ hit['_id'][-3:] }}</a></th>
+                    <div id="{{hit['HITId']}}" class="modal">
+                      <div class="modal-background"></div>
+                      <div class="modal-card">
+                        <header class="modal-card-head">
+                          <p class="modal-card-title">HIT View</p>
+                          <button class="delete" aria-label="close"></button>
+                        </header>
+                        <section class="modal-card-body">
+                          <p>
+                          <strong>Assignment ID: </strong>{{hit['_id']}} <br/>
+                          <strong>HIT ID: </strong>{{hit['HITId']}} <br/>
+                          <strong>Worker ID: </strong>{{hit['WorkerId']}} <br/><br/>
+      
+                          <strong>Status: </strong>{{hit['Status']}}<br/>
+                          <strong>Sandbox Link: </strong><a href={{hit['sandboxLink']}} target="_blank">Click here</a><br/>
+                          {% if 'Explanation' in hit and hit['Explanation'] != "" %}
+                          <br/>
+                          <strong>Worker Explanation: </strong> {{hit['Explanation']}}
+                          {% endif %}
+                          </p>
+                        </section>
+                      </div>
                     </div>
-                  </div>
-                  <td>{{ hit['WorkerId'][-3:] }}</td>
-                  <td>
-                    <span class="icon">
-                      {% if hit['Status'] == "Confirmed" %}
-                      <i class="fas fa-circle" style="color:green; padding-right: 7;"></i>
-                      {% elif hit['Status'] == "Overturned" %}
-                      <i class="fas fa-circle" style="color:red; padding-right: 7;"></i>
-                      {% elif hit['Status'] == "Adjudication" %}
-                      <i class="fas fa-circle" style="color:brown; padding-right: 7;"></i>
-                      {% else %}
-                      <i class="fas fa-circle" style="color:gray; padding-right: 7;"></i>
-                      {% endif %}
-                    </span>
-                  </td>
-                  <td>{{ hit['Fair'] }}</td>
-                  <td>{{ hit['Unfair'] }}</td>
-                  <td><input type="radio" name="{{ hit['_id'] }}" value="approve"/></td>
-                  <td><input type="radio" name="{{ hit['_id'] }}" value="reject"/></td>
-                </tr> 
-                {% endfor %}
-              </tbody>
-            </table>
+                    <td>{{ hit['WorkerId'][-3:] }}</td>
+                    <td>
+                      <span class="icon">
+                        {% if hit['Status'] == "Confirmed" %}
+                        <i class="fas fa-circle" style="color:green; padding-right: 7;"></i>
+                        {% elif hit['Status'] == "Overturned" %}
+                        <i class="fas fa-circle" style="color:red; padding-right: 7;"></i>
+                        {% elif hit['Status'] == "Adjudication" %}
+                        <i class="fas fa-circle" style="color:brown; padding-right: 7;"></i>
+                        {% else %}
+                        <i class="fas fa-circle" style="color:gray; padding-right: 7;"></i>
+                        {% endif %}
+                      </span>
+                    </td>
+                    <td>{{ hit['Fair'] }}</td>
+                    <td>{{ hit['Unfair'] }}</td>
+                    {% if hit['Status'] == "Confirmed" %}
+                      <td><input type="radio" name="{{ hit['_id'] }}" value="confirm" checked=true/></td>
+                      <td><input type="radio" name="{{ hit['_id'] }}" value="overturn"/></td>
+                    {% elif hit['Status'] == "Overturned" %}
+                      <td><input type="radio" name="{{ hit['_id'] }}" value="confirm"/></td>
+                      <td><input type="radio" name="{{ hit['_id'] }}" value="overturn" checked=true/></td>
+                    {% else %}
+                      <td><input type="radio" name="{{ hit['_id'] }}" value="confirm"/></td>
+                      <td><input type="radio" name="{{ hit['_id'] }}" value="overturn"/></td>
+                    {% endif %}
+                  </tr> 
+                  {% endfor %}
+                </tbody>
+              </table>
+            <input type="submit" value="Download csv">
+            </form>
             </div>
         </div>
       </div>
@@ -136,7 +148,6 @@
         inputs.forEach(function(input) {
           if (input.value=="approve") {
             input.checked = true;
-            checkAllReject.checked = false;
           }
         });  
       }
