@@ -1,15 +1,21 @@
-from flask import Flask, jsonify, redirect, request, render_template, send_from_directory, session, url_for, redirect
+from flask import Flask, jsonify, redirect, request, render_template, send_from_directory, session, url_for, redirect, make_response, stream_with_context
 from flask_pymongo import PyMongo
 from apscheduler.scheduler import Scheduler
 from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.wrappers import Response
 from bson.json_util import dumps
 from bson.objectid import ObjectId
 from time import sleep
+from collections import Counter
 from utils import *
+from datetime import datetime
+from io import StringIO
 import os
 import pandas as pd
 import json
 import atexit 
+import csv
+
 
 
 
@@ -29,7 +35,7 @@ cron.start()
 
 @cron.interval_schedule(hours=1)
 def update_HIT_statuses():
-    appeals = csvs_db.find({"Status" : "Under review"})
+    appeals = csvs_db.find({"Status" : "Adjudication"})
     for appeal in appeals:
         appeal_id = appeal["AppealId"]
         appeal_results = get_results(appeal_id)
@@ -37,8 +43,8 @@ def update_HIT_statuses():
             fair  = appeal_results[appeal_results['judgement']=='fair']['judgement'].count()
             unfair = appeal_results[appeal_results['judgement']=='unfair']['judgement'].count()
             csvs_db.update_one({"AppealId":appeal_id}, {"$inc": {"Fair": int(fair), "Unfair": int(unfair)}})
-    csvs_db.update({"Fair": {"$gte":2}}, {"$set": {"Status": "Rejection confirmed"}}) 
-    csvs_db.update({"Unfair": {"$gte":2}}, { "$set": {"Status": "Rejection overturned"}})
+    csvs_db.update({"Fair": {"$gte":2}}, {"$set": {"Status": "Confirmed"}}) 
+    csvs_db.update({"Unfair": {"$gte":2}}, { "$set": {"Status": "Overturned"}})
 
 
 # Shutdown the cron thread when the web process is stopped
@@ -210,7 +216,7 @@ def make_appeal():
             }, 
             {
                 "$set": {
-                    "Status":"Under review",
+                    "Status":"Adjudication",
                     "AppealId":appeal_id, 
                     "WorkerEmail":_email,
                     "Explanation":_explanation,
@@ -273,13 +279,83 @@ def batch_page(batch_name):
             "Status":1,
             "sandboxLink":1,    # only want these fields from the db
             "Explanation":1,
-            "WorkerId":1
+            "WorkerId":1,
+            "Fair":1,
+            "Unfair":1
         }
     ))
-    
+    batch_stats = make_batch_stats(hits)
     if hits:
-        return (render_template('batch.html', batch_name=batch_name, hits=hits))
+        return (render_template('batch.html', batch_name=batch_name, hits=hits, batch_stats=batch_stats))
 
+@app.route('/batch/<batch_name>/judgements', methods=['POST', 'GET'])
+def generate_csv(batch_name):
+    @stream_with_context
+    def generate():
+        _form = request.form.to_dict()
+        output = []
+        data = StringIO()
+        writer = csv.writer(data)
+        writer.writerow(('AssignmentId', 'Approve', 'Reject'))
+        yield data.getvalue()
+        data.seek(0)
+        data.truncate(0)
+        print (_form)
+        for assignment in _form:
+            if  _form[assignment] == 'overturn':
+                writer.writerow((assignment, 'X', ''))
+                yield data.getvalue()
+                data.seek(0)
+                data.truncate(0)
+            elif _form[assignment] == 'confirm':
+                writer.writerow((assignment, '', 'X'))
+                yield data.getvalue()
+                data.seek(0)
+                data.truncate(0)
+    response = Response(generate(), mimetype='text/csv')
+    response.headers.set('{}-judgements'.format(batch_name), 'attachment', filename='{}-judgements.csv'.format(batch_name))
+    return response
+
+'''
+Helper function to make batch stats
+Arg: list of HITs in the batch
+'''
+def make_batch_stats(hits):
+    num_appealed = 0    # keep track of how many appealed in Batch
+    num_overturned = 0  # how many overturned out of the appeals
+    num_confirmed = 0   # how many rejections confirmed out of the appeals
+    num_rejected = 0    # how many HITs rejected 
+    workers = set()
+    rejected_workers = Counter()
+    appealing_workers = Counter()
+    confirmed_workers = Counter()
+    overturned_workers = Counter()
+    for hit in hits:
+        worker = hit["WorkerId"]
+        workers.add(worker)
+        rejected_workers[worker] += 1
+        num_rejected += 1
+        if hit["Status"] != "NA":
+            appealing_workers[worker] += 1
+            num_appealed += 1
+        if hit["Status"] == "Confirmed":
+            num_confirmed += 1
+            confirmed_workers[worker] += 1
+        elif hit["Status"] == "Overturned":
+            num_overturned += 1
+            overturned_workers[worker] += 1
+    return {
+        "num_rejected": num_rejected,
+        "num_appealed": num_appealed,
+        "num_overturned": num_overturned,
+        "num_confirmed": num_confirmed,
+        "total": len(hits),
+        "num_workers": len(workers),
+        "appealing_workers": appealing_workers,
+        "confirmed_workers": confirmed_workers,
+        "overturned_workers": overturned_workers,
+        "rejected_workers": rejected_workers
+    }
 
 '''
 Upload csv data to database.
