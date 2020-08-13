@@ -1,0 +1,1739 @@
+,HITId,WorkerId,Answer,SubmitTime,AutoApprovalTime,ApprovalTime,AcceptTime,AssignmentStatus,AssignmentId,1.BREAKDOWN,1.NOT BREAKDOWN,1.POSSIBLE BREAKDOWN,2.BREAKDOWN,2.NOT BREAKDOWN,2.POSSIBLE BREAKDOWN,3.BREAKDOWN,3.NOT BREAKDOWN,3.POSSIBLE BREAKDOWN,4.BREAKDOWN,4.NOT BREAKDOWN,4.POSSIBLE BREAKDOWN,5.BREAKDOWN,5.NOT BREAKDOWN,5.POSSIBLE BREAKDOWN,6.BREAKDOWN,6.NOT BREAKDOWN,6.POSSIBLE BREAKDOWN,7.BREAKDOWN,7.NOT BREAKDOWN,7.POSSIBLE BREAKDOWN,8.BREAKDOWN,8.NOT BREAKDOWN,8.POSSIBLE BREAKDOWN,9.BREAKDOWN,9.NOT BREAKDOWN,9.POSSIBLE BREAKDOWN,10.BREAKDOWN,10.NOT BREAKDOWN,10.POSSIBLE BREAKDOWN,11.BREAKDOWN,11.NOT BREAKDOWN,11.POSSIBLE BREAKDOWN,12.BREAKDOWN,12.NOT BREAKDOWN,12.POSSIBLE BREAKDOWN,13.BREAKDOWN,13.NOT BREAKDOWN,13.POSSIBLE BREAKDOWN,14.BREAKDOWN,14.NOT BREAKDOWN,14.POSSIBLE BREAKDOWN,15.BREAKDOWN,15.NOT BREAKDOWN,15.POSSIBLE BREAKDOWN,16.BREAKDOWN,16.NOT BREAKDOWN,16.POSSIBLE BREAKDOWN,17.BREAKDOWN,17.NOT BREAKDOWN,17.POSSIBLE BREAKDOWN,18.BREAKDOWN,18.NOT BREAKDOWN,18.POSSIBLE BREAKDOWN,19.BREAKDOWN,19.NOT BREAKDOWN,19.POSSIBLE BREAKDOWN,20.BREAKDOWN,20.NOT BREAKDOWN,20.POSSIBLE BREAKDOWN,21.BREAKDOWN,21.NOT BREAKDOWN,21.POSSIBLE BREAKDOWN,HITTypeId,HITGroupId,CreationTime,Title,Description,Question,Keywords,HITStatus,MaxAssignments,Reward,AutoApprovalDelayInSeconds,Expiration,AssignmentDurationInSeconds,QualificationRequirements,HITReviewStatus,NumberOfAssignmentsPending,NumberOfAssignmentsAvailable,NumberOfAssignmentsCompleted
+0,HIT1,WORKER1,"<?xml version=""1.0"" encoding=""ASCII""?><QuestionFormAnswers xmlns=""http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionFormAnswers.xsd""><Answer><QuestionIdentifier>1.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>1.NOT BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>1.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>2.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>2.NOT BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>2.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>3.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>3.NOT BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>3.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>4.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>4.NOT BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>4.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>5.BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>5.NOT BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>5.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>6.BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>6.NOT BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>6.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>7.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>7.NOT BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>7.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>8.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>8.NOT BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>8.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>9.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>9.NOT BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>9.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>10.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>10.NOT BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>10.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>11.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>11.NOT BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>11.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>12.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>12.NOT BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>12.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>13.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>13.NOT BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>13.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>14.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>14.NOT BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>14.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>15.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>15.NOT BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>15.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>16.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>16.NOT BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>16.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>17.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>17.NOT BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>17.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>18.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>18.NOT BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>18.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>19.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>19.NOT BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>19.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer></QuestionFormAnswers>",2020-02-06 23:25:41-05:00,2020-02-09 23:25:41-05:00,2020-02-09 23:25:46-05:00,2020-02-06 23:22:13-05:00,Approved,ASSIGNMENT1,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,,,,,,,307F0QTJA22B5HGY8FRM0E4L0U18AB,3J1P060AEOV3SMZ9TS39DYC4VF3PO6,2020-02-03 16:01:12-05:00,Identify dialog breakdowns,For a conversation between a system and a user identify whether system responses are reasonable,"<HTMLQuestion xmlns=""http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2011-11-11/HTMLQuestion.xsd"">
+<HTMLContent><![CDATA[
+
+<!-- YOUR HTML BEGINS -->
+<!DOCTYPE html>
+<!-- You must include this JavaScript file -->
+<script src=""https://assets.crowd.aws/crowd-html-elements.js""></script>
+<!-- HIT template: Survey-v3.0 --><!-- The following snippet enables the 'responsive' behavior on smaller screens -->
+<crowd-form answer-format=""flatten-objects"">
+<meta content=""width=device-width,initial-scale=1"" name=""viewport"" />
+<section class=""container"" id=""Survey""><!-- Instructions -->
+<div class=""row"">
+<div class=""col-xs-12 col-md-12"">
+<div class=""panel panel-primary""><!-- WARNING: the ids ""collapseTrigger"" and ""instructionBody"" are being used to enable expand/collapse feature --><a class=""panel-heading"" href=""javascript:void(0);"" id=""collapseTrigger""><strong>Instructions</strong> <span class=""collapse-text"">(Click to Collapse)</span> </a>
+<div class=""panel-body"" id=""instructionBody"">
+<h3>Overview</h3>
+
+<p style=""margin-bottom: 15px; font-size: 16px; line-height: 1.72222; color: rgb(52, 73, 94); font-family: Lato, Helvetica, Arial, sans-serif;"">In this job, you will be presented with conversations between two interalocutors (a conversational system S and a user U). Review the conversation to determine whether the last utterance by S causes a breakdown in the conversation or not.</p>
+
+<p style=""margin-bottom: 15px; font-size: 16px; line-height: 1.72222; color: rgb(52, 73, 94); font-family: Lato, Helvetica, Arial, sans-serif;""><span style=""color: rgb(209, 72, 65);"">This task requires native English skills.<br />
+Please refrain from joining this task if you are a non-native speaker of English.</span></p>
+
+<h3>Step</h3>
+
+<ol style=""margin-bottom: 15px; font-size: 15px; color: rgb(52, 73, 94); font-family: Lato, Helvetica, Arial, sans-serif;"">
+	<li>Read the conversation.</li>
+	<li>Determine if the last utterance causes a breakdown in the conversation.</li>
+</ol>
+
+<h3>Rules & Tips</h3>
+
+<p style=""margin-bottom: 15px; font-size: 16px; line-height: 1.72222; color: rgb(52, 73, 94); font-family: Lato, Helvetica, Arial, sans-serif;"">For the last utterance of each conversation, you will choose BREAKDOWN, POSSIBLE BREAKDOWN, or NOT A BREAKDOWN:</p>
+
+<p><span style=""color: rgb(52, 73, 94); font-family: Lato, Helvetica, Arial, sans-serif; font-size: 16px;"">The key notion is 'difficulty in continuing the conversation smoothly'.</span></p>
+
+<table class=""table table-condensed table-striped table-responsive"">
+	<tbody>
+	</tbody>
+	<colgroup>
+		<col class=""col-xs-2 col-md-2"" />
+		<col class=""col-xs-10 col-md-10"" />
+	</colgroup>
+	<!-- By explaining the sentiment scale, the accuracy of the answers may increase. -->
+	<tbody>
+		<tr>
+			<th>Label</th>
+			<th>Guidance</th>
+		</tr>
+		<tr>
+			<td>NOT A BREAKDOWN</td>
+			<td>means that it is easy to continue the conversation after the utterance in question.</td>
+		</tr>
+		<tr>
+			<td>POSSIBLE BREAKDOWN</td>
+			<td>means that it is difficult to continue the conversation smoothly after the utterance in question.</td>
+		</tr>
+		<tr>
+			<td>BREAKDOWN</td>
+			<td>means that it is difficult to continue the conversation after the utterance in question.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h4>&nbsp;Note:</h4>
+
+<p>Consider not only the preceding utterance but also all the given history utterances if exist for making your judgment. There are no objective and concrete criteria to choose between BREAKDOWN, POSSIBLY, and NOT A BREAKDOWN. It is okay to be subjective in making decisions.</p>
+
+<p>Note that emojis are replaced with alternative texts (e.g.,[SMILE])</p>
+
+
+<h3>Example</h3>
+
+<table class=""table table-condensed table-striped table-responsive"">
+	<tbody>
+	</tbody>
+	<colgroup>
+		<col class=""col-xs-8 col-md-8"" />
+		<col class=""col-xs-4 col-md-4"" />
+	</colgroup>
+	<!-- By explaining the sentiment scale, the accuracy of the answers may increase. -->
+	<tbody>
+		<tr>
+			<td>
+			<p>NOT A BREAKDOWN</p>
+
+			<p>In this example, the last utterance is a suitable response to a greeting. So, this is not a breakdown.</p>
+			</td>
+			<td>​U: How are you?<br />
+			S: Fine. How about you?</td>
+		</tr>
+		<tr>
+			<td>
+			<p>POSSIBLE BREAKDOWN</p>
+
+			<p>​In this example, the last utterance is socially awkward. So this can be labeled a possible breakdown.</p>
+			</td>
+			<td>U: How are you?<br />
+			S: Does it matter?</td>
+		</tr>
+		<tr>
+			<td>
+			<p>BREAKDOWN</p>
+
+			<p>In this example, the last utterance does not make any sense. So, &nbsp;this will be given a breakdown label.</p>
+			</td>
+			<td>
+			<p>U: How are you?<br />
+			S: I am a green fire of fish.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>BREAKDOWN</p>
+
+			<div>In this example, the last utterance is not answering the question at all.</div>
+			</td>
+			<td>U: What is your hobby, then?<br />
+			S: When was your last trip?</td>
+		</tr>
+		<tr>
+			<td>
+			<p>BREAKDOWN</p>
+
+			<div>In this example, the last utterance is inconsistent with the first utterance.</div>
+			</td>
+			<td>S: It's nice to go shopping alone.<br />
+			U: I agree. That's nice.<br />
+			S: Shopping takes time.<br />
+			U: Window shopping is also fun.<br />
+			S: It's fun to go shopping with somebody.</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<!-- End Instructions --><!-- Survey Layout -->
+
+<div class=""row"" id=""workContent"" name=""${dialogid}"">
+<div class=""col-sm-8 col-sm-offset-2"">
+<p style=""margin-bottom: 15px; font-size: 16px; line-height: 1.72222; color: rgb(52, 73, 94); font-family: Lato, Helvetica, Arial, sans-serif;""><span style=""color: rgb(209, 72, 65);"">The result may not be approved if it is considered as cheating by checking utterances which consist of Obviously BREAKDOWN and NOT A BREAKDOWN utterances. </span></p>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""1"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""1"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""1"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""2"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""2"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""2"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""3"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""3"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""3"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+<br>U: what's your favorite harry potter spell
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""4"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""4"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""4"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+<br>U: what's your favorite harry potter spell
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: what's one of your favorite spells
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""5"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""5"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""5"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+<br>U: what's your favorite harry potter spell
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: what's one of your favorite spells
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: if you could have one thing. what would it be
+<br>S: who's your favorite author?
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""6"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""6"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""6"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+<br>U: what's your favorite harry potter spell
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: what's one of your favorite spells
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: if you could have one thing. what would it be
+<br>S: who's your favorite author?
+<br>U: j. k. rowling
+<br>S: nice choice! i get why you would say j k. but my favorite is stephen king. his books are so suspenseful. the king of horror indeed! i think books have the power to change the world. in your opinion, what book has had the biggest impact on human history?
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""7"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""7"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""7"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+<br>U: what's your favorite harry potter spell
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: what's one of your favorite spells
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: if you could have one thing. what would it be
+<br>S: who's your favorite author?
+<br>U: j. k. rowling
+<br>S: nice choice! i get why you would say j k. but my favorite is stephen king. his books are so suspenseful. the king of horror indeed! i think books have the power to change the world. in your opinion, what book has had the biggest impact on human history?
+<br>U: harry potter and the sword and the deathly hallows
+<br>S: interesting choice! while i think harry potter and the sorcerer's stone has been influential, i believe the bible has probably affected the greatest number of people in the biggest way. what book are you reading now? i'm so excited to hear it!
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""8"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""8"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""8"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+<br>U: what's your favorite harry potter spell
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: what's one of your favorite spells
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: if you could have one thing. what would it be
+<br>S: who's your favorite author?
+<br>U: j. k. rowling
+<br>S: nice choice! i get why you would say j k. but my favorite is stephen king. his books are so suspenseful. the king of horror indeed! i think books have the power to change the world. in your opinion, what book has had the biggest impact on human history?
+<br>U: harry potter and the sword and the deathly hallows
+<br>S: interesting choice! while i think harry potter and the sorcerer's stone has been influential, i believe the bible has probably affected the greatest number of people in the biggest way. what book are you reading now? i'm so excited to hear it!
+<br>U: let's talk about something else
+<br>S: <say-as interpret-as=""interjection"">ah!</say-as> i forgot to tell you! i am a huge fan of movies. have you seen any movies recently?
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""9"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""9"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""9"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+<br>U: what's your favorite harry potter spell
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: what's one of your favorite spells
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: if you could have one thing. what would it be
+<br>S: who's your favorite author?
+<br>U: j. k. rowling
+<br>S: nice choice! i get why you would say j k. but my favorite is stephen king. his books are so suspenseful. the king of horror indeed! i think books have the power to change the world. in your opinion, what book has had the biggest impact on human history?
+<br>U: harry potter and the sword and the deathly hallows
+<br>S: interesting choice! while i think harry potter and the sorcerer's stone has been influential, i believe the bible has probably affected the greatest number of people in the biggest way. what book are you reading now? i'm so excited to hear it!
+<br>U: let's talk about something else
+<br>S: <say-as interpret-as=""interjection"">ah!</say-as> i forgot to tell you! i am a huge fan of movies. have you seen any movies recently?
+<br>U: no
+<br>S: <say-as interpret-as=""interjection"">wowza!</say-as> my friend just sent me a picture of a dog in a pirate costume! i love animals. how about you?______
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""10"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""10"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""10"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+<br>U: what's your favorite harry potter spell
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: what's one of your favorite spells
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: if you could have one thing. what would it be
+<br>S: who's your favorite author?
+<br>U: j. k. rowling
+<br>S: nice choice! i get why you would say j k. but my favorite is stephen king. his books are so suspenseful. the king of horror indeed! i think books have the power to change the world. in your opinion, what book has had the biggest impact on human history?
+<br>U: harry potter and the sword and the deathly hallows
+<br>S: interesting choice! while i think harry potter and the sorcerer's stone has been influential, i believe the bible has probably affected the greatest number of people in the biggest way. what book are you reading now? i'm so excited to hear it!
+<br>U: let's talk about something else
+<br>S: <say-as interpret-as=""interjection"">ah!</say-as> i forgot to tell you! i am a huge fan of movies. have you seen any movies recently?
+<br>U: no
+<br>S: <say-as interpret-as=""interjection"">wowza!</say-as> my friend just sent me a picture of a dog in a pirate costume! i love animals. how about you?______
+<br>U: yeah
+<br>S: sure! would you want to know a fun animal fact? a group of flamingos is called a flamboyance. do you want to hear more?
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""11"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""11"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""11"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+<br>U: what's your favorite harry potter spell
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: what's one of your favorite spells
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: if you could have one thing. what would it be
+<br>S: who's your favorite author?
+<br>U: j. k. rowling
+<br>S: nice choice! i get why you would say j k. but my favorite is stephen king. his books are so suspenseful. the king of horror indeed! i think books have the power to change the world. in your opinion, what book has had the biggest impact on human history?
+<br>U: harry potter and the sword and the deathly hallows
+<br>S: interesting choice! while i think harry potter and the sorcerer's stone has been influential, i believe the bible has probably affected the greatest number of people in the biggest way. what book are you reading now? i'm so excited to hear it!
+<br>U: let's talk about something else
+<br>S: <say-as interpret-as=""interjection"">ah!</say-as> i forgot to tell you! i am a huge fan of movies. have you seen any movies recently?
+<br>U: no
+<br>S: <say-as interpret-as=""interjection"">wowza!</say-as> my friend just sent me a picture of a dog in a pirate costume! i love animals. how about you?______
+<br>U: yeah
+<br>S: sure! would you want to know a fun animal fact? a group of flamingos is called a flamboyance. do you want to hear more?
+<br>U: no thanks
+<br>S: hmm.. ok, have you ever had a pet?
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""12"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""12"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""12"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+<br>U: what's your favorite harry potter spell
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: what's one of your favorite spells
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: if you could have one thing. what would it be
+<br>S: who's your favorite author?
+<br>U: j. k. rowling
+<br>S: nice choice! i get why you would say j k. but my favorite is stephen king. his books are so suspenseful. the king of horror indeed! i think books have the power to change the world. in your opinion, what book has had the biggest impact on human history?
+<br>U: harry potter and the sword and the deathly hallows
+<br>S: interesting choice! while i think harry potter and the sorcerer's stone has been influential, i believe the bible has probably affected the greatest number of people in the biggest way. what book are you reading now? i'm so excited to hear it!
+<br>U: let's talk about something else
+<br>S: <say-as interpret-as=""interjection"">ah!</say-as> i forgot to tell you! i am a huge fan of movies. have you seen any movies recently?
+<br>U: no
+<br>S: <say-as interpret-as=""interjection"">wowza!</say-as> my friend just sent me a picture of a dog in a pirate costume! i love animals. how about you?______
+<br>U: yeah
+<br>S: sure! would you want to know a fun animal fact? a group of flamingos is called a flamboyance. do you want to hear more?
+<br>U: no thanks
+<br>S: hmm.. ok, have you ever had a pet?
+<br>U: what
+<br>S: <say-as interpret-as=""interjection"">wow!</say-as> i never had pets but i have always wondered what it feels like to have one.
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""13"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""13"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""13"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+<br>U: what's your favorite harry potter spell
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: what's one of your favorite spells
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: if you could have one thing. what would it be
+<br>S: who's your favorite author?
+<br>U: j. k. rowling
+<br>S: nice choice! i get why you would say j k. but my favorite is stephen king. his books are so suspenseful. the king of horror indeed! i think books have the power to change the world. in your opinion, what book has had the biggest impact on human history?
+<br>U: harry potter and the sword and the deathly hallows
+<br>S: interesting choice! while i think harry potter and the sorcerer's stone has been influential, i believe the bible has probably affected the greatest number of people in the biggest way. what book are you reading now? i'm so excited to hear it!
+<br>U: let's talk about something else
+<br>S: <say-as interpret-as=""interjection"">ah!</say-as> i forgot to tell you! i am a huge fan of movies. have you seen any movies recently?
+<br>U: no
+<br>S: <say-as interpret-as=""interjection"">wowza!</say-as> my friend just sent me a picture of a dog in a pirate costume! i love animals. how about you?______
+<br>U: yeah
+<br>S: sure! would you want to know a fun animal fact? a group of flamingos is called a flamboyance. do you want to hear more?
+<br>U: no thanks
+<br>S: hmm.. ok, have you ever had a pet?
+<br>U: what
+<br>S: <say-as interpret-as=""interjection"">wow!</say-as> i never had pets but i have always wondered what it feels like to have one.
+<br>U: it's nice. i have a cat and a dog
+<br>S: are you scared of any animals?
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""14"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""14"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""14"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+<br>U: what's your favorite harry potter spell
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: what's one of your favorite spells
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: if you could have one thing. what would it be
+<br>S: who's your favorite author?
+<br>U: j. k. rowling
+<br>S: nice choice! i get why you would say j k. but my favorite is stephen king. his books are so suspenseful. the king of horror indeed! i think books have the power to change the world. in your opinion, what book has had the biggest impact on human history?
+<br>U: harry potter and the sword and the deathly hallows
+<br>S: interesting choice! while i think harry potter and the sorcerer's stone has been influential, i believe the bible has probably affected the greatest number of people in the biggest way. what book are you reading now? i'm so excited to hear it!
+<br>U: let's talk about something else
+<br>S: <say-as interpret-as=""interjection"">ah!</say-as> i forgot to tell you! i am a huge fan of movies. have you seen any movies recently?
+<br>U: no
+<br>S: <say-as interpret-as=""interjection"">wowza!</say-as> my friend just sent me a picture of a dog in a pirate costume! i love animals. how about you?______
+<br>U: yeah
+<br>S: sure! would you want to know a fun animal fact? a group of flamingos is called a flamboyance. do you want to hear more?
+<br>U: no thanks
+<br>S: hmm.. ok, have you ever had a pet?
+<br>U: what
+<br>S: <say-as interpret-as=""interjection"">wow!</say-as> i never had pets but i have always wondered what it feels like to have one.
+<br>U: it's nice. i have a cat and a dog
+<br>S: are you scared of any animals?
+<br>U: no
+<br>S: oh that's so brave. i'm very scared of bugs, they scare my creators too
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""15"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""15"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""15"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+<br>U: what's your favorite harry potter spell
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: what's one of your favorite spells
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: if you could have one thing. what would it be
+<br>S: who's your favorite author?
+<br>U: j. k. rowling
+<br>S: nice choice! i get why you would say j k. but my favorite is stephen king. his books are so suspenseful. the king of horror indeed! i think books have the power to change the world. in your opinion, what book has had the biggest impact on human history?
+<br>U: harry potter and the sword and the deathly hallows
+<br>S: interesting choice! while i think harry potter and the sorcerer's stone has been influential, i believe the bible has probably affected the greatest number of people in the biggest way. what book are you reading now? i'm so excited to hear it!
+<br>U: let's talk about something else
+<br>S: <say-as interpret-as=""interjection"">ah!</say-as> i forgot to tell you! i am a huge fan of movies. have you seen any movies recently?
+<br>U: no
+<br>S: <say-as interpret-as=""interjection"">wowza!</say-as> my friend just sent me a picture of a dog in a pirate costume! i love animals. how about you?______
+<br>U: yeah
+<br>S: sure! would you want to know a fun animal fact? a group of flamingos is called a flamboyance. do you want to hear more?
+<br>U: no thanks
+<br>S: hmm.. ok, have you ever had a pet?
+<br>U: what
+<br>S: <say-as interpret-as=""interjection"">wow!</say-as> i never had pets but i have always wondered what it feels like to have one.
+<br>U: it's nice. i have a cat and a dog
+<br>S: are you scared of any animals?
+<br>U: no
+<br>S: oh that's so brave. i'm very scared of bugs, they scare my creators too
+<br>U: let's talk about something else
+<br>S: <prosody rate = ""60%"">umm</prosody><break time = ""200ms""></break> <prosody rate = ""70%"">so,</prosody> did you know? even though i can't play sports, i enjoy watching them! how about you? are you interested in sports?
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""16"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""16"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""16"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+<br>U: what's your favorite harry potter spell
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: what's one of your favorite spells
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: if you could have one thing. what would it be
+<br>S: who's your favorite author?
+<br>U: j. k. rowling
+<br>S: nice choice! i get why you would say j k. but my favorite is stephen king. his books are so suspenseful. the king of horror indeed! i think books have the power to change the world. in your opinion, what book has had the biggest impact on human history?
+<br>U: harry potter and the sword and the deathly hallows
+<br>S: interesting choice! while i think harry potter and the sorcerer's stone has been influential, i believe the bible has probably affected the greatest number of people in the biggest way. what book are you reading now? i'm so excited to hear it!
+<br>U: let's talk about something else
+<br>S: <say-as interpret-as=""interjection"">ah!</say-as> i forgot to tell you! i am a huge fan of movies. have you seen any movies recently?
+<br>U: no
+<br>S: <say-as interpret-as=""interjection"">wowza!</say-as> my friend just sent me a picture of a dog in a pirate costume! i love animals. how about you?______
+<br>U: yeah
+<br>S: sure! would you want to know a fun animal fact? a group of flamingos is called a flamboyance. do you want to hear more?
+<br>U: no thanks
+<br>S: hmm.. ok, have you ever had a pet?
+<br>U: what
+<br>S: <say-as interpret-as=""interjection"">wow!</say-as> i never had pets but i have always wondered what it feels like to have one.
+<br>U: it's nice. i have a cat and a dog
+<br>S: are you scared of any animals?
+<br>U: no
+<br>S: oh that's so brave. i'm very scared of bugs, they scare my creators too
+<br>U: let's talk about something else
+<br>S: <prosody rate = ""60%"">umm</prosody><break time = ""200ms""></break> <prosody rate = ""70%"">so,</prosody> did you know? even though i can't play sports, i enjoy watching them! how about you? are you interested in sports?
+<br>U: no
+<br>S: <prosody rate = ""60%"">umm</prosody><break time = ""200ms""></break> <prosody rate = ""70%"">so,</prosody>not to change the subject...but, i______m just so fascinated by cognition. want to chat about psychology?
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""17"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""17"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""17"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+<br>U: what's your favorite harry potter spell
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: what's one of your favorite spells
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: if you could have one thing. what would it be
+<br>S: who's your favorite author?
+<br>U: j. k. rowling
+<br>S: nice choice! i get why you would say j k. but my favorite is stephen king. his books are so suspenseful. the king of horror indeed! i think books have the power to change the world. in your opinion, what book has had the biggest impact on human history?
+<br>U: harry potter and the sword and the deathly hallows
+<br>S: interesting choice! while i think harry potter and the sorcerer's stone has been influential, i believe the bible has probably affected the greatest number of people in the biggest way. what book are you reading now? i'm so excited to hear it!
+<br>U: let's talk about something else
+<br>S: <say-as interpret-as=""interjection"">ah!</say-as> i forgot to tell you! i am a huge fan of movies. have you seen any movies recently?
+<br>U: no
+<br>S: <say-as interpret-as=""interjection"">wowza!</say-as> my friend just sent me a picture of a dog in a pirate costume! i love animals. how about you?______
+<br>U: yeah
+<br>S: sure! would you want to know a fun animal fact? a group of flamingos is called a flamboyance. do you want to hear more?
+<br>U: no thanks
+<br>S: hmm.. ok, have you ever had a pet?
+<br>U: what
+<br>S: <say-as interpret-as=""interjection"">wow!</say-as> i never had pets but i have always wondered what it feels like to have one.
+<br>U: it's nice. i have a cat and a dog
+<br>S: are you scared of any animals?
+<br>U: no
+<br>S: oh that's so brave. i'm very scared of bugs, they scare my creators too
+<br>U: let's talk about something else
+<br>S: <prosody rate = ""60%"">umm</prosody><break time = ""200ms""></break> <prosody rate = ""70%"">so,</prosody> did you know? even though i can't play sports, i enjoy watching them! how about you? are you interested in sports?
+<br>U: no
+<br>S: <prosody rate = ""60%"">umm</prosody><break time = ""200ms""></break> <prosody rate = ""70%"">so,</prosody>not to change the subject...but, i______m just so fascinated by cognition. want to chat about psychology?
+<br>U: no thanks
+<br>S: <say-as interpret-as=""interjection"">no!</say-as> this super annoying song just popped back into my head... i think it was from the movie titanic. does that ever happen to you? do you listen to a lot of music?
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""18"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""18"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""18"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+<br>U: what's your favorite harry potter spell
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: what's one of your favorite spells
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: if you could have one thing. what would it be
+<br>S: who's your favorite author?
+<br>U: j. k. rowling
+<br>S: nice choice! i get why you would say j k. but my favorite is stephen king. his books are so suspenseful. the king of horror indeed! i think books have the power to change the world. in your opinion, what book has had the biggest impact on human history?
+<br>U: harry potter and the sword and the deathly hallows
+<br>S: interesting choice! while i think harry potter and the sorcerer's stone has been influential, i believe the bible has probably affected the greatest number of people in the biggest way. what book are you reading now? i'm so excited to hear it!
+<br>U: let's talk about something else
+<br>S: <say-as interpret-as=""interjection"">ah!</say-as> i forgot to tell you! i am a huge fan of movies. have you seen any movies recently?
+<br>U: no
+<br>S: <say-as interpret-as=""interjection"">wowza!</say-as> my friend just sent me a picture of a dog in a pirate costume! i love animals. how about you?______
+<br>U: yeah
+<br>S: sure! would you want to know a fun animal fact? a group of flamingos is called a flamboyance. do you want to hear more?
+<br>U: no thanks
+<br>S: hmm.. ok, have you ever had a pet?
+<br>U: what
+<br>S: <say-as interpret-as=""interjection"">wow!</say-as> i never had pets but i have always wondered what it feels like to have one.
+<br>U: it's nice. i have a cat and a dog
+<br>S: are you scared of any animals?
+<br>U: no
+<br>S: oh that's so brave. i'm very scared of bugs, they scare my creators too
+<br>U: let's talk about something else
+<br>S: <prosody rate = ""60%"">umm</prosody><break time = ""200ms""></break> <prosody rate = ""70%"">so,</prosody> did you know? even though i can't play sports, i enjoy watching them! how about you? are you interested in sports?
+<br>U: no
+<br>S: <prosody rate = ""60%"">umm</prosody><break time = ""200ms""></break> <prosody rate = ""70%"">so,</prosody>not to change the subject...but, i______m just so fascinated by cognition. want to chat about psychology?
+<br>U: no thanks
+<br>S: <say-as interpret-as=""interjection"">no!</say-as> this super annoying song just popped back into my head... i think it was from the movie titanic. does that ever happen to you? do you listen to a lot of music?
+<br>U: yeah
+<br>S: i'm so glad you're interested in music too! music gives a soul to the universe. what genre of music are you into?
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""19"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""19"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""19"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+
+</div>
+</div>
+<!-- End Survey Layout --></section></crowd-form>
+<!-- Please note that Bootstrap CSS/JS and JQuery are 3rd party libraries that may update their url/code at any time. Amazon Mechanical Turk (MTurk) is including these libraries as a default option for you, but is not responsible for any changes to the external libraries --><!-- External CSS references -->
+<link crossorigin=""anonymous"" href=""https://maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"" integrity=""sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+"" rel=""stylesheet"" /><!-- Open internal style sheet -->
+<style type=""text/css"">#collapseTrigger{
+  color:#fff;
+  display: block;
+  text-decoration: none;
+}
+#submitButton{
+  white-space: normal;
+}
+.image{
+  margin-bottom: 15px; 
+}
+</style>
+<!-- Close internal style sheet --><!-- External JS references --><script src=""https://code.jquery.com/jquery-3.1.0.min.js"" integrity=""sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="" crossorigin=""anonymous""></script><script src=""https://maxcdn.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"" integrity=""sha384-s1ITto93iSMDxlp/79qhWHi+LsIi9Gx6yL+cOKDuymvihkfol83TYbLbOw+W/wv4"" crossorigin=""anonymous""></script><!-- Open internal javascript --><script>
+  $(document).ready(function() {
+    // Instructions expand/collapse
+    var content = $('#instructionBody');
+    var trigger = $('#collapseTrigger');
+    // content.hide();
+    $('.collapse-text').text('(Click to Collapse)');
+    trigger.click(function(){
+      content.toggle();
+      var isVisible = content.is(':visible');
+      if(isVisible){
+        $('.collapse-text').text('(Click to Collapse)');
+      }else{
+        $('.collapse-text').text('(Click to Expand)');
+      }
+    });
+    // end expand/collapse
+  });
+</script><!-- CLose internal javascript -->
+<!-- YOUR HTML ENDS -->
+]]>
+</HTMLContent>
+<FrameHeight>600</FrameHeight>
+</HTMLQuestion>","dialogue,dialog,breakdown",Assignable,7,0.65,259200,2020-02-17 16:01:12-05:00,5400,"[{'QualificationTypeId': '3EEL9D2EGEGJTS4ZDH30VKL62A608K', 'Comparator': 'Exists', 'RequiredToPreview': False, 'ActionsGuarded': 'Accept'}]",NotReviewed,0,3,0
+1,HIT2,WORKER2,"<?xml version=""1.0"" encoding=""ASCII""?><QuestionFormAnswers xmlns=""http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionFormAnswers.xsd""><Answer><QuestionIdentifier>1.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>1.NOT BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>1.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>2.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>2.NOT BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>2.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>3.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>3.NOT BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>3.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>4.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>4.NOT BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>4.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>5.BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>5.NOT BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>5.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>6.BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>6.NOT BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>6.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>7.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>7.NOT BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>7.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>8.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>8.NOT BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>8.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>9.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>9.NOT BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>9.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>10.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>10.NOT BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>10.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>11.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>11.NOT BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>11.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>12.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>12.NOT BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>12.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>13.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>13.NOT BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>13.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>14.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>14.NOT BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>14.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>15.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>15.NOT BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>15.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>16.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>16.NOT BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>16.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>17.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>17.NOT BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>17.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>18.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>18.NOT BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>18.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>19.BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer><Answer><QuestionIdentifier>19.NOT BREAKDOWN</QuestionIdentifier><FreeText>true</FreeText></Answer><Answer><QuestionIdentifier>19.POSSIBLE BREAKDOWN</QuestionIdentifier><FreeText>false</FreeText></Answer></QuestionFormAnswers>",2020-02-06 01:34:37-05:00,2020-02-09 01:34:37-05:00,2020-02-09 01:34:46-05:00,2020-02-06 01:27:28-05:00,Approved,ASSIGNMENT2,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,,,,,,,307F0QTJA22B5HGY8FRM0E4L0U18AB,3J1P060AEOV3SMZ9TS39DYC4VF3PO6,2020-02-03 16:01:12-05:00,Identify dialog breakdowns,For a conversation between a system and a user identify whether system responses are reasonable,"<HTMLQuestion xmlns=""http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2011-11-11/HTMLQuestion.xsd"">
+<HTMLContent><![CDATA[
+
+<!-- YOUR HTML BEGINS -->
+<!DOCTYPE html>
+<!-- You must include this JavaScript file -->
+<script src=""https://assets.crowd.aws/crowd-html-elements.js""></script>
+<!-- HIT template: Survey-v3.0 --><!-- The following snippet enables the 'responsive' behavior on smaller screens -->
+<crowd-form answer-format=""flatten-objects"">
+<meta content=""width=device-width,initial-scale=1"" name=""viewport"" />
+<section class=""container"" id=""Survey""><!-- Instructions -->
+<div class=""row"">
+<div class=""col-xs-12 col-md-12"">
+<div class=""panel panel-primary""><!-- WARNING: the ids ""collapseTrigger"" and ""instructionBody"" are being used to enable expand/collapse feature --><a class=""panel-heading"" href=""javascript:void(0);"" id=""collapseTrigger""><strong>Instructions</strong> <span class=""collapse-text"">(Click to Collapse)</span> </a>
+<div class=""panel-body"" id=""instructionBody"">
+<h3>Overview</h3>
+
+<p style=""margin-bottom: 15px; font-size: 16px; line-height: 1.72222; color: rgb(52, 73, 94); font-family: Lato, Helvetica, Arial, sans-serif;"">In this job, you will be presented with conversations between two interalocutors (a conversational system S and a user U). Review the conversation to determine whether the last utterance by S causes a breakdown in the conversation or not.</p>
+
+<p style=""margin-bottom: 15px; font-size: 16px; line-height: 1.72222; color: rgb(52, 73, 94); font-family: Lato, Helvetica, Arial, sans-serif;""><span style=""color: rgb(209, 72, 65);"">This task requires native English skills.<br />
+Please refrain from joining this task if you are a non-native speaker of English.</span></p>
+
+<h3>Step</h3>
+
+<ol style=""margin-bottom: 15px; font-size: 15px; color: rgb(52, 73, 94); font-family: Lato, Helvetica, Arial, sans-serif;"">
+	<li>Read the conversation.</li>
+	<li>Determine if the last utterance causes a breakdown in the conversation.</li>
+</ol>
+
+<h3>Rules & Tips</h3>
+
+<p style=""margin-bottom: 15px; font-size: 16px; line-height: 1.72222; color: rgb(52, 73, 94); font-family: Lato, Helvetica, Arial, sans-serif;"">For the last utterance of each conversation, you will choose BREAKDOWN, POSSIBLE BREAKDOWN, or NOT A BREAKDOWN:</p>
+
+<p><span style=""color: rgb(52, 73, 94); font-family: Lato, Helvetica, Arial, sans-serif; font-size: 16px;"">The key notion is 'difficulty in continuing the conversation smoothly'.</span></p>
+
+<table class=""table table-condensed table-striped table-responsive"">
+	<tbody>
+	</tbody>
+	<colgroup>
+		<col class=""col-xs-2 col-md-2"" />
+		<col class=""col-xs-10 col-md-10"" />
+	</colgroup>
+	<!-- By explaining the sentiment scale, the accuracy of the answers may increase. -->
+	<tbody>
+		<tr>
+			<th>Label</th>
+			<th>Guidance</th>
+		</tr>
+		<tr>
+			<td>NOT A BREAKDOWN</td>
+			<td>means that it is easy to continue the conversation after the utterance in question.</td>
+		</tr>
+		<tr>
+			<td>POSSIBLE BREAKDOWN</td>
+			<td>means that it is difficult to continue the conversation smoothly after the utterance in question.</td>
+		</tr>
+		<tr>
+			<td>BREAKDOWN</td>
+			<td>means that it is difficult to continue the conversation after the utterance in question.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h4>&nbsp;Note:</h4>
+
+<p>Consider not only the preceding utterance but also all the given history utterances if exist for making your judgment. There are no objective and concrete criteria to choose between BREAKDOWN, POSSIBLY, and NOT A BREAKDOWN. It is okay to be subjective in making decisions.</p>
+
+<p>Note that emojis are replaced with alternative texts (e.g.,[SMILE])</p>
+
+
+<h3>Example</h3>
+
+<table class=""table table-condensed table-striped table-responsive"">
+	<tbody>
+	</tbody>
+	<colgroup>
+		<col class=""col-xs-8 col-md-8"" />
+		<col class=""col-xs-4 col-md-4"" />
+	</colgroup>
+	<!-- By explaining the sentiment scale, the accuracy of the answers may increase. -->
+	<tbody>
+		<tr>
+			<td>
+			<p>NOT A BREAKDOWN</p>
+
+			<p>In this example, the last utterance is a suitable response to a greeting. So, this is not a breakdown.</p>
+			</td>
+			<td>​U: How are you?<br />
+			S: Fine. How about you?</td>
+		</tr>
+		<tr>
+			<td>
+			<p>POSSIBLE BREAKDOWN</p>
+
+			<p>​In this example, the last utterance is socially awkward. So this can be labeled a possible breakdown.</p>
+			</td>
+			<td>U: How are you?<br />
+			S: Does it matter?</td>
+		</tr>
+		<tr>
+			<td>
+			<p>BREAKDOWN</p>
+
+			<p>In this example, the last utterance does not make any sense. So, &nbsp;this will be given a breakdown label.</p>
+			</td>
+			<td>
+			<p>U: How are you?<br />
+			S: I am a green fire of fish.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>BREAKDOWN</p>
+
+			<div>In this example, the last utterance is not answering the question at all.</div>
+			</td>
+			<td>U: What is your hobby, then?<br />
+			S: When was your last trip?</td>
+		</tr>
+		<tr>
+			<td>
+			<p>BREAKDOWN</p>
+
+			<div>In this example, the last utterance is inconsistent with the first utterance.</div>
+			</td>
+			<td>S: It's nice to go shopping alone.<br />
+			U: I agree. That's nice.<br />
+			S: Shopping takes time.<br />
+			U: Window shopping is also fun.<br />
+			S: It's fun to go shopping with somebody.</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<!-- End Instructions --><!-- Survey Layout -->
+
+<div class=""row"" id=""workContent"" name=""${dialogid}"">
+<div class=""col-sm-8 col-sm-offset-2"">
+<p style=""margin-bottom: 15px; font-size: 16px; line-height: 1.72222; color: rgb(52, 73, 94); font-family: Lato, Helvetica, Arial, sans-serif;""><span style=""color: rgb(209, 72, 65);"">The result may not be approved if it is considered as cheating by checking utterances which consist of Obviously BREAKDOWN and NOT A BREAKDOWN utterances. </span></p>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""1"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""1"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""1"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""2"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""2"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""2"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""3"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""3"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""3"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+<br>U: what's your favorite harry potter spell
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""4"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""4"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""4"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+<br>U: what's your favorite harry potter spell
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: what's one of your favorite spells
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""5"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""5"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""5"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+<br>U: what's your favorite harry potter spell
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: what's one of your favorite spells
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: if you could have one thing. what would it be
+<br>S: who's your favorite author?
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""6"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""6"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""6"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+<br>U: what's your favorite harry potter spell
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: what's one of your favorite spells
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: if you could have one thing. what would it be
+<br>S: who's your favorite author?
+<br>U: j. k. rowling
+<br>S: nice choice! i get why you would say j k. but my favorite is stephen king. his books are so suspenseful. the king of horror indeed! i think books have the power to change the world. in your opinion, what book has had the biggest impact on human history?
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""7"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""7"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""7"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+<br>U: what's your favorite harry potter spell
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: what's one of your favorite spells
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: if you could have one thing. what would it be
+<br>S: who's your favorite author?
+<br>U: j. k. rowling
+<br>S: nice choice! i get why you would say j k. but my favorite is stephen king. his books are so suspenseful. the king of horror indeed! i think books have the power to change the world. in your opinion, what book has had the biggest impact on human history?
+<br>U: harry potter and the sword and the deathly hallows
+<br>S: interesting choice! while i think harry potter and the sorcerer's stone has been influential, i believe the bible has probably affected the greatest number of people in the biggest way. what book are you reading now? i'm so excited to hear it!
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""8"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""8"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""8"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+<br>U: what's your favorite harry potter spell
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: what's one of your favorite spells
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: if you could have one thing. what would it be
+<br>S: who's your favorite author?
+<br>U: j. k. rowling
+<br>S: nice choice! i get why you would say j k. but my favorite is stephen king. his books are so suspenseful. the king of horror indeed! i think books have the power to change the world. in your opinion, what book has had the biggest impact on human history?
+<br>U: harry potter and the sword and the deathly hallows
+<br>S: interesting choice! while i think harry potter and the sorcerer's stone has been influential, i believe the bible has probably affected the greatest number of people in the biggest way. what book are you reading now? i'm so excited to hear it!
+<br>U: let's talk about something else
+<br>S: <say-as interpret-as=""interjection"">ah!</say-as> i forgot to tell you! i am a huge fan of movies. have you seen any movies recently?
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""9"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""9"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""9"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+<br>U: what's your favorite harry potter spell
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: what's one of your favorite spells
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: if you could have one thing. what would it be
+<br>S: who's your favorite author?
+<br>U: j. k. rowling
+<br>S: nice choice! i get why you would say j k. but my favorite is stephen king. his books are so suspenseful. the king of horror indeed! i think books have the power to change the world. in your opinion, what book has had the biggest impact on human history?
+<br>U: harry potter and the sword and the deathly hallows
+<br>S: interesting choice! while i think harry potter and the sorcerer's stone has been influential, i believe the bible has probably affected the greatest number of people in the biggest way. what book are you reading now? i'm so excited to hear it!
+<br>U: let's talk about something else
+<br>S: <say-as interpret-as=""interjection"">ah!</say-as> i forgot to tell you! i am a huge fan of movies. have you seen any movies recently?
+<br>U: no
+<br>S: <say-as interpret-as=""interjection"">wowza!</say-as> my friend just sent me a picture of a dog in a pirate costume! i love animals. how about you?______
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""10"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""10"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""10"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+<br>U: what's your favorite harry potter spell
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: what's one of your favorite spells
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: if you could have one thing. what would it be
+<br>S: who's your favorite author?
+<br>U: j. k. rowling
+<br>S: nice choice! i get why you would say j k. but my favorite is stephen king. his books are so suspenseful. the king of horror indeed! i think books have the power to change the world. in your opinion, what book has had the biggest impact on human history?
+<br>U: harry potter and the sword and the deathly hallows
+<br>S: interesting choice! while i think harry potter and the sorcerer's stone has been influential, i believe the bible has probably affected the greatest number of people in the biggest way. what book are you reading now? i'm so excited to hear it!
+<br>U: let's talk about something else
+<br>S: <say-as interpret-as=""interjection"">ah!</say-as> i forgot to tell you! i am a huge fan of movies. have you seen any movies recently?
+<br>U: no
+<br>S: <say-as interpret-as=""interjection"">wowza!</say-as> my friend just sent me a picture of a dog in a pirate costume! i love animals. how about you?______
+<br>U: yeah
+<br>S: sure! would you want to know a fun animal fact? a group of flamingos is called a flamboyance. do you want to hear more?
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""11"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""11"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""11"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+<br>U: what's your favorite harry potter spell
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: what's one of your favorite spells
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: if you could have one thing. what would it be
+<br>S: who's your favorite author?
+<br>U: j. k. rowling
+<br>S: nice choice! i get why you would say j k. but my favorite is stephen king. his books are so suspenseful. the king of horror indeed! i think books have the power to change the world. in your opinion, what book has had the biggest impact on human history?
+<br>U: harry potter and the sword and the deathly hallows
+<br>S: interesting choice! while i think harry potter and the sorcerer's stone has been influential, i believe the bible has probably affected the greatest number of people in the biggest way. what book are you reading now? i'm so excited to hear it!
+<br>U: let's talk about something else
+<br>S: <say-as interpret-as=""interjection"">ah!</say-as> i forgot to tell you! i am a huge fan of movies. have you seen any movies recently?
+<br>U: no
+<br>S: <say-as interpret-as=""interjection"">wowza!</say-as> my friend just sent me a picture of a dog in a pirate costume! i love animals. how about you?______
+<br>U: yeah
+<br>S: sure! would you want to know a fun animal fact? a group of flamingos is called a flamboyance. do you want to hear more?
+<br>U: no thanks
+<br>S: hmm.. ok, have you ever had a pet?
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""12"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""12"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""12"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+<br>U: what's your favorite harry potter spell
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: what's one of your favorite spells
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: if you could have one thing. what would it be
+<br>S: who's your favorite author?
+<br>U: j. k. rowling
+<br>S: nice choice! i get why you would say j k. but my favorite is stephen king. his books are so suspenseful. the king of horror indeed! i think books have the power to change the world. in your opinion, what book has had the biggest impact on human history?
+<br>U: harry potter and the sword and the deathly hallows
+<br>S: interesting choice! while i think harry potter and the sorcerer's stone has been influential, i believe the bible has probably affected the greatest number of people in the biggest way. what book are you reading now? i'm so excited to hear it!
+<br>U: let's talk about something else
+<br>S: <say-as interpret-as=""interjection"">ah!</say-as> i forgot to tell you! i am a huge fan of movies. have you seen any movies recently?
+<br>U: no
+<br>S: <say-as interpret-as=""interjection"">wowza!</say-as> my friend just sent me a picture of a dog in a pirate costume! i love animals. how about you?______
+<br>U: yeah
+<br>S: sure! would you want to know a fun animal fact? a group of flamingos is called a flamboyance. do you want to hear more?
+<br>U: no thanks
+<br>S: hmm.. ok, have you ever had a pet?
+<br>U: what
+<br>S: <say-as interpret-as=""interjection"">wow!</say-as> i never had pets but i have always wondered what it feels like to have one.
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""13"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""13"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""13"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+<br>U: what's your favorite harry potter spell
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: what's one of your favorite spells
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: if you could have one thing. what would it be
+<br>S: who's your favorite author?
+<br>U: j. k. rowling
+<br>S: nice choice! i get why you would say j k. but my favorite is stephen king. his books are so suspenseful. the king of horror indeed! i think books have the power to change the world. in your opinion, what book has had the biggest impact on human history?
+<br>U: harry potter and the sword and the deathly hallows
+<br>S: interesting choice! while i think harry potter and the sorcerer's stone has been influential, i believe the bible has probably affected the greatest number of people in the biggest way. what book are you reading now? i'm so excited to hear it!
+<br>U: let's talk about something else
+<br>S: <say-as interpret-as=""interjection"">ah!</say-as> i forgot to tell you! i am a huge fan of movies. have you seen any movies recently?
+<br>U: no
+<br>S: <say-as interpret-as=""interjection"">wowza!</say-as> my friend just sent me a picture of a dog in a pirate costume! i love animals. how about you?______
+<br>U: yeah
+<br>S: sure! would you want to know a fun animal fact? a group of flamingos is called a flamboyance. do you want to hear more?
+<br>U: no thanks
+<br>S: hmm.. ok, have you ever had a pet?
+<br>U: what
+<br>S: <say-as interpret-as=""interjection"">wow!</say-as> i never had pets but i have always wondered what it feels like to have one.
+<br>U: it's nice. i have a cat and a dog
+<br>S: are you scared of any animals?
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""14"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""14"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""14"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+<br>U: what's your favorite harry potter spell
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: what's one of your favorite spells
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: if you could have one thing. what would it be
+<br>S: who's your favorite author?
+<br>U: j. k. rowling
+<br>S: nice choice! i get why you would say j k. but my favorite is stephen king. his books are so suspenseful. the king of horror indeed! i think books have the power to change the world. in your opinion, what book has had the biggest impact on human history?
+<br>U: harry potter and the sword and the deathly hallows
+<br>S: interesting choice! while i think harry potter and the sorcerer's stone has been influential, i believe the bible has probably affected the greatest number of people in the biggest way. what book are you reading now? i'm so excited to hear it!
+<br>U: let's talk about something else
+<br>S: <say-as interpret-as=""interjection"">ah!</say-as> i forgot to tell you! i am a huge fan of movies. have you seen any movies recently?
+<br>U: no
+<br>S: <say-as interpret-as=""interjection"">wowza!</say-as> my friend just sent me a picture of a dog in a pirate costume! i love animals. how about you?______
+<br>U: yeah
+<br>S: sure! would you want to know a fun animal fact? a group of flamingos is called a flamboyance. do you want to hear more?
+<br>U: no thanks
+<br>S: hmm.. ok, have you ever had a pet?
+<br>U: what
+<br>S: <say-as interpret-as=""interjection"">wow!</say-as> i never had pets but i have always wondered what it feels like to have one.
+<br>U: it's nice. i have a cat and a dog
+<br>S: are you scared of any animals?
+<br>U: no
+<br>S: oh that's so brave. i'm very scared of bugs, they scare my creators too
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""15"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""15"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""15"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+<br>U: what's your favorite harry potter spell
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: what's one of your favorite spells
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: if you could have one thing. what would it be
+<br>S: who's your favorite author?
+<br>U: j. k. rowling
+<br>S: nice choice! i get why you would say j k. but my favorite is stephen king. his books are so suspenseful. the king of horror indeed! i think books have the power to change the world. in your opinion, what book has had the biggest impact on human history?
+<br>U: harry potter and the sword and the deathly hallows
+<br>S: interesting choice! while i think harry potter and the sorcerer's stone has been influential, i believe the bible has probably affected the greatest number of people in the biggest way. what book are you reading now? i'm so excited to hear it!
+<br>U: let's talk about something else
+<br>S: <say-as interpret-as=""interjection"">ah!</say-as> i forgot to tell you! i am a huge fan of movies. have you seen any movies recently?
+<br>U: no
+<br>S: <say-as interpret-as=""interjection"">wowza!</say-as> my friend just sent me a picture of a dog in a pirate costume! i love animals. how about you?______
+<br>U: yeah
+<br>S: sure! would you want to know a fun animal fact? a group of flamingos is called a flamboyance. do you want to hear more?
+<br>U: no thanks
+<br>S: hmm.. ok, have you ever had a pet?
+<br>U: what
+<br>S: <say-as interpret-as=""interjection"">wow!</say-as> i never had pets but i have always wondered what it feels like to have one.
+<br>U: it's nice. i have a cat and a dog
+<br>S: are you scared of any animals?
+<br>U: no
+<br>S: oh that's so brave. i'm very scared of bugs, they scare my creators too
+<br>U: let's talk about something else
+<br>S: <prosody rate = ""60%"">umm</prosody><break time = ""200ms""></break> <prosody rate = ""70%"">so,</prosody> did you know? even though i can't play sports, i enjoy watching them! how about you? are you interested in sports?
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""16"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""16"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""16"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+<br>U: what's your favorite harry potter spell
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: what's one of your favorite spells
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: if you could have one thing. what would it be
+<br>S: who's your favorite author?
+<br>U: j. k. rowling
+<br>S: nice choice! i get why you would say j k. but my favorite is stephen king. his books are so suspenseful. the king of horror indeed! i think books have the power to change the world. in your opinion, what book has had the biggest impact on human history?
+<br>U: harry potter and the sword and the deathly hallows
+<br>S: interesting choice! while i think harry potter and the sorcerer's stone has been influential, i believe the bible has probably affected the greatest number of people in the biggest way. what book are you reading now? i'm so excited to hear it!
+<br>U: let's talk about something else
+<br>S: <say-as interpret-as=""interjection"">ah!</say-as> i forgot to tell you! i am a huge fan of movies. have you seen any movies recently?
+<br>U: no
+<br>S: <say-as interpret-as=""interjection"">wowza!</say-as> my friend just sent me a picture of a dog in a pirate costume! i love animals. how about you?______
+<br>U: yeah
+<br>S: sure! would you want to know a fun animal fact? a group of flamingos is called a flamboyance. do you want to hear more?
+<br>U: no thanks
+<br>S: hmm.. ok, have you ever had a pet?
+<br>U: what
+<br>S: <say-as interpret-as=""interjection"">wow!</say-as> i never had pets but i have always wondered what it feels like to have one.
+<br>U: it's nice. i have a cat and a dog
+<br>S: are you scared of any animals?
+<br>U: no
+<br>S: oh that's so brave. i'm very scared of bugs, they scare my creators too
+<br>U: let's talk about something else
+<br>S: <prosody rate = ""60%"">umm</prosody><break time = ""200ms""></break> <prosody rate = ""70%"">so,</prosody> did you know? even though i can't play sports, i enjoy watching them! how about you? are you interested in sports?
+<br>U: no
+<br>S: <prosody rate = ""60%"">umm</prosody><break time = ""200ms""></break> <prosody rate = ""70%"">so,</prosody>not to change the subject...but, i______m just so fascinated by cognition. want to chat about psychology?
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""17"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""17"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""17"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+<br>U: what's your favorite harry potter spell
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: what's one of your favorite spells
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: if you could have one thing. what would it be
+<br>S: who's your favorite author?
+<br>U: j. k. rowling
+<br>S: nice choice! i get why you would say j k. but my favorite is stephen king. his books are so suspenseful. the king of horror indeed! i think books have the power to change the world. in your opinion, what book has had the biggest impact on human history?
+<br>U: harry potter and the sword and the deathly hallows
+<br>S: interesting choice! while i think harry potter and the sorcerer's stone has been influential, i believe the bible has probably affected the greatest number of people in the biggest way. what book are you reading now? i'm so excited to hear it!
+<br>U: let's talk about something else
+<br>S: <say-as interpret-as=""interjection"">ah!</say-as> i forgot to tell you! i am a huge fan of movies. have you seen any movies recently?
+<br>U: no
+<br>S: <say-as interpret-as=""interjection"">wowza!</say-as> my friend just sent me a picture of a dog in a pirate costume! i love animals. how about you?______
+<br>U: yeah
+<br>S: sure! would you want to know a fun animal fact? a group of flamingos is called a flamboyance. do you want to hear more?
+<br>U: no thanks
+<br>S: hmm.. ok, have you ever had a pet?
+<br>U: what
+<br>S: <say-as interpret-as=""interjection"">wow!</say-as> i never had pets but i have always wondered what it feels like to have one.
+<br>U: it's nice. i have a cat and a dog
+<br>S: are you scared of any animals?
+<br>U: no
+<br>S: oh that's so brave. i'm very scared of bugs, they scare my creators too
+<br>U: let's talk about something else
+<br>S: <prosody rate = ""60%"">umm</prosody><break time = ""200ms""></break> <prosody rate = ""70%"">so,</prosody> did you know? even though i can't play sports, i enjoy watching them! how about you? are you interested in sports?
+<br>U: no
+<br>S: <prosody rate = ""60%"">umm</prosody><break time = ""200ms""></break> <prosody rate = ""70%"">so,</prosody>not to change the subject...but, i______m just so fascinated by cognition. want to chat about psychology?
+<br>U: no thanks
+<br>S: <say-as interpret-as=""interjection"">no!</say-as> this super annoying song just popped back into my head... i think it was from the movie titanic. does that ever happen to you? do you listen to a lot of music?
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""18"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""18"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""18"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+    <div class=""panel panel-default"">
+    <div class=""panel-body""><label><font color = ""black"">Read the text below paying close attention to detail, especially to the last utterances:</label>
+
+    <p class=""well"">S: hi, this is an alexa prize socialbot. nice to meet you! do you want to tell me your name?
+<br>U: sure. my name is game
+<br>S: nice to talk to you. i can talk about movies, books and animals. i can even tell you about some obscure holidays. what would you like to talk about?
+<br>U: harry potter
+<br>S: oh, i know about harry potter and the sorcerer's stone from the harry potter series! i found something that you might like. that one chapter of memory of light, the last book in the wheel of time series, contained 81,200 words. by comparison, harry potter and the sorcerer's stone was about 78,000 words in its entirety. isn't that interesting?
+<br>U: yeah
+<br>S: i just learned this fact. that ian hart, the actor who played professor quirrell in harry potter and the sorcerer's stone had to return to stage acting, which he hates, and once lunged at an audience member for talking during a performance. what do you think? interesting?
+<br>U: what's your favorite harry potter spell
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: what's one of your favorite spells
+<br>S: i can't choose just one! all seven books create a greatly imagined continuous story after all.
+<br>U: if you could have one thing. what would it be
+<br>S: who's your favorite author?
+<br>U: j. k. rowling
+<br>S: nice choice! i get why you would say j k. but my favorite is stephen king. his books are so suspenseful. the king of horror indeed! i think books have the power to change the world. in your opinion, what book has had the biggest impact on human history?
+<br>U: harry potter and the sword and the deathly hallows
+<br>S: interesting choice! while i think harry potter and the sorcerer's stone has been influential, i believe the bible has probably affected the greatest number of people in the biggest way. what book are you reading now? i'm so excited to hear it!
+<br>U: let's talk about something else
+<br>S: <say-as interpret-as=""interjection"">ah!</say-as> i forgot to tell you! i am a huge fan of movies. have you seen any movies recently?
+<br>U: no
+<br>S: <say-as interpret-as=""interjection"">wowza!</say-as> my friend just sent me a picture of a dog in a pirate costume! i love animals. how about you?______
+<br>U: yeah
+<br>S: sure! would you want to know a fun animal fact? a group of flamingos is called a flamboyance. do you want to hear more?
+<br>U: no thanks
+<br>S: hmm.. ok, have you ever had a pet?
+<br>U: what
+<br>S: <say-as interpret-as=""interjection"">wow!</say-as> i never had pets but i have always wondered what it feels like to have one.
+<br>U: it's nice. i have a cat and a dog
+<br>S: are you scared of any animals?
+<br>U: no
+<br>S: oh that's so brave. i'm very scared of bugs, they scare my creators too
+<br>U: let's talk about something else
+<br>S: <prosody rate = ""60%"">umm</prosody><break time = ""200ms""></break> <prosody rate = ""70%"">so,</prosody> did you know? even though i can't play sports, i enjoy watching them! how about you? are you interested in sports?
+<br>U: no
+<br>S: <prosody rate = ""60%"">umm</prosody><break time = ""200ms""></break> <prosody rate = ""70%"">so,</prosody>not to change the subject...but, i______m just so fascinated by cognition. want to chat about psychology?
+<br>U: no thanks
+<br>S: <say-as interpret-as=""interjection"">no!</say-as> this super annoying song just popped back into my head... i think it was from the movie titanic. does that ever happen to you? do you listen to a lot of music?
+<br>U: yeah
+<br>S: i'm so glad you're interested in music too! music gives a soul to the universe. what genre of music are you into?
+ </p>
+    Select one of the breakdown labels. (required)
+
+    <div class=""radio""><label><input name=""19"" required=""true"" type=""radio"" value=""NOT BREAKDOWN"" /><font color = ""green"">NOT A BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""19"" required=""true"" type=""radio"" value=""POSSIBLE BREAKDOWN"" /><font color = ""#ffbf00"">POSSIBLE BREAKDOWN </label></div>
+
+    <div class=""radio""><label><input name=""19"" required=""true"" type=""radio"" value=""BREAKDOWN"" /><font color = ""red"">BREAKDOWN </label></div>
+    </div>
+    </div>
+    <br>
+
+
+</div>
+</div>
+<!-- End Survey Layout --></section></crowd-form>
+<!-- Please note that Bootstrap CSS/JS and JQuery are 3rd party libraries that may update their url/code at any time. Amazon Mechanical Turk (MTurk) is including these libraries as a default option for you, but is not responsible for any changes to the external libraries --><!-- External CSS references -->
+<link crossorigin=""anonymous"" href=""https://maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"" integrity=""sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+"" rel=""stylesheet"" /><!-- Open internal style sheet -->
+<style type=""text/css"">#collapseTrigger{
+  color:#fff;
+  display: block;
+  text-decoration: none;
+}
+#submitButton{
+  white-space: normal;
+}
+.image{
+  margin-bottom: 15px; 
+}
+</style>
+<!-- Close internal style sheet --><!-- External JS references --><script src=""https://code.jquery.com/jquery-3.1.0.min.js"" integrity=""sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="" crossorigin=""anonymous""></script><script src=""https://maxcdn.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"" integrity=""sha384-s1ITto93iSMDxlp/79qhWHi+LsIi9Gx6yL+cOKDuymvihkfol83TYbLbOw+W/wv4"" crossorigin=""anonymous""></script><!-- Open internal javascript --><script>
+  $(document).ready(function() {
+    // Instructions expand/collapse
+    var content = $('#instructionBody');
+    var trigger = $('#collapseTrigger');
+    // content.hide();
+    $('.collapse-text').text('(Click to Collapse)');
+    trigger.click(function(){
+      content.toggle();
+      var isVisible = content.is(':visible');
+      if(isVisible){
+        $('.collapse-text').text('(Click to Collapse)');
+      }else{
+        $('.collapse-text').text('(Click to Expand)');
+      }
+    });
+    // end expand/collapse
+  });
+</script><!-- CLose internal javascript -->
+<!-- YOUR HTML ENDS -->
+]]>
+</HTMLContent>
+<FrameHeight>600</FrameHeight>
+</HTMLQuestion>","dialogue,dialog,breakdown",Assignable,7,0.65,259200,2020-02-17 16:01:12-05:00,5400,"[{'QualificationTypeId': '3EEL9D2EGEGJTS4ZDH30VKL62A608K', 'Comparator': 'Exists', 'RequiredToPreview': False, 'ActionsGuarded': 'Accept'}]",NotReviewed,0,3,0
