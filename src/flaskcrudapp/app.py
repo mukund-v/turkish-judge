@@ -300,7 +300,6 @@ def generate_csv(batch_name):
         yield data.getvalue()
         data.seek(0)
         data.truncate(0)
-        print (_form)
         for assignment in _form:
             if  _form[assignment] == 'overturn':
                 writer.writerow((assignment, 'X', ''))
