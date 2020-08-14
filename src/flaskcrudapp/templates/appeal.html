@@ -18,8 +18,10 @@
           <h1  class="title is-3">Current appeal:</h1>
           <p><strong>HIT ID:</strong> {{hit_data['HITId']}}</p>
           <p><strong>Worker ID:</strong> {{hit_data['WorkerId']}}</p>
-          {% if hit_data['Status']!='NA' %}
+          {% if hit_data['Status']=='Adjudication' %}
           <p><strong>Status:</strong> {{hit_data['Status']}}</p>
+          {% elif hit_data['Status'] in ['Confirmed', 'Overturned'] %}
+          <p><strong>Status:</strong> Rejection {{hit_data['Status']}}</p>
           {% else %}
           <p><strong>Status: </strong> Not yet appealed. You can appeal this HIT using the panel below.
           {% endif %}
