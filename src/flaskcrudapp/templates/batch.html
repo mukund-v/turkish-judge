@@ -54,7 +54,7 @@
           <div class="box">
             <h1 class="title is-4">Batch <strong>{{batch_name}}</strong> HITs</h1>
 
-            <form  action="/batch/{{batch_name}}/judgements" method="POST" target="_blank" enctype="multipart/form-data">
+            
               <table class="table table-responsive" id="batch-assignments">
                 <thead>
                   <tr>
@@ -98,9 +98,9 @@
                     <td>
                       <span class="icon">
                         {% if hit['Status'] == "Confirmed" %}
-                        <i class="fas fa-circle" style="color:green; padding-right: 7;"></i>
-                        {% elif hit['Status'] == "Overturned" %}
                         <i class="fas fa-circle" style="color:red; padding-right: 7;"></i>
+                        {% elif hit['Status'] == "Overturned" %}
+                        <i class="fas fa-circle" style="color:green; padding-right: 7;"></i>
                         {% elif hit['Status'] == "Adjudication" %}
                         <i class="fas fa-circle" style="color:brown; padding-right: 7;"></i>
                         {% else %}
@@ -124,6 +124,7 @@
                   {% endfor %}
                 </tbody>
               </table>
+            <form  action="/batch/{{batch_name}}/judgements" method="POST" target="_blank" enctype="multipart/form-data">
             <input type="submit" value="Download csv">
             </form>
             </div>
