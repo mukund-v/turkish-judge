@@ -49,7 +49,7 @@ def get_bonus_info(df):
         total_time = np.sum(task_times)
         total_by_med = med * len(group_submits)
         bonus = max(0, 15 * total_by_med/ 60 - .65 * len(group_submits))
-        info_by_worker.append({"WorkerId": group, "bonus": bonus, "Work Time": total_time, "Median Time": med})
+        info_by_worker.append({"WorkerId": group, "bonus": bonus, "Work Time": total_time, "Median Time": med, "num": len(group_submits)})
     return info_by_worker
 
 def perform_time_calculation(group_accepts, group_submits):

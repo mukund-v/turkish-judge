@@ -269,6 +269,16 @@ def requester():
 @app.route('/batch/<batch_name>')
 def batch_page(batch_name):
     #TODO case when we don't find HITs
+    hits = get_hits(batch_name)
+    bonuses = get_bonuses(batch_name)
+    batch_stats = make_batch_stats(hits)
+    bonus_stats = make_bonus_stats(bonuses)
+    for worker, rejections in batch_stats["rejected_workers"].items(): 
+        bonus_stats[worker]["frac"] = "{:10.2f}".format(rejections / bonus_stats[worker]["num"] * 100)
+    if hits:
+        return (render_template('batch.html', batch_name=batch_name, hits=hits, batch_stats=batch_stats, bonus_stats=bonus_stats))
+
+def get_hits(batch_name):
     hits = list(csvs_db.find(
         {
             "req_id" : session["req_id"],
@@ -285,9 +295,24 @@ def batch_page(batch_name):
             "Unfair":1
         }
     ))
-    batch_stats = make_batch_stats(hits)
-    if hits:
-        return (render_template('batch.html', batch_name=batch_name, hits=hits, batch_stats=batch_stats))
+    return hits
+
+def get_bonuses(batch_name):
+    bonuses = list(bonuses_db.find(
+        {
+            "req_id" : session["req_id"],
+            "batch_name" : batch_name
+        },
+        {
+            "_id" : 1,
+            "WorkerId" : 1,
+            "bonus" : 1,
+            "Work Time" : 1,
+            "Median Time" : 1,
+            "num" : 1
+        }
+    ))
+    return bonuses
 
 @app.route('/batch/<batch_name>/judgements', methods=['POST', 'GET'])
 def generate_csv(batch_name):
@@ -315,6 +340,21 @@ def generate_csv(batch_name):
     response = Response(generate(), mimetype='text/csv')
     response.headers.set('{}-judgements'.format(batch_name), 'attachment', filename='{}-judgements.csv'.format(batch_name))
     return response
+
+def make_bonus_stats(bonuses):
+    bonus_stats = {}
+    for bonus in bonuses:
+        for key, value in bonus.items():
+            def format_val(value): return "{:10.2f}".format(value)
+            if isinstance(value, float):
+                bonus[key] = format_val(value)
+        bonus_stats[bonus['WorkerId']] = {
+                                            "work_time" : bonus['Work Time'], 
+                                            'bonus' : bonus['bonus'], 
+                                            "median_time" : bonus['Median Time'], 
+                                            "num" : bonus["num"]
+                                        }
+    return bonus_stats
 
 '''
 Helper function to make batch stats
