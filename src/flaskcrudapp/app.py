@@ -1,3 +1,11 @@
+from datetime import datetime
+from io import StringIO
+import os
+from time import sleep
+from collections import Counter
+import json
+import atexit 
+import csv
 from flask_pymongo import PyMongo
 from flask import Flask, jsonify, redirect, request, render_template, send_from_directory, session, url_for, redirect, make_response, stream_with_context
 from apscheduler.scheduler import Scheduler
@@ -5,16 +13,10 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from werkzeug.wrappers import Response
 from bson.json_util import dumps
 from bson.objectid import ObjectId
-from time import sleep
-from collections import Counter
-from utils import *
-from datetime import datetime
-from io import StringIO
-import os
+
 import pandas as pd
-import json
-import atexit 
-import csv
+from utils import *
+
 
 
 
@@ -79,7 +81,7 @@ def index():
         ))
     
     else:
-        return(render_template('index.html'))
+        return render_template('index.html')
     
 
 '''
@@ -100,7 +102,7 @@ def signin():
             return redirect(url_for('requester'))
         else:
             session['signinerror'] = True
-            return (redirect(url_for('index'), code=307))
+            return redirect(url_for('index'), code=307)
     else:
         return not_found()
 
@@ -114,12 +116,10 @@ def signout():
     return redirect(url_for('index'))
 
 
-'''
-Account signup page.
-'''
+'''Account signup page.'''
 @app.route('/signup', methods=['GET'])
 def signup():
-    return (render_template('signUp.html', signuperror=request.args.get('signuperror')))
+    return render_template('signUp.html', signuperror=request.args.get('signuperror'))
 
 
 '''
@@ -146,7 +146,7 @@ def add_user():
 
         resp = jsonify('User added successfully')
         resp.status_code = 200
-        return (redirect(url_for('index')))
+        return redirect(url_for('index'))
     
     else:
         return not_found()
@@ -162,19 +162,15 @@ def appeal():
     _HIT_id = _form["HITId"]
 
     result = csvs_db.find_one({"WorkerId":_worker_id, "HITId":_HIT_id})
-    
     if not result:
         session['appealerror'] = True
         return (redirect(url_for('index'), code=307))
-    
     sandbox_link = result['sandboxLink']
     status = result['Status']
-    
     try:
         worker_email = result['WorkerEmail'] 
     except:
         worker_email = ''
-    
     hit_data = {
         'HITId' : _HIT_id,
         'WorkerId' : _worker_id,
@@ -188,7 +184,7 @@ def appeal():
     session["WorkerId"] = _worker_id
     session["HITId"] = _HIT_id
 
-    return (render_template('appeal.html', hit_data=hit_data))
+    return render_template('appeal.html', hit_data=hit_data)
 
 
 '''
@@ -276,7 +272,7 @@ def batch_page(batch_name):
     for worker, rejections in batch_stats["rejected_workers"].items(): 
         bonus_stats[worker]["frac"] = "{:10.2f}".format(rejections / bonus_stats[worker]["num"] * 100)
     if hits:
-        return (render_template('batch.html', batch_name=batch_name, hits=hits, batch_stats=batch_stats, bonus_stats=bonus_stats))
+        return render_template('batch.html', batch_name=batch_name, hits=hits, batch_stats=batch_stats, bonus_stats=bonus_stats)
 
 def get_hits(batch_name):
     hits = list(csvs_db.find(
@@ -427,8 +423,7 @@ def upload():
 
         return redirect(url_for('requester'))
 
-    else:
-        return unsupported_media_type()
+    return unsupported_media_type()
 
 
 
