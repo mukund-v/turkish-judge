@@ -57,7 +57,7 @@ if __name__=="__main__":
                 totaltime_overlapping += group_submits[index] - asmt 
         #print (totaltime, totaltime_overlapping, len(group_submits))
         avg_time_per_task.append(totaltime / len(group_submits))
-        med = np.mean(task_times)
+        med = np.median(task_times)
         total_by_med = med * len(group_submits)
         '''
         if (cnt == 6):

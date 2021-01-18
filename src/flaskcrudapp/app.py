@@ -1,5 +1,5 @@
-from flask import Flask, jsonify, redirect, request, render_template, send_from_directory, session, url_for, redirect, make_response, stream_with_context
 from flask_pymongo import PyMongo
+from flask import Flask, jsonify, redirect, request, render_template, send_from_directory, session, url_for, redirect, make_response, stream_with_context
 from apscheduler.scheduler import Scheduler
 from werkzeug.security import generate_password_hash, check_password_hash
 from werkzeug.wrappers import Response
@@ -29,6 +29,7 @@ app.config['MONGO_URI']= config["mongo"]
 mongo = PyMongo(app)
 users_db = mongo.db.users
 csvs_db = mongo.db.csvs
+bonuses_db = mongo.db.bonuses
 
 cron = Scheduler(daemon=True)
 cron.start()
@@ -369,14 +370,19 @@ def upload():
         return redirect(url_for('requester', batch_name_error=True))
     
     if '.' in filename and filename.split(".")[-1] in ALLOWED_EXTENSIONS:
-        rejected = parse_csv(input=file)
+        rejected, bonuses = parse_csv(input=file)
 
         for reject in rejected:
             reject["req_id"] = requester_info["req_id"]
             reject["batch_name"] = batch_name
             reject["Explanation"] = ""
 
+        for bonus in bonuses:
+            bonus["req_id"] = requester_info["req_id"]
+            bonus["batch_name"] = batch_name
+
         csvs_db.insert(rejected)
+        bonuses_db.insert(bonuses)
         users_db.update_one({"req_id":session["req_id"]}, {"$addToSet":{"batches":batch_name}})
 
         return redirect(url_for('requester'))

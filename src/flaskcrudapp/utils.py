@@ -1,8 +1,10 @@
 import pandas as pd
 import json as json
+import numpy as np 
 import csv 
 import boto3
 import xmltodict
+from datetime import datetime
 from bs4 import BeautifulSoup
 from jinja2 import Environment, FileSystemLoader, Template
 from example import example_question, example_answer
@@ -14,16 +16,57 @@ with open("config.json", 'r') as input:
 # TODO this method shoud be able to accept arbitrary column names that indicate rejections
 def parse_csv(input):
     df = pd.read_csv(input)
+    reject_json = make_reject_json(df)
+    bonuses_json = make_bonuses_json(df)
+    return reject_json, bonuses_json
+
+def make_reject_json(df):
     rejected = df[
-        df["AssignmentStatus"]=="Approved"  # TODO change to 'Rejected' testing csv has all 'Approved'
-    ]
+          df["AssignmentStatus"]=="Approved"  # TODO change to 'Rejected' testing csv has all 'Approved'
+      ]
     only_relevant_columns = rejected[["WorkerId", "AssignmentId", "HITId", "Question", "Answer"]]
     rejected_w_id = only_relevant_columns.rename(columns={"AssignmentId":"_id"})
     reject_json = json.loads(rejected_w_id.to_json(orient='records'))
     for hit in reject_json:
         hit["Status"] = "NA"
-        hit["sandboxLink"] = create_task(question_xml=hit["Question"], answer_xml=hit["Answer"], HITId=hit["_id"])
+        #  hit["sandboxLink"] = create_task(question_xml=hit["Question"], answer_xml=hit["Answer"], HITId=hit["_id"])
+        hit["sandboxLink"] = "NA for testing"
     return reject_json
+
+def make_bonuses_json(df):
+    df = df.sort_values(by=['WorkerId']).set_index(keys=['WorkerId']).groupby(by=['WorkerId'])  # sort values by WorkerId to performgroupby
+    return get_bonus_info(df)
+
+def get_bonus_info(df):
+    info_by_worker = []
+    groups = df.groups
+    for group in groups:
+        group_df = df.get_group(group)
+        group_df.sort_values(by=['AcceptTime'], ignore_index=True, inplace=True)
+        group_accepts, group_submits = make_and_format_accepts_submits(group_df)
+        task_times = perform_time_calculation(group_accepts, group_submits)        
+        med = np.median(task_times)
+        total_time = np.sum(task_times)
+        total_by_med = med * len(group_submits)
+        bonus = max(0, 15 * total_by_med/ 60 - .65 * len(group_submits))
+        info_by_worker.append({"WorkerId": group, "bonus": bonus, "Work Time": total_time, "Median Time": med})
+    return info_by_worker
+
+def perform_time_calculation(group_accepts, group_submits):
+    task_times = []
+    for index, asmt in group_accepts.items():
+        if (index != 0 and asmt < group_submits[index-1]):
+            task_times.append(group_submits[index] - group_submits[index - 1])
+        else:
+            task_times.append(group_submits[index] - asmt)
+    return task_times
+
+def make_and_format_accepts_submits(group_df):
+    group_accepts = group_df['AcceptTime']
+    group_submits = group_df['SubmitTime']
+    group_accepts = group_accepts.apply(lambda x: datetime.strptime(x[0:x.rfind("-")], "%Y-%m-%d %H:%M:%S").timestamp() / 60)
+    group_submits = group_submits.apply(lambda x: datetime.strptime(x[0:x.rfind("-")], "%Y-%m-%d %H:%M:%S").timestamp() / 60)
+    return group_accepts, group_submits
 
 def align_xmls(question_xml, answer_xml):
     question = BeautifulSoup(question_xml, 'lxml')
@@ -68,8 +111,6 @@ def create_appeal(sandbox_link, explanation):
     )
     print ("https://workersandbox.mturk.com/mturk/preview?groupId=" + new_hit['HIT']['HITGroupId'])
     return new_hit['HIT']['HITId']
-    
-
 
 def create_task(question_xml, answer_xml, HITId):
     mturk = connect_to_MTurk()
@@ -109,7 +150,6 @@ def get_results(HITID):
           all_results.append(assignment)
           mturk.approve_assignment(AssignmentId=assignment["AssignmentId"])
   return pd.DataFrame(all_results, columns=keys)
-
 
 def connect_to_MTurk(sandbox=True):
   '''
