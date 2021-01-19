@@ -14,7 +14,7 @@
           <div class="column is-half">
             <div class="box">
               <h1 class="title is-4">Batch <strong>{{batch_name}}</strong> Rejection Stats</h1>
-              <table class="table">
+              <table class="table table-responsive" id="batch-stats">
                 <thead>
                   <tr>
                     <th>#</th>
@@ -30,7 +30,7 @@
                   <tr>
                     <th>{{loop.index}}</th>
                     <td>{{worker[-3:]}}</td>
-                    <td>{{batch_stats['rejected_workers'][worker]}} ({{bonus_stats[worker]['frac']}}%)</td>
+                    <td>{{batch_stats['rejected_workers'][worker]}} ({{bonus_stats['Workers'][worker]['frac']}}%)</td>
                     <td>{{batch_stats['appealing_workers'][worker]}}</td>
                     <td>{{batch_stats['confirmed_workers'][worker]}}</td>
                     <td>{{batch_stats['overturned_workers'][worker]}}</td>
@@ -51,7 +51,7 @@
             </div>
             <div class="box">
               <h1 class="title is-4">Batch <strong>{{batch_name}}</strong> Bonus Stats</h1>
-              <table class="table">
+              <table class="table table-responsive" id="bonus-stats">
                 <thead>
                   <tr>
                     <th>#</th>
@@ -63,28 +63,31 @@
                   </tr>
                 </thead>
                 <tbody>
-                  {% for worker in bonus_stats %}
+                  {% for worker in bonus_stats['Workers'] %}
                   <tr>
                     <th>{{loop.index}}</th>
                     <td>{{worker[-3:]}}</td>
-                    <td>{{bonus_stats[worker]['work_time']}}</td>
-                    <td>{{bonus_stats[worker]['median_time']}}</td>
-                    <td>{{bonus_stats[worker]['bonus']}}</td>
-                    <td>{{bonus_stats[worker]['num']}}</td>
+                    <td>{{bonus_stats['Workers'][worker]['work_time']}}</td>
+                    <td>{{bonus_stats['Workers'][worker]['median_time']}}</td>
+                    <td>${{bonus_stats['Workers'][worker]['bonus']}}</td>
+                    <td>{{bonus_stats['Workers'][worker]['num']}}</td>
                   </tr> 
                   {% endfor %}
                 </tbody>
                 <tfoot>
                   <tr>
                     <th>Totals</th>
-                    <th>{{batch_stats['num_workers']}}</th>
-                    <th>{{batch_stats['num_rejected']}}</th>
-                    <th>{{batch_stats['num_appealed']}}</th>
-                    <th>{{batch_stats['num_confirmed']}}</th>
-                    <th>{{batch_stats['num_overturned']}}</th>
+                    <th>{{bonus_stats['totals']['num_workers']}}</th>
+                    <th>{{bonus_stats['totals']['work_time']}}</th>
+                    <th>{{bonus_stats['totals']['median']}}</th>
+                    <th>${{bonus_stats['totals']['total_bonus']}}</th>
+                    <th>{{bonus_stats['totals']['num']}}</th>
                   </tr>
                 </tfoot>
               </table>
+              <form  action="/batch/{{batch_name}}/bonuses" method="POST" target="_blank" enctype="multipart/form-data">
+                <input type="submit" value="Download csv">
+                </form>
             </div>
         </div>
         <div class="column is-half">

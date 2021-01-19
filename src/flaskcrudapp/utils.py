@@ -52,6 +52,18 @@ def get_bonus_info(df):
         info_by_worker.append({"WorkerId": group, "bonus": bonus, "Work Time": total_time, "Median Time": med, "num": len(group_submits)})
     return info_by_worker
 
+def format_time_string(work_time):
+    hours = int(float(work_time) / 60)
+    minutes = int(float(work_time) % 60)
+    seconds = int(work_time.split(".")[1])
+    seconds = seconds * 60 / 100
+    if hours != 0:
+        formatted = "{} hrs. {} mins. {} secs.".format(hours, minutes, seconds)
+    else :
+        formatted = "{} mins. {} secs.".format(minutes, seconds)
+    return formatted
+    
+
 def perform_time_calculation(group_accepts, group_submits):
     task_times = []
     for index, asmt in group_accepts.items():

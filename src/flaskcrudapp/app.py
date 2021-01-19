@@ -270,7 +270,7 @@ def batch_page(batch_name):
     batch_stats = make_batch_stats(hits)
     bonus_stats = make_bonus_stats(bonuses)
     for worker, rejections in batch_stats["rejected_workers"].items(): 
-        bonus_stats[worker]["frac"] = "{:10.2f}".format(rejections / bonus_stats[worker]["num"] * 100)
+        bonus_stats['Workers'][worker]["frac"] = "{:10.2f}".format(rejections / bonus_stats['Workers'][worker]["num"] * 100)
     if hits:
         return render_template('batch.html', batch_name=batch_name, hits=hits, batch_stats=batch_stats, bonus_stats=bonus_stats)
 
@@ -310,6 +310,24 @@ def get_bonuses(batch_name):
     ))
     return bonuses
 
+@app.route('/batch/<batch_name>/bonuses', methods=['POST', 'GET'])
+def generate_bonuses_csv(batch_name):
+    @stream_with_context
+    def generate():
+        _form = request.form.to_dict()
+        for assignment in _form:
+            print (assignment)
+        output = []
+        data = StringIO()
+        writer = csv.writer(data)
+        writer.writerow(('WorkerId', 'Bonus'))
+        yield data.getvalue()
+        data.seek(0)
+        data.truncate(0)
+        
+    response = Response(generate(), mimetype='text/csv')
+    return response
+
 @app.route('/batch/<batch_name>/judgements', methods=['POST', 'GET'])
 def generate_csv(batch_name):
     @stream_with_context
@@ -339,18 +357,32 @@ def generate_csv(batch_name):
 
 def make_bonus_stats(bonuses):
     bonus_stats = {}
+    work_times = []
+    median_times = []
+    bonus_totals = []
     for bonus in bonuses:
+        work_times.append(bonus["Work Time"])
+        median_times.append(bonus["Median Time"])
+        bonus_totals.append(bonus["bonus"])
         for key, value in bonus.items():
             def format_val(value): return "{:10.2f}".format(value)
             if isinstance(value, float):
                 bonus[key] = format_val(value)
         bonus_stats[bonus['WorkerId']] = {
-                                            "work_time" : bonus['Work Time'], 
+                                            "work_time" : format_time_string(bonus['Work Time']), 
                                             'bonus' : bonus['bonus'], 
-                                            "median_time" : bonus['Median Time'], 
+                                            "median_time" : format_time_string(bonus['Median Time']), 
                                             "num" : bonus["num"]
                                         }
-    return bonus_stats
+    totals = {
+        "work_time" : format_time_string("{:10.2f}".format(np.sum(work_times))),
+        "median" : format_time_string("{:10.2f}".format(np.median(median_times))),
+        "total_bonus" : "{:10.2f}".format(np.sum(bonus_totals)),
+        "num" : sum(bonus["num"] for bonus in bonuses),
+        "num_workers" : sum(1 for bonus in bonuses)
+    }
+    bonus_stats_w_totals = {"Workers": bonus_stats, "totals" : totals}
+    return bonus_stats_w_totals
 
 '''
 Helper function to make batch stats
